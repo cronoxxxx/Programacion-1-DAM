@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="nuevoAjedrez:jar3" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d59b7811-b6c2-40f5-b0ab-5b3ce57c3511" name="Changes" comment="bonne nuit." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2cJDuodlNNpJj0x0fJGWJLv8Y1f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/madrid/Desktop/ProgresoAjedrez/ConsolaMejorada/BoostAjedrez",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "C:/Users/madrid/Desktop/ProgresoAjedrez/xd/nuevoAjedrez/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Rainbow Brackets",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\madrid\Desktop\ProgresoAjedrez\xd\nuevoAjedrez\src\main\java" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d59b7811-b6c2-40f5-b0ab-5b3ce57c3511" name="Changes" comment="" />
+      <created>1707821016459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707821016459</updated>
+      <workItem from="1707821017553" duration="11081000" />
+      <workItem from="1707864515304" duration="1086000" />
+      <workItem from="1707900204355" duration="198000" />
+      <workItem from="1707900778829" duration="10399000" />
+      <workItem from="1707937550335" duration="10970000" />
+      <workItem from="1707949091663" duration="48000" />
+      <workItem from="1707982385179" duration="21706000" />
+      <workItem from="1708076404048" duration="339000" />
+      <workItem from="1708076858051" duration="5077000" />
+      <workItem from="1708260691659" duration="7702000" />
+      <workItem from="1708295067117" duration="2050000" />
+      <workItem from="1708336176587" duration="2190000" />
+      <workItem from="1708358946339" duration="44000" />
+    </task>
+    <task id="LOCAL-00001" summary="bonne nuit.">
+      <option name="closed" value="true" />
+      <created>1707859210459</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707859210459</updated>
+    </task>
+    <task id="LOCAL-00002" summary="bonne nuit.">
+      <option name="closed" value="true" />
+      <created>1707949128299</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707949128299</updated>
+    </task>
+    <task id="LOCAL-00003" summary="bonne nuit.">
+      <option name="closed" value="true" />
+      <created>1708298430444</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708298430444</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bonne nuit." />
+    <option name="LAST_COMMIT_MESSAGE" value="bonne nuit." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
+    <option name="historyDtoById">
+      <map>
+        <entry key="052212">
+          <value>
+            <ChatHistoryModel>
+              <option name="contextFilesPaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/main/java/Clases/Tablero.java" />
+                </list>
+              </option>
+              <option name="id" value="052212" />
+              <option name="initiateTms" value="1707907461320" />
+              <option name="request" value="devuelvePieza(mov.getPosInicial()).getColor().equals(&quot;blanco&quot;) &amp;&amp; mov.saltoVertical() == -1 QUE SIGNIFICA ESTO" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="La expresión `devuelvePieza(mov.getPosInicial()).getColor().equals(&quot;blanco&quot;) &amp;&amp; mov.saltoVertical() == -1` es una condición que verifica dos cosas:&#10;&#10;1. `devuelvePieza(mov.getPosInicial()).getColor().equals(&quot;blanco&quot;)`: Verifica si el color de la pieza en la posición inicial del movimiento es &quot;blanco&quot;. Esto se hace llamando al método `devuelvePieza()` para obtener la pieza en la posición inicial, luego llamando al método `getColor()` para obtener el color de la pieza y finalmente comparando si es igual a &quot;blanco&quot; usando el método `equals()`.&#10;&#10;2. `mov.saltoVertical() == -1`: Verifica si el salto vertical del movimiento es igual a -1. El salto vertical se calcula restando la fila final del movimiento con la fila inicial. Si el resultado es -1, significa que el movimiento es hacia abajo en el tablero.&#10;&#10;En resumen, esta condición verifica si la pieza en la posición inicial del movimiento es blanca y si el movimiento es hacia abajo en el tablero." />
+              <option name="responseFileName" value="" />
+              <option name="responseFilePath" value="" />
+              <option name="responseTms" value="1707907470605" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/main/java/Clases/Tablero.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="greeting">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="greeting" />
+              <option name="initiateTms" value="1707907452894" />
+              <option name="request" value="" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="&#10;Hello, I am Machinet AI - context aware chat, which can help you with your daily programming routine. How can I help?" />
+              <option name="responseTms" value="1707907454637" />
+            </ChatHistoryModel>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
