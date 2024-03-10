@@ -1,4 +1,4 @@
-package org.example.Peliculas.InsertFiles.Files;
+package org.example.Peliculas.InsertFiles.Files.com.softwarepeliculas.domain;
 
 public class Actor {
     private int edad;
@@ -6,10 +6,18 @@ public class Actor {
 
     private boolean esFamoso;
 
+
+
     public Actor() {
         this.edad = 20;
         this.nombreCompleto = "Adrian Saavedra";
         this.esFamoso = true;
+    }
+
+    public Actor(int edad, String nombreCompleto, boolean esFamoso) {
+        this.edad = edad;
+        this.nombreCompleto = nombreCompleto;
+        this.esFamoso = esFamoso;
     }
 
     public int getEdad() {

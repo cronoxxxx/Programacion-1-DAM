@@ -42,7 +42,7 @@ public class Files2 {
 
     private static void leerArchivoDeTexto(String archivoo){
 
-        try {
+        /*try {
             FileReader archivo = new FileReader(archivoo);
             BufferedReader bf = new BufferedReader(archivo);
             String linea;
@@ -52,6 +52,16 @@ public class Files2 {
             }
         }catch (IOException i){
             i.printStackTrace(System.out);
+        }*/
+        try {
+            FileReader fileReader = new FileReader(archivoo);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            for (String linea = bufferedReader.readLine(); linea != null; linea = bufferedReader.readLine()) {
+                System.out.println(linea);
+            }
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace(System.out);
         }
     }
 
