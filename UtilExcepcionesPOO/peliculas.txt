@@ -1,9 +1,12 @@
-Nombre: a
-Año: 1
+Nombre: Nemo
+Año: 1999
 Es Estreno: false
 Es Famosa: true
-Actor: Nombre completo: a,
+Actor: Nombre completo: Nemo,
 Edad: 1
 ¿Es famoso? true
+
+
+
 
 
