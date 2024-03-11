@@ -26,6 +26,7 @@ public class AccesoDatosImpl implements IAccesoDatos {
             }*/
             for (String contenido = entrada.readLine(); contenido != null; contenido = entrada.readLine()) {
                 System.out.println(contenido);
+
             }
             entrada.close();
         }catch (IOException err){
