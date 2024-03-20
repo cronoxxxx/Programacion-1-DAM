@@ -3,7 +3,6 @@ package dao;
 import common.CategoriaException;
 import domain.Palabra;
 
-import java.io.IOException;
 import java.util.List;
 
 public interface DaoPalabras {
@@ -16,10 +15,10 @@ public interface DaoPalabras {
     public List<Palabra> getPalabrasNivelCategoria(int nivel, String categoria);
     public List<Palabra> getPalabrasNivel (int nivel);
     public List<Palabra> getPalabrasOrdenadas(boolean ascendente);
-    public boolean modificarCategoria(int id, String categoria);
+    public boolean modificarCategoria(int id, String categoria) throws CategoriaException;
     public boolean modificarPalabra(int id, String incognita);
-    public void eliminarPalabra(Palabra Palabra) ;
-    public void eliminarPalabra(int id) ;
+    public boolean eliminarPalabra(Palabra Palabra) ;
+    public boolean eliminarPalabra(int id) ;
     //personal 2
     public void idOK(int id )throws IDException;
     }

@@ -1,6 +1,7 @@
 package service;
 
 import common.CategoriaException;
+import dao.IDException;
 import domain.Palabra;
 
 import java.io.IOException;
@@ -28,12 +29,14 @@ public interface IGestionPalabras {
     public boolean modificarCategoria(int id, String categoria) throws CategoriaException;
     public boolean modificarPalabra(int id, String incognita);
 
-    public List<Palabra> getListaPalabrasCategoria();
-    public void eliminarPalabra(Palabra Palabra);
+    public List<Palabra> getListaPalabrasCategoria(String categoria);
+    public boolean eliminarPalabra(Palabra Palabra);
+    public boolean eliminarPalabra (int id);
     public void crearFicheros()throws IOException;
     public boolean cargarFichero() throws IOException;
     public boolean escribirFichero();
     public boolean escribirFicheroBinario();
     public boolean cargarFicheroBinario();
+    void idOK(int id) throws IDException;
 
 }

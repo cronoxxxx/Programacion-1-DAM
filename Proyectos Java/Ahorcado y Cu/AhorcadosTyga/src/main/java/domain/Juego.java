@@ -10,7 +10,7 @@ public class Juego {
     private Palabra aAdivinar; //o el String directamente
     private Jugador jugador;
     private int fallos;
-    private char[] adivinadas;
+    private char[] palabraChar;
 
     public Juego(Palabra aAdivinar, Jugador jugador) {
         this.aAdivinar = aAdivinar;
@@ -41,8 +41,10 @@ public class Juego {
         Palabras palabras = new Palabras();
         this.aAdivinar = palabras.getPalabraDificultadCategoria(dificutad, categoria);
         //paso la palabra a caracteres, uso el metodo toCharArray para ello, las ire implementando poco a poco
-        adivinadas = aAdivinar.getIncognita().toCharArray();
+        palabraChar = aAdivinar.getIncognita().toCharArray();
     }
+
+
 
     public Palabra getaAdivinar() {
         return aAdivinar;
@@ -73,16 +75,17 @@ public class Juego {
         this.fallos = fallos + 1;
     }
 
-    public char[] getAdivinadas() {
-        return adivinadas;
+    public char[] getPalabraChar() {
+        return palabraChar;
     }
 
-    public void setAdivinadas(char[] adivinadas) {
-        this.adivinadas = adivinadas;
+    public void setpalabraChar(char[] palabraChar) {
+        this.palabraChar = palabraChar;
     }
 
     public void pintarTablero() {
         switch (fallos) {
+            case 0 -> System.out.println(Constantes.FALLOCERO);
             case 1 -> System.out.println(Constantes.FALLO1);
             case 2 -> System.out.println(Constantes.FALLO2);
             case 3 -> System.out.println(Constantes.FALLO3);
@@ -96,8 +99,8 @@ public class Juego {
 
     public void comprobar(char letra) {
         boolean comprobada = false;
-        for (int i = 0; i < adivinadas.length; i++) {
-            if (adivinadas[i]==letra || adivinadas[i]==letra+32 || adivinadas[i]==letra-32){ //EN MAYUSCULA, MINISCULA O WHATEVER
+        for (int i = 0; i < palabraChar.length; i++) {
+            if (palabraChar[i]==letra || palabraChar[i]==letra+32 || palabraChar[i]==letra-32){ //EN MAYUSCULA, MINISCULA O WHATEVER
                 comprobada = true;
                 //System.out.println("¡LA HAS PILLADO!");
                 System.out.println(Constantes.LA_HAS_PILLADO);
@@ -108,31 +111,38 @@ public class Juego {
 
 
     //SI LA PALABRA ES IGUAL A ALGUNOS DE LOS INTENTOS DEL JUGADOR, QUE CONTIENE LAS LETRAS QUE EL JUGADOR VA AÑADIENDO, SE IGUALA AL CHAR CREADO CON LA LONHGITUD DE LA PALABRA
-    public void pintarAdivinadas (){
-        char [] obtenida = new char [aAdivinar.getIncognita().length()]; //longitud de la palabra
-        for (int i = 0; i < adivinadas.length; i++) { //evalua si alguna de las letras ingresadas por el usuario es igual a alguna letra de la palabra original
-            for (int j = 0; j < jugador.getIntentos().size(); j++) {
-                if (adivinadas[i]==jugador.getIntentos().get(j) ||adivinadas[i]==jugador.getIntentos().get(j)+32 || adivinadas[i]==jugador.getIntentos().get(j)-32 ){
-                    obtenida[i]=adivinadas[i];
+    public void pintarpalabraChar() {
+        char[] obtenida = new char[aAdivinar.getIncognita().length()];
+
+        for (int i = 0; i < palabraChar.length; i++) {
+            if (palabraChar[i] == ' ') {
+                obtenida[i] = ' ';
+            } else if (palabraChar[i] == '-') {
+                obtenida[i] = '-';
+            } else {
+                for (int j = 0; j < jugador.getIntentos().size(); j++) {
+                    if (palabraChar[i]==jugador.getIntentos().get(j) ||palabraChar[i]==jugador.getIntentos().get(j)+32 || palabraChar[i]==jugador.getIntentos().get(j)-32 ){
+                        obtenida[i]=palabraChar[i];
+                    }
                 }
-            }
-            if (obtenida [i]==0 ){ //null
-                obtenida[i]=  95; //codigo ascii de _____
+                if (obtenida [i]==0 ){ //null
+                    obtenida[i]= 95; //codigo ascii de _____
+                }
+
             }
         }
-        System.out.println(Constantes.ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR + Arrays.toString(obtenida)); //solo pone los caracteres adivinados
 
-
-
+        System.out.println(Constantes.ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR + Arrays.toString(obtenida));
     }
 
+
     public void pintarFallidas (){ //getter de fallidos
-        if (getFallos()!=0){
+        if (fallos!=0){
             System.out.println(Constantes.ERRORES);
             for (int i = 0; i < jugador.getIntentos().size(); i++) {
                 boolean esta = false;
-                for (int j = 0; j < adivinadas.length; j++) {
-                    if (jugador.getIntentos().get(i)==adivinadas[j] || jugador.getIntentos().get(i)==adivinadas[j]+32 || jugador.getIntentos().get(i)==adivinadas[j]-32){
+                for (int j = 0; j < palabraChar.length; j++) {
+                    if (jugador.getIntentos().get(i)==palabraChar[j] || jugador.getIntentos().get(i)==palabraChar[j]+32 || jugador.getIntentos().get(i)==palabraChar[j]-32){
                         esta=true;
                     }
                 }
@@ -148,7 +158,7 @@ public class Juego {
             if (jugador.anyadirLetra(letra)){//SI SE AÑADE LA PALABRA POR PRIMERA VEZ, SE EVALUA
                 comprobar(letra);
                 pintarTablero();
-                pintarAdivinadas();
+                pintarpalabraChar();
                 pintarFallidas();
             } else {
                 System.out.println(Constantes.EL_CARACTER_YA_HA_SIDO_INTRODUCIDO_AGREGUE_UNO_DISTINTO);
@@ -157,29 +167,42 @@ public class Juego {
             System.out.println(Constantes.CARACTER_INVALIDO);
         }
     }
-    public int fin (){
+    public int fin() {
         int fin = 0;
-        if (fallos==7){
-            fin=1;
-        } else {
-            char []obtenido = new char[aAdivinar.getIncognita().length()];
-            for (int i = 0; i < adivinadas.length; i++) {
-                boolean esta = false;
-                for (int j = 0; j < jugador.getIntentos().size(); j++) {
-                    if (adivinadas[i]==jugador.getIntentos().get(j) || adivinadas[i]==jugador.getIntentos().get(j)+32 || adivinadas[i]==jugador.getIntentos().get(j)-32){
-                        esta=true;
+        boolean palabraCompleta = true;
+
+        char[] obtenido = new char[aAdivinar.getIncognita().length()];
+
+        for (int i = 0; i < palabraChar.length; i++) {
+            if (palabraChar[i] == ' ') {
+                obtenido[i] = ' ';
+            }else if (palabraChar[i] == '-') {
+                obtenido[i] = '-';
+            }
+            else {
+                boolean encontrada = false;
+                for (char intento : jugador.getIntentos()) {
+                    if (palabraChar[i] == intento || palabraChar[i] == intento + 32 || palabraChar[i] == intento - 32) {
+                        obtenido[i] = palabraChar[i];
+                        encontrada = true;
                     }
                 }
-            }
-            fin = 2;
-            for (int i = 0; i < obtenido.length; i++) {
-                if (obtenido[i]==0){
-                    fin = 0;
+                if (!encontrada) {
+                    obtenido[i] = '_';
+                    palabraCompleta = false;
                 }
             }
         }
+
+        if (palabraCompleta) {
+            fin = 2;
+        } else if (fallos == 7) {
+            fin = 1;
+        }
+
         return fin;
     }
+
 
 
 }

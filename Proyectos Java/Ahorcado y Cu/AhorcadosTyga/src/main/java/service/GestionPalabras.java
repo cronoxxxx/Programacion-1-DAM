@@ -3,6 +3,7 @@ package service;
 import common.CategoriaException;
 import dao.DaoPalabras;
 import dao.DaoPalabrasImplementacion;
+import dao.IDException;
 import domain.Palabra;
 
 import java.io.IOException;
@@ -23,70 +24,79 @@ public class GestionPalabras implements IGestionPalabras {
 
     @Override
     public boolean isEmptyPalabrasList() {
-        return false;
+        return daoPalabras.isEmptyPalabrasList();
     }
 
     @Override
     public List<Palabra> getListaPalabras() {
-        return null;
+        return daoPalabras.getListaDePalabras();
     }
 
     @Override
-    public boolean insertarPalabra(Palabra Palabra) {
-        return false;
+    public boolean insertarPalabra(Palabra palabra) {
+        return daoPalabras.insertarPalabra(palabra);
     }
 
     @Override
     public boolean insertarPalabra(int id, int level, String incognita, String categoria) throws CategoriaException {
-        return false;
+        return daoPalabras.insertarPalabra(id,level,incognita,categoria);
     }
 
 
     @Override
     public List<Palabra> listar(String categoria) {
-        return null;
+        return daoPalabras.getPalabrasCategoria(categoria);
     }
 
     @Override
     public List<Palabra> listar(int nivel, String categoria) {
-        return null;
+        return daoPalabras.getPalabrasNivelCategoria(nivel,categoria);
     }
 
     @Override
     public List<Palabra> listar(int nivel) {
-        return null;
+        return daoPalabras.getPalabrasNivel(nivel);
     }
 
     @Override
     public List<Palabra> listarPalabras(boolean ascendente) {
-        return null;
+        return daoPalabras.getPalabrasOrdenadas(ascendente);
     }
 
     @Override
     public boolean modificarCategoria(int id, String categoria) throws CategoriaException {
-        return false;
+        return daoPalabras.modificarCategoria(id,categoria);
     }
 
     @Override
     public boolean modificarPalabra(int id, String incognita) {
-        return false;
+        return daoPalabras.modificarPalabra(id,incognita);
+
+
     }
 
       @Override
-    public List<Palabra> getListaPalabrasCategoria() {
-        return null;
+    public List<Palabra> getListaPalabrasCategoria(String categoria) {
+        return daoPalabras.getPalabrasCategoria(categoria);
     }
 
     @Override
-    public void eliminarPalabra(Palabra Palabra) {
-
+    public boolean eliminarPalabra(Palabra Palabra) {
+        return daoPalabras.eliminarPalabra(Palabra);
     }
-
 
     @Override
-    public void crearFicheros() throws IOException {
-
+    public boolean eliminarPalabra(int id) {
+        return daoPalabras.eliminarPalabra(id);
     }
+    @Override
+    public void idOK(int id) throws IDException {
+        daoPalabras.idOK(id);
+    }
+
+//PARA DESPUES
+    @Override
+    public void crearFicheros() throws IOException {}
 
     @Override
     public boolean cargarFichero() throws IOException {
@@ -107,4 +117,6 @@ public class GestionPalabras implements IGestionPalabras {
     public boolean cargarFicheroBinario() {
         return false;
     }
+
+
 }

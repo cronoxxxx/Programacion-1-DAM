@@ -1,6 +1,7 @@
 package dao;
 
 import common.CategoriaException;
+import common.Constantes;
 import domain.Palabra;
 
 import java.util.*;
@@ -77,34 +78,34 @@ public class DaoPalabrasImplementacion implements DaoPalabras {
     }
 
     @Override
-    public void eliminarPalabra(Palabra Palabra) {
+    public boolean eliminarPalabra(Palabra Palabra) {
         boolean eliminado = false;
         for (int i = 0; i < lista.getListaPalabras().size() && !eliminado; i++) {
-            if (lista.getListaPalabras().get(i)==Palabra){
+            if (Objects.equals(lista.getListaPalabras().get(i).getIncognita(), Palabra.getIncognita()) && Objects.equals(lista.getListaPalabras().get(i).getCategoria(), Palabra.getCategoria())){
                 lista.getListaPalabras().remove(i);
-                i=lista.getListaPalabras().size();
                 eliminado=true;
             }
         }
         if (!eliminado){
-            System.out.println("No se ha encontrado la palabra");
+            System.out.println(Constantes.NO_SE_HA_ENCONTRADO_LA_PALABRA);
         }
 
+        return eliminado;
     }
 
     @Override
-    public void eliminarPalabra(int id) {
+    public boolean eliminarPalabra(int id) {
         boolean eliminado = false;
         for (int i = 0; i < lista.getListaPalabras().size() && !eliminado; i++) {
             if (lista.getListaPalabras().get(i).getId()==id){
                 lista.getListaPalabras().remove(i);
-                i=lista.getListaPalabras().size();
                 eliminado=true;
             }
         }
         if (!eliminado){
-            System.out.println("No se ha encontrado la palabra");
+            System.out.println(Constantes.NO_SE_HA_ENCONTRADO_LA_PALABRA);
         }
+        return eliminado;
     }
 
     @Override
@@ -115,25 +116,25 @@ public class DaoPalabrasImplementacion implements DaoPalabras {
                 encontrado = true;
             }
         }
-        if (!encontrado){
-            System.out.println("No se ha encontrado la palabra");
-        } else {
+        if (encontrado){
+            //System.out.println("No se ha encontrado la palabra");
             throw new IDException();
         }
     }
 
     @Override
-    public boolean modificarCategoria(int id, String categoria) {
+    public boolean modificarCategoria(int id, String categoria)  {
         boolean cambio = false;
         for (int i = 0; i < lista.getListaPalabras().size() && !cambio; i++) {
             if (lista.getListaPalabras().get(i).getId()==id){
+
                 try {
                     lista.getListaPalabras().get(i).setCategoria(categoria);
+                    cambio=true;
                 } catch (CategoriaException e) {
-                    throw new RuntimeException(e);
+                    System.out.println(e.getMessage());
+
                 }
-                cambio=true;
-                i=lista.getListaPalabras().size();
             }
         }
         return cambio;
@@ -146,7 +147,7 @@ public class DaoPalabrasImplementacion implements DaoPalabras {
             if (lista.getListaPalabras().get(i).getId()==id){
                 lista.getListaPalabras().get(i).setIncognita(incognita);
                 cambio=true;
-                i=lista.getListaPalabras().size(); //rompe bucle
+                 //rompe bucle
             }
         }
         return cambio;

@@ -5,6 +5,7 @@ import common.CategoriaException;
 import common.Comprobacion;
 import dao.Palabras;
 
+import java.util.Objects;
 import java.util.StringJoiner;
 
 public class Palabra implements Comparable<Palabra> {
@@ -45,13 +46,13 @@ public class Palabra implements Comparable<Palabra> {
         //asignar nivel 1 para caracteres mayores de 7, 0 para los de menor
         this.level = asignarNivel(incognita);
         Comprobacion.categoriaOk(categoria);
-        this.incognita = incognita;
+        this.incognita = incognita.trim();
         this.categoria = categoria;
     }
 
     public int asignarNivel(String incognita){
         int nivel = 0;
-        if (categoria.length()>=7){
+        if (incognita.length()>=6){
             nivel =1;
         }
         return nivel;
@@ -94,7 +95,7 @@ public class Palabra implements Comparable<Palabra> {
     }
 
     public String getIncognita() {
-        return incognita;
+        return incognita.trim();
     }
 
     public void setIncognita(String incognita) {
@@ -107,6 +108,19 @@ public class Palabra implements Comparable<Palabra> {
 
     public static void setAutonumerico(int autonumerico) {
         Palabra.autonumerico = autonumerico;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Palabra palabra = (Palabra) o;
+        return Objects.equals(incognita, palabra.incognita);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, level, incognita, categoria);
     }
 
     @Override
