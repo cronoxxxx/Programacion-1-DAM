@@ -1,14 +1,11 @@
 package dao;
 
 
-import common.Categoria;
-import common.CategoriaException;
+import common.*;
 import domain.Palabra;
 import net.datafaker.Faker;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class Palabras {
     private final ArrayList<Palabra> palabras;
@@ -17,15 +14,17 @@ public class Palabras {
         HashSet<Palabra> hs = new HashSet<>();
         //try catch
         Faker fake = new Faker();
-            for (int i = 0; i <maxLength; i++) {
+            for (int i = 0; i <maxLength;i++) {
                 try {
-                    switch (i / 200) {
-                        case 0-> hs.add(new Palabra(fake.pokemon().name().strip(), Categoria.pokemon.name()));
-                        case 1-> hs.add(new Palabra(fake.southPark().characters().strip(), Categoria.southPark.name()));
-                        case 2-> hs.add(new Palabra(fake.address().country().strip(), Categoria.address.name()));
-                        case 3-> hs.add(new Palabra(fake.football().players().strip(), Categoria.football.name()));
-                        default-> hs.add(new Palabra(fake.starWars().character().strip(), Categoria.starWars.name()));
+                    int categoryIndex = (int)(Math.random() * 5)+1;
+                    switch (categoryIndex) {
+                        case 1-> hs.add(new Palabra(fake.pokemon().name(), Categoria.pokemon.name()));
+                        case 2-> hs.add(new Palabra(fake.southPark().characters(), Categoria.southPark.name()));
+                        case 3-> hs.add(new Palabra(fake.address().country(), Categoria.address.name()));
+                        case 4-> hs.add(new Palabra(fake.football().players(), Categoria.football.name()))  ;
+                        default-> hs.add(new Palabra(fake.starWars().character(), Categoria.starWars.name()));
                     }//System.out.println(hs.get(i).toStringFile()); //separador con comas para el archivo
+                    // Verificar duplicados y decrementar el índice si es necesario
                 }catch (CategoriaException e){
                     System.out.println(e.getMessage());
                     i--;

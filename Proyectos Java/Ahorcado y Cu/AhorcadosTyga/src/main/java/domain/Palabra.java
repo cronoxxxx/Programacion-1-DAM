@@ -31,24 +31,26 @@ public class Palabra implements Comparable<Palabra> {
         Comprobacion.categoriaOk(categoria);
         this.categoria = categoria;
     }
-    /*public Palabra(int level, String incognita, String categoria) throws CategoriaException {
-        this.id = Palabras.getAutonumerico();
-        Palabras.setAutonumerico(Palabras.getAutonumerico()+1);
-        this.level = level;
+    public Palabra(int level, String incognita, String categoria) throws CategoriaException {
+        this.id=level;
+        this.level = asignarNivel(incognita);
+        Comprobacion.categoriaOk(categoria);
         this.incognita = incognita;
-
         this.categoria = categoria;
-    }*/
+    }
 
     public Palabra(String incognita, String categoria)throws CategoriaException  {
         this.id=autonumerico;
         autonumerico++;
-        //asignar nivel 1 para caracteres mayores de 7, 0 para los de menor
         this.level = asignarNivel(incognita);
         Comprobacion.categoriaOk(categoria);
         this.incognita = incognita.trim();
         this.categoria = categoria;
     }
+
+
+
+
 
     public int asignarNivel(String incognita){
         int nivel = 0;
@@ -115,13 +117,15 @@ public class Palabra implements Comparable<Palabra> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Palabra palabra = (Palabra) o;
-        return Objects.equals(incognita, palabra.incognita);
+        return Objects.equals(incognita, palabra.incognita) &&
+                Objects.equals(categoria, palabra.categoria);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, level, incognita, categoria);
+        return Objects.hash(incognita, categoria);
     }
+
 
     @Override
     public int compareTo(Palabra o) {

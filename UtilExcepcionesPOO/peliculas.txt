@@ -1,9 +1,12 @@
-Nombre: a
-Año: 1
-Es Estreno: true
-Es Famosa: true
-Actor: Nombre completo: a,
+Nombre: a;Año: 1;Es Estreno: false;Es Famosa: true;Actor: Nombre completo: a,
 Edad: 1
 ¿Es famoso? true
 
+Nombre: a;Año: 1;Es Estreno: true;Es Famosa: true;Actor: Nombre completo: a,
+Edad: 1
+¿Es famoso? true
+
+Nombre: a;Año: 1;Es Estreno: true;Es Famosa: true;Actor: Nombre completo: a,
+Edad: 1
+¿Es famoso? true
 

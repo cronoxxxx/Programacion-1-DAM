@@ -115,12 +115,12 @@ public class Juego {
         char[] obtenida = new char[aAdivinar.getIncognita().length()];
 
         for (int i = 0; i < palabraChar.length; i++) {
-            if (palabraChar[i] == ' ') {
+            if (palabraChar[i] == ' ') { //Si la palabra es un caracter vacio, la obtenida introduce este valor
                 obtenida[i] = ' ';
             } else if (palabraChar[i] == '-') {
                 obtenida[i] = '-';
             } else {
-                for (int j = 0; j < jugador.getIntentos().size(); j++) {
+                for (int j = 0; j < jugador.getIntentos().size(); j++) { //evalua las letras que va añadiendo el jugador
                     if (palabraChar[i]==jugador.getIntentos().get(j) ||palabraChar[i]==jugador.getIntentos().get(j)+32 || palabraChar[i]==jugador.getIntentos().get(j)-32 ){
                         obtenida[i]=palabraChar[i];
                     }

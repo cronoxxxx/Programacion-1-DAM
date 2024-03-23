@@ -220,7 +220,6 @@ public class GestionDiccionario {
                 num = lector.nextInt();
                 caracterValido = true;
             } catch (InputMismatchException in) {
-                lector.next();
                 System.out.println(Constantes.CARACTER_NO_VALIDO_SOLO_SE_PERMITEN_NUMEROS_INTRODUZCA_UN_CARACTER_VALIDO);
                 System.out.println(in.getMessage());
                 lector.nextLine();

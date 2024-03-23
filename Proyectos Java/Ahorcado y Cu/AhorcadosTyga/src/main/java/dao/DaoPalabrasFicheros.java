@@ -29,7 +29,8 @@ public class DaoPalabrasFicheros {
             while (sc.hasNextLine()) {
                 String cadena = sc.nextLine();
                 String[] trozos = cadena.split(";");
-                //crear Palabra y añadirlo a auxiliar.
+
+
 
             };
         } catch (FileNotFoundException ex) {

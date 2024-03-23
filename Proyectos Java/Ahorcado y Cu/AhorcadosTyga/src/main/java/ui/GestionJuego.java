@@ -37,13 +37,13 @@ public class GestionJuego {
             }
         } while (!valid);
         //proff
-        System.out.println(juego.getaAdivinar());
+        //System.out.println(juego.getaAdivinar());
         juego.pintarTablero();
         juego.pintarpalabraChar();
         do {
             System.out.println(Constantes.INGRESA_LA_PALABRA_A_ADIVINAR);
-            char arcter = entrada.next().charAt(0);
-            juego.jugada(arcter);
+            char acter = entrada.next().charAt(0);
+            juego.jugada(acter);
         } while (juego.fin() == 0);
         if (juego.fin() == 1) {
             System.out.println(Constantes.HAS_GASTADO_TODOS_TUS_INTENTOS_GAME_OVER);

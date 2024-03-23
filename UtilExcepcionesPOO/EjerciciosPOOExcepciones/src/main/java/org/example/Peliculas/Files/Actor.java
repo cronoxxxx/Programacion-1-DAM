@@ -38,6 +38,6 @@ public class Actor {
 
     @Override
     public String toString() {
-        return String.format("Nombre completo: %s,\nEdad: %d\n¿Es famoso? %b",nombreCompleto,edad,esFamoso);
+        return String.format("Nombre de actor: %s;Edad: %d;¿Es famoso? %b",nombreCompleto,edad,esFamoso);
     }
 }

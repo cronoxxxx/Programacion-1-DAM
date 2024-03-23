@@ -59,16 +59,16 @@ public class Constantes {
     public static final String CONTRASENA_INCORRECTA_INGRESE_UNA_VALIDA ="Contraseña incorrecta, ingrese una válida";
 
     public static final String INTRODUZCA_SU_NOMBRE = "Introduzca su nombre";
-    public static final String INTRODUZCA_LA_DIFICULTAD = "Introduzca la dificultad";
+    public static final String INTRODUZCA_LA_DIFICULTAD = "Introduzca la dificultad\nPresiona [0] para palabras cortas || Presiona [1] para palabras largas";
     public static final String INTRODUZCA_LA_CATEGORIA = "Introduzca la categoria";
 
     public static final String MENU_JUGADOR ="Opciones:\n1.INICIAR PARTIDA NUEVA\n2.RECUPERAR PARTIDA ANTERIOR";
 
-    public static final String VALORES_JUEGO_NO_VALIDO ="Valores de juego no válido";
+    public static final String VALORES_JUEGO_NO_VALIDO ="Valores de juego no válidos";
     public static final String INGRESA_LA_PALABRA_A_ADIVINAR = "Ingresa la palabra a adivinar";
 
     public static final String HAS_GASTADO_TODOS_TUS_INTENTOS_GAME_OVER = "Has gastado todos tus intentos. GAME OVER ! ! !";
     public static final String ENHORABUENA_LO_HAS_LOGRADO = "Enhorabuena, lo has logrado";
 
-    public static final String MEEEEEEENUUUUU_PRIIIINCIIIPAAAL__UIIIIII = "\nBienvenido al ahorcadosxD, identifícate:\n1. Administrador\n2.Jugador\n3.Salir del ahorcados";
+    public static final String MEEEEEEENUUUUU_PRIIIINCIIIPAAAL__UIIIIII = "\tBienvenido al ahorcadosxD, identifícate:\n1. Administrador\n2.Jugador\n3.Salir del ahorcados";
 }
