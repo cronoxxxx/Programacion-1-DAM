@@ -1,10 +1,8 @@
 package service;
 
-import common.CategoriaException;
-import dao.DaoPalabras;
-import dao.DaoPalabrasImplementacion;
-import dao.IDException;
-import domain.Palabra;
+import common.*;
+import dao.*;
+import domain.*;
 
 import java.io.IOException;
 import java.util.List;
