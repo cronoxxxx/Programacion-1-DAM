@@ -217,18 +217,22 @@ public class GestionPersonal {
     }
 
     public void ordenarTrabajadoresPorIncorporacion() {
-        Trabajador t;
-        for (int i = 0; i < trabajadores.length; i++) {
-            for (int j = i+1; j < trabajadores.length-1; j++) {
-                if (trabajadores[i]!=null && trabajadores[j]!=null)
-                if (trabajadores[i].compareTo(trabajadores[j])>0){
-                    t = trabajadores[i];
-                    trabajadores[i]=trabajadores[j];
-                    trabajadores[j]=t;
-                }
+       boolean ordenado;
+        do {
+            int n = trabajadores.length;
+            ordenado = false;
+            for (int i = 0; i < n-1; i++) {
+                    if (trabajadores[i]!=null && trabajadores[i+1]!=null )
+                        if (trabajadores[i].compareTo(trabajadores[i+1])>0){
+                            Trabajador t = trabajadores[i];
+                            trabajadores[i]=trabajadores[i+1];
+                            trabajadores[i+1]=t;
+                            ordenado=true;
+                        }
+                    n--;
             }
+        } while (!ordenado);
 
-        }
 
         for (int i = 0; i < trabajadores.length; i++) {
             if (trabajadores[i]!=null){

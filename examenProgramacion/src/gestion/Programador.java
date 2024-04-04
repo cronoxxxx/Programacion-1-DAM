@@ -28,10 +28,7 @@ public class Programador extends Trabajador implements Comparable<Trabajador>{
                 j = (int) (Math.random()*recorrer.length);
                 lenguajes[i]= recorrer[j];
             }
-
-
         }
-
         this.sueldoReal = calcularSueldo((int)(Math.random()*31)+1);
     }
 
