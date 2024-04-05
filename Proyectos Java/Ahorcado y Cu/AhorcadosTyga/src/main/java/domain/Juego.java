@@ -132,7 +132,7 @@ public class Juego {
             }
         }
 
-        System.out.println(Constantes.ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR + Arrays.toString(obtenida));
+        System.out.println(Constantes.ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR + Arrays.toString(obtenida).replace(","," ").replace("[","").replace("]",""));
     }
 
 
@@ -197,6 +197,7 @@ public class Juego {
         if (palabraCompleta) {
             fin = 2;
         } else if (fallos == 7) {
+
             fin = 1;
         }
 

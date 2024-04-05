@@ -27,7 +27,60 @@ public class Jugador {
     public void setIntentos(List<Character> intentos) {
         this.intentos = intentos;
     }
-    public boolean anyadirLetra (char letra){
+
+    public boolean anyadirLetra(char letra) {
+        boolean agregada = false;
+        if (!intentos.contains(letra)) {
+            intentos.add(letra);
+            agregada = true;
+        }
+        return agregada;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*public boolean anyadirLetra (char letra){
         boolean existente = false,agregada=false;
         for (int i = 0; i < intentos.size(); i++) {
             if (intentos.get(i)==letra){
@@ -40,5 +93,4 @@ public class Jugador {
         }
         return agregada;
 
-    }
-}
+    }*/

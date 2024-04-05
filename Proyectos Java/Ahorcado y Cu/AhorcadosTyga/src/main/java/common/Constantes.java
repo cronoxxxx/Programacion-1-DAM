@@ -25,7 +25,9 @@ public class Constantes {
 
     public static final String OPCION5="5. Salir";
     public static final String LA_HAS_PILLADO = "¡LA HAS PILLADO!";
-    public static final String ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR = "Esta es la palabra que tienes que adivinar";
+    public static final String ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR = "Esta es la palabra que tienes que adivinar: ";
+
+    public static final String ESTA_ERA_LA_PALABRA_QUE_TENIAS_QUE_ADIVINAR = "Esta era la palabra que tenias que adivinar: ";
     public static final String ERRORES = "Errores";
     public static final String CARACTER_INVALIDO="Caracter inválido";
     public static final String ID_INVALIDO="ID inválido";
