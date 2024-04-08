@@ -259,7 +259,6 @@ public class GestionPersonal {
                 if (trabajadores[i]!=null)
                     if (trabajadores[i].nombre.strip().equalsIgnoreCase(nombre[j]) || trabajadores[i].nombre.strip().equalsIgnoreCase(jefe)){
                         suma+= trabajadores[i].sueldoDiario * 7;
-
                     }
 
 
