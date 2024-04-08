@@ -34,7 +34,7 @@ public interface IGestionPalabras {
     public boolean eliminarPalabra (int id);
     public void crearFicheros()throws IOException;
     public boolean cargarFichero() throws IOException;
-    public boolean escribirFichero();
+    public boolean escribirFichero() throws IOException;
     public boolean escribirFicheroBinario();
     public boolean cargarFicheroBinario();
     void idOK(int id) throws IDException;

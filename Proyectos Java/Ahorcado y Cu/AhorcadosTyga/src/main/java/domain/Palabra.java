@@ -72,7 +72,7 @@ public class Palabra implements Comparable<Palabra> {
 
     @Override
     public String toString() {
-        return String.format("ID: %d\nNivel: %d\nIncognita %s\nCategoria: %s",id,level,incognita,categoria);
+        return String.format("ID: %d;Nivel: %d;Incognita %s;Categoria: %s\n",id,level,incognita,categoria);
     }
     public String toStringFile() {
         return id + ";" + level +

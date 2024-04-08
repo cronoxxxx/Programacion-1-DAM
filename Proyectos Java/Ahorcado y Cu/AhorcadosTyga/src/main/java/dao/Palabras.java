@@ -7,7 +7,7 @@ import net.datafaker.Faker;
 
 import java.util.*;
 
-public class Palabras {
+public class Palabras extends ArrayList<Palabra> {
     private final ArrayList<Palabra> palabras;
     private static final int maxLength = 1000;
     public Palabras() {
@@ -22,6 +22,7 @@ public class Palabras {
                         case 2-> hs.add(new Palabra(fake.southPark().characters(), Categoria.southPark.name()));
                         case 3-> hs.add(new Palabra(fake.address().country(), Categoria.address.name()));
                         case 4-> hs.add(new Palabra(fake.football().players(), Categoria.football.name()))  ;
+                        case 5 -> hs.add (new Palabra(fake.animal().name(),Categoria.animal.name()));
                         default-> hs.add(new Palabra(fake.starWars().character(), Categoria.starWars.name()));
                     }//System.out.println(hs.get(i).toStringFile()); //separador con comas para el archivo
                     // Verificar duplicados y decrementar el índice si es necesario

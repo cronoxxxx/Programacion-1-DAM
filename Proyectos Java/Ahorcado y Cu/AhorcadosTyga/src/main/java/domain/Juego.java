@@ -126,7 +126,7 @@ public class Juego {
                     }
                 }
                 if (obtenida [i]==0 ){ //null
-                    obtenida[i]= 95; //codigo ascii de _____
+                    obtenida[i]= 95; //codigo ascii de _______
                 }
 
             }
@@ -195,7 +195,7 @@ public class Juego {
         }
 
         if (palabraCompleta) {
-            fin = 2;
+            fin = 2;//cuando ganas
         } else if (fallos == 7) {
 
             fin = 1;

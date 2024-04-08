@@ -4,6 +4,7 @@ import common.*;
 import dao.*;
 import domain.*;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
@@ -103,6 +104,11 @@ public class GestionPalabras implements IGestionPalabras {
 
     @Override
     public boolean escribirFichero() {
+        try {
+            return DaoPalabrasFicheros.escribirFichero(daoPalabras.getPalabrasOrdenadas(true),"Diccionario");
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
         return false;
     }
 
