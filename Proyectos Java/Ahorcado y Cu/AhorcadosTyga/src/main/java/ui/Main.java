@@ -16,11 +16,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args)  {
-        try {
             PruebaTotal.iniciarMenuJuego();
-        } catch (CategoriaException e) {
-            throw new RuntimeException(e);
-        }
     }
 }
 
