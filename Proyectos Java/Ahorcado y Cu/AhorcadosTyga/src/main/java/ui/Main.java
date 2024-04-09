@@ -17,15 +17,6 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args)  {
         try {
-            DaoPalabrasFicheros.crearFicheros();
-            System.out.println("Creado con exito");
-            DaoPalabrasFicheros.leerFichero(DaoPalabrasFicheros.FICHERO);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-
-        try {
             PruebaTotal.iniciarMenuJuego();
         } catch (CategoriaException e) {
             throw new RuntimeException(e);

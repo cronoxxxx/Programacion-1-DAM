@@ -4,6 +4,7 @@ import common.*;
 import dao.*;
 import domain.*;
 
+import java.io.EOFException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
@@ -102,6 +103,8 @@ public class GestionPalabras implements IGestionPalabras {
         return false;
     }
 
+
+
     @Override
     public boolean escribirFichero() {
         try {
@@ -112,14 +115,28 @@ public class GestionPalabras implements IGestionPalabras {
         return false;
     }
 
-    @Override
-    public boolean escribirFicheroBinario() {
+    public boolean escribirFichero2(GestionPalabras gestionPalabras) {
+        try {
+            return DaoPalabrasFicheros.escribirFichero(gestionPalabras.listarPalabras(true),DaoPalabrasFicheros.FICHERO);
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
         return false;
     }
 
     @Override
-    public boolean cargarFicheroBinario() {
-        return false;
+    public void leerFichero() throws IOException {
+        DaoPalabrasFicheros.leerFile(DaoPalabrasFicheros.FICHERO);
+    }
+
+    @Override
+    public boolean escribirFicheroBinario(Juego j) {
+        return DaoPalabrasFicheros.escribirFicheroBinario(j);
+    }
+
+    @Override
+    public Juego cargarFicheroBinario()  {
+        return DaoPalabrasFicheros.leerFicheroBinario();
     }
 
 

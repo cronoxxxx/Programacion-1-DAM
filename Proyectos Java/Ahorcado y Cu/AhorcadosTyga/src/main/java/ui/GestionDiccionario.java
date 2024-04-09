@@ -1,9 +1,12 @@
 package ui;
 
 import common.*;
+import dao.DaoPalabrasFicheros;
 import dao.IDException;
 import domain.Palabra;
 import service.GestionPalabras;
+
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -34,7 +37,15 @@ public class GestionDiccionario {
                     case 2 -> insertarPalabra(gestionPalabras);
                     case 3 -> modificarIncognitaOrCategoria(gestionPalabras);
                     case 4 -> eliminarPalabra(gestionPalabras);
-                    case 5 -> System.out.println(Constantes.VUELVA_PRONTO);
+                    case 5 -> {
+                        System.out.println(Constantes.VUELVA_PRONTO);
+                        gestionPalabras.escribirFichero2(gestionPalabras);
+                        try {
+                            gestionPalabras.leerFichero();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
                     default -> System.out.println(Constantes.SELECCIONA_UNA_OPCION_VALIDA);
                 }
             } while (opcion != 5);

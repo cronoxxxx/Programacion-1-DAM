@@ -17,20 +17,12 @@ public class DaoPalabrasFicheros {
         File fichero2 = new File(FICHEROB);
         if (!fichero1.exists()) {
             fichero1.createNewFile();
-            ArrayList<Palabra> palabras = new Palabras();
-            try (PrintWriter pw = new PrintWriter(new FileWriter(fichero1))) {
-                for (int i = 0; i < palabras.size(); i++) {
-                    pw.println(palabras.get(i).toStringFile());
-                }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
         }
         if (!fichero2.exists())
             fichero2.createNewFile();
     }
 
-    /*Un poco obsoleto la verdad xd*/
+    /*Un poco obsoleto la verdad xd
     public static List<Palabra> leerFichero() throws IOException {
         return leerFichero(FICHERO);
     }
@@ -56,7 +48,7 @@ public class DaoPalabrasFicheros {
 
         return auxiliar;
 
-    }
+    }*/
 
     public static void leerFile(String nombreFichero) throws IOException {
 
@@ -79,19 +71,25 @@ public class DaoPalabrasFicheros {
         return true;
     }
 
+    public static boolean insertarPalabra(Palabra nuevaPalabra, String nombreArchivo) throws IOException {
+        PrintWriter pw = new PrintWriter(new FileWriter(nombreArchivo, true)); // Abrir el archivo en modo de añadir (append)
+        pw.println(nuevaPalabra.toStringFile());
+        pw.close();
+        return true;
+    }
+
     /**
      * Ejemplo de lectura de fichero binario. Pensad cómo utilizarlo para guardar y recuperar partida, guardando el objeto juego
      * en vez del ArrayList
      * @return
      */
-    public static Juego leerFicheroBinario() {
+    public static Juego leerFicheroBinario()  {
         Juego auxiliar = null;
         try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(FICHEROB))) {
             auxiliar = (Juego) is.readObject();
 
         } catch (IOException | ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(DaoPalabrasFicheros.class.getName()).log(java.util.logging.Level.SEVERE, ex.getMessage(), ex);
-
         }
         return auxiliar;
     }

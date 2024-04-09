@@ -62,7 +62,7 @@ public class Constantes {
 
     public static final String INTRODUZCA_SU_NOMBRE = "Introduzca su nombre";
     public static final String INTRODUZCA_LA_DIFICULTAD = "Introduzca la dificultad\nPresiona [0] para palabras cortas || Presiona [1] para palabras largas";
-    public static final String INTRODUZCA_LA_CATEGORIA = "Introduzca la categoria";
+    public static final String INTRODUZCA_LA_CATEGORIA = "Introduzca la categoria: ";
 
     public static final String MENU_JUGADOR ="Opciones:\n1.INICIAR PARTIDA NUEVA\n2.RECUPERAR PARTIDA ANTERIOR";
 
@@ -71,6 +71,8 @@ public class Constantes {
 
     public static final String HAS_GASTADO_TODOS_TUS_INTENTOS_GAME_OVER = "Has gastado todos tus intentos. GAME OVER ! ! !";
     public static final String ENHORABUENA_LO_HAS_LOGRADO = "Enhorabuena, lo has logrado";
-
+    public static final String NO_SE_HA_PODIDO_ENCONTRAR_PARTIDA_GUARDADA = "No se ha podido encontrar partida guardada";
+    public static final String CARGANDO = "CARGANDO . . .";
     public static final String MEEEEEEENUUUUU_PRIIIINCIIIPAAAL__UIIIIII = "\tBienvenido al ahorcadosxD, identifícate:\n1. Administrador\n2.Jugador\n3.Salir del ahorcados";
+    public static final String OPCION_NO_VALIDA = "Opcion no válida";
 }

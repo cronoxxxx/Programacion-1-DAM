@@ -16,10 +16,10 @@ public class Palabras extends ArrayList<Palabra> {
         Faker fake = new Faker();
             for (int i = 0; i <maxLength;i++) {
                 try {
-                    int categoryIndex = (int)(Math.random() * 5)+1;
+                    int categoryIndex = (int)(Math.random() * 6)+1;
                     switch (categoryIndex) {
                         case 1-> hs.add(new Palabra(fake.pokemon().name(), Categoria.pokemon.name()));
-                        case 2-> hs.add(new Palabra(fake.southPark().characters(), Categoria.southPark.name()));
+                        case 2-> hs.add(new Palabra(fake.dragonBall().character(), Categoria.dragonBall.name()));
                         case 3-> hs.add(new Palabra(fake.address().country(), Categoria.address.name()));
                         case 4-> hs.add(new Palabra(fake.football().players(), Categoria.football.name()))  ;
                         case 5 -> hs.add (new Palabra(fake.animal().name(),Categoria.animal.name()));

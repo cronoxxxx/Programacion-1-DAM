@@ -2,6 +2,8 @@ package ui;
 
 import dao.DaoPalabrasFicheros;
 import dao.DaoPalabrasImplementacion;
+import dao.Palabras;
+import domain.Palabra;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,36 +12,36 @@ public class FileTester {
     public static void main(String[] args) {
         DaoPalabrasImplementacion a = new DaoPalabrasImplementacion();
         try {
+            // Crear los archivos si no existen
             DaoPalabrasFicheros.crearFicheros();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         try {
-            DaoPalabrasFicheros.escribirFichero(a.getPalabrasOrdenadas(true),DaoPalabrasFicheros.FICHERO);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-
-        try {
-            DaoPalabrasFicheros.leerFile(DaoPalabrasFicheros.FICHERO);
-        }  catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        a.eliminarPalabra(2); //se borra  tmb del fichero
-        try {
-            DaoPalabrasFicheros.escribirFichero(a.getPalabrasOrdenadas(true),DaoPalabrasFicheros.FICHERO);
+            // Escribir las palabras ordenadas en el archivo
+            DaoPalabrasFicheros.escribirFichero(a.getPalabrasOrdenadas(true), DaoPalabrasFicheros.FICHERO);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
 
 
 
-        System.out.println("par");
+// Insertar una nueva palabra
+        Palabras p = new Palabras();
+
         try {
-            DaoPalabrasFicheros.leerFile(DaoPalabrasFicheros.FICHERO);
+            DaoPalabrasFicheros.insertarPalabra(p.getPalabraDificultadCategoria(1,"pokemon"), DaoPalabrasFicheros.FICHERO);
         }  catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        for (int i = 0; i < 1000; i++) {
+            System.out.print(".");
+        }
+        try {
+            // Leer y mostrar el contenido del archivo
+            DaoPalabrasFicheros.leerFile(DaoPalabrasFicheros.FICHERO);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
 

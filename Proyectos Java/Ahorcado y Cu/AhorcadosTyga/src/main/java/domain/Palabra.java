@@ -5,10 +5,11 @@ import common.CategoriaException;
 import common.Comprobacion;
 import dao.Palabras;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class Palabra implements Comparable<Palabra> {
+public class Palabra implements Comparable<Palabra>, Serializable {
     private int id;
     private int level;
     private String incognita;

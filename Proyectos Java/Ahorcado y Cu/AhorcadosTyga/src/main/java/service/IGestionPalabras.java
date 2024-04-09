@@ -2,8 +2,10 @@ package service;
 
 import common.CategoriaException;
 import dao.IDException;
+import domain.Juego;
 import domain.Palabra;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.util.List;
 
@@ -35,8 +37,9 @@ public interface IGestionPalabras {
     public void crearFicheros()throws IOException;
     public boolean cargarFichero() throws IOException;
     public boolean escribirFichero() throws IOException;
-    public boolean escribirFicheroBinario();
-    public boolean cargarFicheroBinario();
+    public boolean escribirFicheroBinario(Juego j);
+    public Juego cargarFicheroBinario() throws EOFException;
+    void leerFichero() throws IOException;
     void idOK(int id) throws IDException;
 
 }

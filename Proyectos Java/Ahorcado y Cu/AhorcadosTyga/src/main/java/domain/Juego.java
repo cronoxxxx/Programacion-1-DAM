@@ -3,9 +3,10 @@ package domain;
 import common.*;
 import dao.*;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class Juego {
+public class Juego implements Serializable {
     //pensar en los atributos que definen el estado del juego en ese instante para que que si lo paran se pueda recuperar
     private Palabra aAdivinar; //o el String directamente
     private Jugador jugador;
@@ -115,26 +116,29 @@ public class Juego {
         char[] obtenida = new char[aAdivinar.getIncognita().length()];
 
         for (int i = 0; i < palabraChar.length; i++) {
-            if (palabraChar[i] == ' ') { //Si la palabra es un caracter vacio, la obtenida introduce este valor
-                obtenida[i] = ' ';
-            } else if (palabraChar[i] == '-') {
-                obtenida[i] = '-';
-            } else {
-                for (int j = 0; j < jugador.getIntentos().size(); j++) { //evalua las letras que va añadiendo el jugador
-                    if (palabraChar[i]==jugador.getIntentos().get(j) ||palabraChar[i]==jugador.getIntentos().get(j)+32 || palabraChar[i]==jugador.getIntentos().get(j)-32 ){
-                        obtenida[i]=palabraChar[i];
+            switch (palabraChar[i]) {
+                case ' '-> obtenida[i] = ' ';
+                case '-' -> obtenida[i] = '-';
+                case '(', ')'->
+                    obtenida[i] = palabraChar[i];
+                default->{
+                    boolean encontrado = false;
+                    for (char intento : jugador.getIntentos()) {
+                        if (palabraChar[i] == intento || palabraChar[i] == intento + 32 || palabraChar[i] == intento - 32) {
+                            obtenida[i] = palabraChar[i];
+                            encontrado = true;
+                            break;
+                        }
+                    }
+                    if (!encontrado) {
+                        obtenida[i] = 95; // código ASCII de '_'
                     }
                 }
-                if (obtenida [i]==0 ){ //null
-                    obtenida[i]= 95; //codigo ascii de _______
-                }
-
             }
         }
 
-        System.out.println(Constantes.ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR + Arrays.toString(obtenida).replace(","," ").replace("[","").replace("]",""));
+        System.out.println(Constantes.ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR + Arrays.toString(obtenida).replace(",", " ").replace("[", "").replace("]", ""));
     }
-
 
     public void pintarFallidas (){ //getter de fallidos
         if (fallos!=0){
