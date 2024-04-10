@@ -69,12 +69,12 @@ public class DaoPalabrasFicheros {
         return true;
     }
 
-    public static boolean insertarPalabra(Palabra nuevaPalabra, String nombreArchivo) throws IOException {
+    /*public static boolean insertarPalabra(Palabra nuevaPalabra, String nombreArchivo) throws IOException {
         PrintWriter pw = new PrintWriter(new FileWriter(nombreArchivo, true)); // Abrir el archivo en modo de añadir (append)
         pw.println(nuevaPalabra.toStringFile());
         pw.close();
         return true;
-    }
+    }*/
 
     /**
      * Ejemplo de lectura de fichero binario. Pensad cómo utilizarlo para guardar y recuperar partida, guardando el objeto juego

@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class FileTester {
     public static void main(String[] args) {
-        DaoPalabrasImplementacion a = new DaoPalabrasImplementacion();
+        /*DaoPalabrasImplementacion a = new DaoPalabrasImplementacion();
         try {
             // Crear los archivos si no existen
             DaoPalabrasFicheros.crearFicheros();
@@ -44,5 +44,6 @@ public class FileTester {
             throw new RuntimeException(e);
         }
 
+    }*/
     }
 }

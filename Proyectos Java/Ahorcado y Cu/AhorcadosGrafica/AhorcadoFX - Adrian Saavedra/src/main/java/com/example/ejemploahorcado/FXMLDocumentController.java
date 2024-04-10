@@ -40,13 +40,15 @@ public class FXMLDocumentController implements Initializable {
     private ImageView imagen;
     private int estado;  //fallos
     private String adivinar; //en este label podemos ir poniendo ____ y destapando
-    GestionPalabras gestionPalabras = new GestionPalabras();
+    private GestionPalabras gestionPalabras = new GestionPalabras();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         iniciarDesdeCero();
 
     }
+
+
 
     private void iniciarDesdeCero() {
         juego = GestionJuego.juego(gestionPalabras);
@@ -101,7 +103,6 @@ public class FXMLDocumentController implements Initializable {
                 palabra.setText(Constantes.INGRESA_LA_PALABRA_A_ADIVINAR);
             } else {
                 palabra.setText(jugada);
-
                 fallos.setText("Fallos: " + juego.getFallos() + "/7" + juego.pintarFallidas());
                 imagen.setImage(new Image("File:src/main/resources/com/example/ejemploahorcado/images/" + juego.getFallos() + ".png"));
             }

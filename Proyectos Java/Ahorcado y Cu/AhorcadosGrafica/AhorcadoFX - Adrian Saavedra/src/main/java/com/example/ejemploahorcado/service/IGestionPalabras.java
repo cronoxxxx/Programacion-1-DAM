@@ -34,8 +34,7 @@ public interface IGestionPalabras {
     public List<Palabra> getListaPalabrasCategoria(String categoria);
     public boolean eliminarPalabra(Palabra Palabra);
     public boolean eliminarPalabra (int id);
-    public void crearFicheros()throws IOException;
-    public boolean cargarFichero() throws IOException;
+
     public boolean escribirFichero() throws IOException;
     public boolean escribirFicheroBinario(Juego j);
     public Juego cargarFicheroBinario() throws EOFException;

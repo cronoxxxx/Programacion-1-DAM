@@ -40,7 +40,7 @@ public class GestionDiccionario {
                     case 4 -> eliminarPalabra(gestionPalabras);
                     case 5 -> {
                         System.out.println(Constantes.VUELVA_PRONTO);
-                        gestionPalabras.escribirFichero2();
+                        gestionPalabras.escribirFichero();
                         try {
                             gestionPalabras.leerFichero();
                         } catch (IOException e) {

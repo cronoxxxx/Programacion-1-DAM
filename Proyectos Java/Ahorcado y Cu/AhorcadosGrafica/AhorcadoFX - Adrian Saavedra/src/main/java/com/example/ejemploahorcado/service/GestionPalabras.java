@@ -96,29 +96,29 @@ public class GestionPalabras implements IGestionPalabras {
     public void idOK(int id) throws IDException {
         daoPalabras.idOK(id);
     }
+    /*
+    //PARA DESPUES
+        @Override
+        public void crearFicheros() throws IOException {}
 
-//PARA DESPUES
-    @Override
-    public void crearFicheros() throws IOException {}
-
-    @Override
-    public boolean cargarFichero() throws IOException {
-        return false;
-    }
-
-
-
-    @Override
-    public boolean escribirFichero() {
-        try {
-            return DaoPalabrasFicheros.escribirFichero(daoPalabras.getPalabrasOrdenadas(true),"Diccionario");
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+        @Override
+        public boolean cargarFichero() throws IOException {
+            return false;
         }
-        return false;
-    }
 
-    public boolean escribirFichero2() {
+
+
+        @Override
+        public boolean escribirFichero() {
+            try {
+                return DaoPalabrasFicheros.escribirFichero(daoPalabras.getPalabrasOrdenadas(true),"Diccionario");
+            } catch (FileNotFoundException e) {
+                System.out.println(e.getMessage());
+            }
+            return false;
+        }*/
+@Override
+    public boolean escribirFichero() {
         try {
             return DaoPalabrasFicheros.escribirFichero(listarPalabras(true),DaoPalabrasFicheros.FICHERO);
         } catch (FileNotFoundException e) {
