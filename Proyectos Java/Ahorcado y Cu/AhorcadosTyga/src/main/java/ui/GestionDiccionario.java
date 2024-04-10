@@ -15,9 +15,8 @@ import java.util.*;
 public class GestionDiccionario {
     private static final String pass = "messi";
 
-    public static void gestion() throws CategoriaException {
+    public static void gestion(GestionPalabras gestionPalabras) throws CategoriaException {
         Scanner entrada = new Scanner(System.in);
-        GestionPalabras gestionPalabras = new GestionPalabras();
         System.out.println(Constantes.INTRODUCE_LA_CONTRASENA);
         String contra = null;
         do {
@@ -39,7 +38,7 @@ public class GestionDiccionario {
                     case 4 -> eliminarPalabra(gestionPalabras);
                     case 5 -> {
                         System.out.println(Constantes.VUELVA_PRONTO);
-                        gestionPalabras.escribirFichero2(gestionPalabras);
+                        gestionPalabras.escribirFichero2();
                         try {
                             gestionPalabras.leerFichero();
                         } catch (IOException e) {

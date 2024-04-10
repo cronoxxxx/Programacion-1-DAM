@@ -1,453 +1,483 @@
-1;1;rhinoceros;animal
-2;1;Delle Alli;football
-3;1;Bradley Biggle;southPark
-4;1;Heidi Turner;southPark
-5;1;Cesc Fabregas;football
-6;1;Arjen Robben;football
-7;1;Lao People's Democratic Republic;address
-8;0;shark;animal
-9;1;sardine;animal
-10;1;Vileplume;pokemon
-11;1;Franck Ribery;football
-12;0;Satan;southPark
-13;0;Watto;starWars
-14;1;raccoon;animal
-15;1;armadillo;animal
-16;1;cockroach;animal
-17;1;Tweek Tweak;southPark
-18;1;Officer Barbrady;southPark
-19;1;Captain Phasma;starWars
-20;0;Peru;address
-21;0;crab;animal
-22;0;China;address
-23;1;crocodile;animal
-24;1;Saw Gerrera;starWars
-25;1;Paul Pogba;football
-26;0;wolf;animal
-27;1;Kakuna;pokemon
-28;1;Charmander;pokemon
-29;1;Cristiano Ronaldo;football
+1;1;Cesc Fabregas;football
+2;1;Puerto Rico;address
+3;1;Faroe Islands;address
+4;1;Western Sahara;address
+5;1;Poliwrath;pokemon
+6;1;Andres Iniesta;football
+7;1;impala;animal
+8;1;Captain Ginyu;dragonBall
+9;1;Kid Trunks;dragonBall
+11;1;Leia Organa;starWars
+12;1;Android 18;dragonBall
+13;0;Gohan;dragonBall
+14;1;Seadra;pokemon
+15;1;Lionel Messi;football
+16;1;Gerard Pique;football
+17;1;Bail Organa;starWars
+18;1;Anakin Skywalker;starWars
+19;1;Kingler;pokemon
+20;1;Machoke;pokemon
+21;1;Saw Gerrera;starWars
+22;1;Mewtwo;pokemon
+23;1;Arjen Robben;football
+24;0;Sudan;address
+25;1;Mohammed Salah;football
+26;1;Saint Martin;address
+27;1;Serbia;address
+29;1;goldfish;animal
 30;1;Mario Mandzukic;football
-31;1;Maz Kanata;starWars
-32;1;wildebeest;animal
-33;1;Rhydon;pokemon
-34;1;Nidoran;pokemon
-35;1;Stuart McCormick;southPark
-36;1;reindeer;animal
-37;1;Edinson Cavani;football
-38;1;Thailand;address
-39;1;Pakistan;address
-40;1;Uruguay;address
-41;1;Towelie;southPark
-42;1;Algeria;address
-43;1;Oddish;pokemon
-44;0;God;southPark
-45;1;Dratini;pokemon
-47;0;Mali;address
-48;1;Tauros;pokemon
-49;1;David Rodriguez;southPark
-50;1;Bellsprout;pokemon
-51;1;Somalia;address
-52;1;Sheev Palpatine;starWars
-53;0;Arbok;pokemon
-54;1;Alvaro Morata;football
-55;1;wombat;animal
-56;0;Santa;southPark
-58;1;chinchilla;animal
-59;1;Democratic People's Republic of Korea;address
-61;1;dolphin;animal
-62;1;Manuel Neuer;football
-63;1;Lebanon;address
-64;1;Ezra Bridger;starWars
-65;1;Zlatan Ibrahimovic;football
-66;1;Nute Gunray;starWars
-68;1;Horsea;pokemon
-69;0;fish;animal
-70;1;Swaziland;address
-71;1;Sergio Ramos;football
-72;1;Koffing;pokemon
-74;1;Caterpie;pokemon
-75;1;Gianluigi Buffon;football
-77;1;monkey;animal
-78;1;Tuong Lu Kim;southPark
-79;1;Dodrio;pokemon
-80;0;Zubat;pokemon
-81;1;scorpion;animal
-82;1;Juan Mata;football
-84;1;Starvin' Marvin;southPark
-87;1;Jimbo Kern;southPark
-88;1;Greece;address
-89;1;Mesut Ozil;football
-90;1;Jolteon;pokemon
-91;1;Greenland;address
-95;1;leopard;animal
-98;1;Canada;address
-100;1;Grand Admiral Thrawn;starWars
-101;0;Ditto;pokemon
-102;1;Malawi;address
-103;1;Linda Stotch;southPark
-105;1;Philippines;address
-106;1;Kevin McCormick;southPark
-107;1;Mace Windu;starWars
-108;1;Jango Fett;starWars
-109;1;Karen McCormick;southPark
-111;1;Charmeleon;pokemon
-112;1;Roberto Firmino;football
-113;1;Gareth Bale;football
-114;1;Bulbasaur;pokemon
-115;1;Bahrain;address
-116;1;Eden Hazard;football
-118;1;jellyfish;animal
-119;1;Poe Dameron;starWars
-121;1;cheetah;animal
-123;1;Neymar;football
-124;0;goose;animal
-125;1;Golbat;pokemon
-126;1;salmon;animal
-127;0;Chile;address
-128;0;Rey;starWars
-130;1;Pidgey;pokemon
-131;0;Pip;southPark
-133;1;Mohammed Salah;football
-136;1;Ukraine;address
-137;1;Rapidash;pokemon
-138;1;Mr. Slave;southPark
-139;1;Borvo the Hutt;starWars
-141;1;Electrode;pokemon
-142;0;cat;animal
-143;1;Mr. Hankey;southPark
-144;1;serval;animal
-146;1;Darth Sidious;starWars
-147;1;Andorra;address
-148;1;Marco Reus;football
-152;1;Stan Marsh;southPark
-153;1;porcupine;animal
-154;1;Zapdos;pokemon
-155;1;Token Black;southPark
-157;1;Clyde Donovan;southPark
-158;0;India;address
-160;1;Andres Iniesta;football
-162;1;Kylo Ren;starWars
-164;0;Yoda;starWars
-165;1;Pidgeotto;pokemon
-166;0;louse;animal
-167;1;Sergio Aguero;football
-169;1;Poland;address
-170;1;hedgehog;animal
-171;1;prairie dog;animal
-173;1;Bosnia and Herzegovina;address
-174;1;Ike Broflovski;southPark
-175;1;France;address
-176;1;Shelly Marsh;southPark
-177;1;David De Gea;football
-178;0;Macao;address
-180;1;Barbados;address
-181;0;deer;animal
-182;1;Grand Moff Tarkin;starWars
-183;0;pug;animal
-184;1;Eric Cartman;southPark
-186;1;Lionel Messi;football
-187;1;Meowth;pokemon
-188;1;woodchuck;animal
-189;0;Moses;southPark
-190;1;Sabine Wren;starWars
-191;1;walrus;animal
-192;1;Belarus;address
-193;1;Golduck;pokemon
-202;1;Hera Syndulla;starWars
-203;1;Boba Fett;starWars
-204;1;Grandpa Marvin Marsh;southPark
-205;1;Goldeen;pokemon
-206;1;Saint Martin;address
-207;1;Honduras;address
-208;1;Shmi Skywalker;starWars
-211;1;Sheila Broflovski;southPark
-212;0;Yemen;address
-213;1;Harry Kane;football
-216;1;Blastoise;pokemon
-218;1;Darth Vader;starWars
-219;0;Hypno;pokemon
-220;1;Estonia;address
-221;1;Butters Stotch;southPark
-222;1;Mr. Mackey;southPark
-224;1;Kazakhstan;address
-225;0;Seel;pokemon
-226;1;Machoke;pokemon
-228;0;fox;animal
-229;0;snake;animal
-231;0;fly;animal
-233;1;Puerto Rico;address
-234;0;toad;animal
-235;1;Han Solo;starWars
-237;0;elk;animal
-239;0;bat;animal
-240;1;Rhyhorn;pokemon
-241;1;Gyarados;pokemon
-242;1;PC Principal;southPark
-245;1;Obi-Wan Kenobi;starWars
-246;1;Dragonite;pokemon
-247;1;kangaroo;animal
-249;1;Kuwait;address
-252;1;baboon;animal
-253;1;French Guiana;address
-254;1;Willian;football
-255;1;Myanmar;address
-257;1;Mankey;pokemon
-258;1;squirrel;animal
-259;1;Anakin Skywalker;starWars
-261;1;Stephen Stotch;southPark
-264;0;Bendu;starWars
-266;1;Wendy Testaburger;southPark
-267;1;alligator;animal
-270;1;turtle;animal
-271;0;duck;animal
-272;1;Hong Kong;address
-273;1;Kingler;pokemon
-274;1;Serbia;address
-276;1;Heard Island and McDonald Islands;address
-277;1;Darth Caedus;starWars
-279;1;Saint Lucia;address
-280;1;Bail Organa;starWars
-285;0;trout;animal
-287;1;Holy See (Vatican City State);address
-288;0;Ekans;pokemon
-290;1;General Hux;starWars
-291;1;Montserrat;address
-294;0;hyena;animal
-295;1;French Southern Territories;address
-296;1;Rattata;pokemon
-299;1;Vice Admiral Holdo;starWars
-306;1;yellowjacket;animal
-309;1;Guadeloupe;address
-310;1;Greedo;starWars
-312;1;Panaka;starWars
-313;1;Poliwag;pokemon
-316;1;Poliwhirl;pokemon
-318;1;elephant;animal
-320;1;Republic of Korea;address
-321;1;mallard;animal
-323;1;Graveler;pokemon
-324;1;Ponyta;pokemon
-327;0;Malta;address
-330;1;hippopotamus;animal
-331;1;Dragonair;pokemon
-332;1;Arcanine;pokemon
-333;1;Slowpoke;pokemon
-337;0;Jesus;southPark
-340;1;giraffe;animal
-341;1;Supreme Leader Snoke;starWars
-342;1;Jimmy Valmer;southPark
-343;1;Growlithe;pokemon
-346;1;Antoine Griezmann;football
-347;1;Magmar;pokemon
-348;1;goldfish;animal
-349;1;Staryu;pokemon
-350;1;United Kingdom;address
-351;1;Robert Lewandoski;football
-354;1;Savage Opress;starWars
-357;1;Grenada;address
-359;1;Lickitung;pokemon
-360;1;Guernsey;address
-361;1;dinosaur;animal
-362;1;Beedrill;pokemon
-366;1;Lyra Erso;starWars
-371;1;Lemmiwinks;southPark
-373;0;sheep;animal
-374;1;United Arab Emirates;address
-375;1;Anguilla;address
-376;0;Nauru;address
-378;1;New Caledonia;address
-379;1;Syrian Arab Republic;address
-380;1;Lando Calrissian;starWars
-383;1;Moldova;address
-384;1;Rose Tico;starWars
-385;1;Kangaskhan;pokemon
-386;1;cattle;animal
-392;1;Aerodactyl;pokemon
-394;1;Machamp;pokemon
-397;1;Mauritania;address
-403;1;Grimer;pokemon
-404;0;dog;animal
-406;1;Asajj Ventress;starWars
-407;1;spider;animal
-408;1;Nidorino;pokemon
-411;1;Afghanistan;address
-412;1;Martinique;address
-414;1;Nicaragua;address
-415;1;Scott Malkinson;southPark
-416;1;Antigua and Barbuda;address
-417;1;Croatia;address
-418;0;ox;animal
-419;1;Magnemite;pokemon
-421;1;Galen Erso;starWars
-425;1;Ben Solo;starWars
-426;1;grasshopper;animal
-430;1;Shellder;pokemon
-433;1;Wedge Antilles;starWars
-435;1;Padme Amidala;starWars
-436;0;Aruba;address
-442;1;Jabba the Hutt;starWars
-444;0;camel;animal
-450;1;Ned Gerblansky;southPark
-451;1;wallaby;animal
-452;1;South Africa;address
-453;1;Hitmonlee;pokemon
-454;1;Western Sahara;address
-456;1;minnow;animal
-459;1;Kyrgyz Republic;address
-463;1;Gerard Pique;football
-464;1;caribou;animal
-467;1;Father Maxi;southPark
-468;1;Liane Cartman;southPark
-469;0;eagle;animal
-472;1;Timmy Burch;southPark
-480;1;Cambodia;address
-481;0;Samoa;address
-483;1;cricket;animal
-487;1;Dr. Alphonse Mephesto;southPark
-488;1;Mr. Garrison;southPark
-490;1;locust;animal
-491;1;cicada;animal
-496;1;Snorlax;pokemon
-500;1;Suriname;address
-501;1;Angola;address
-503;1;Carol McCormick;southPark
-507;1;Svalbard & Jan Mayen Islands;address
-509;1;Malaysia;address
-511;0;Spain;address
-513;1;Ki-Adi-Mundi;starWars
-514;1;Lapras;pokemon
-518;1;Magneton;pokemon
-521;1;Bulgaria;address
-522;1;Seaking;pokemon
-523;1;Rwanda;address
-526;1;Nidoqueen;pokemon
-528;0;mink;animal
-538;1;marten;animal
-540;1;Clefairy;pokemon
-543;1;Papua New Guinea;address
-547;1;Netherlands Antilles;address
-550;1;Alakazam;pokemon
-551;1;Vulpix;pokemon
-553;1;Nidoking;pokemon
-557;1;Albania;address
-564;1;Sharon Marsh;southPark
-569;1;Mon Mothma;starWars
-576;1;Mongolia;address
-580;1;weasel;animal
-585;0;Togo;address
-586;1;Seychelles;address
-593;1;Sebulba;starWars
-596;0;Niue;address
-598;1;Liberia;address
-599;1;hamster;animal
-600;0;yak;animal
-601;1;Uganda;address
-607;0;koala;animal
-610;1;lizard;animal
-616;1;Kabuto;pokemon
-617;1;Slowbro;pokemon
-618;1;Poliwrath;pokemon
-621;1;Clefable;pokemon
-624;1;Kenny McCormick;southPark
-625;1;Cyprus;address
-627;1;Mayor McDaniels;southPark
-631;1;Djibouti;address
-633;1;Sandslash;pokemon
-634;0;snail;animal
-636;1;water buffalo;animal
-638;1;Jamaica;address
-641;1;Flareon;pokemon
-643;0;Fiji;address
-644;1;Tangela;pokemon
-648;1;Dougie;southPark
-649;1;Weepinbell;pokemon
-657;0;Congo;address
-658;1;Chansey;pokemon
-671;0;Finn;starWars
-676;1;Kadabra;pokemon
-686;1;Iceland;address
-687;1;Victreebel;pokemon
-688;0;Sudan;address
-690;0;Haiti;address
-694;1;Raticate;pokemon
-700;1;Pinsir;pokemon
-707;1;Dewgong;pokemon
-708;1;Turks and Caicos Islands;address
-709;1;Tanzania;address
-711;1;Cloyster;pokemon
-715;1;platypus;animal
-719;1;Chirrut Imwe;starWars
-722;1;Venusaur;pokemon
-727;1;manatee;animal
-731;1;Bolivia;address
-737;1;Tentacruel;pokemon
-739;1;New Zealand;address
-741;1;Craig Tucker;southPark
-745;1;beaver;animal
-750;1;porpoise;animal
-751;0;raven;animal
-758;1;American Samoa;address
-761;1;Kyle Broflovski;southPark
-762;0;goat;animal
-764;1;gerbil;animal
-767;0;pig;animal
-768;1;Vaporeon;pokemon
-771;0;crow;animal
-773;1;Diglett;pokemon
-780;1;Gerald Broflovski;southPark
-784;0;Gabon;address
-786;1;Virgin Islands, U.S.;address
-789;1;muskrat;animal
-790;1;Kanan Jarrus;starWars
-792;1;Sergeant Harrison Yates;southPark
-793;1;Paraguay;address
-794;1;Wallis and Futuna;address
-799;1;Venonat;pokemon
-805;1;ferret;animal
-809;1;Darth Maul;starWars
-810;1;Slovenia;address
-818;1;Saint Pierre and Miquelon;address
-822;1;tortoise;animal
-823;1;Voltorb;pokemon
-825;1;Botswana;address
-827;1;Senegal;address
-831;1;Norfolk Island;address
-840;1;Guinea;address
-843;1;Omanyte;pokemon
-846;1;Butterfree;pokemon
-849;0;Niger;address
-851;1;Burkina Faso;address
-858;1;Uzbekistan;address
-864;1;buffalo;animal
-865;0;mule;animal
-867;1;Parasect;pokemon
-872;1;San Marino;address
-878;1;Randy Marsh;southPark
-879;1;Saint Helena;address
-882;1;Isle of Man;address
-887;1;Luke Skywalker;starWars
-902;0;Egypt;address
-907;1;beetle;animal
-921;1;Bhutan;address
-927;1;chimpanzee;animal
-931;1;Falkland Islands (Malvinas);address
-932;0;Mew;pokemon
-938;1;Haunter;pokemon
-941;1;Kabutops;pokemon
-942;1;Gastly;pokemon
-943;1;Turkey;address
-945;0;Gloom;pokemon
-946;1;Palestinian Territory;address
-949;0;ant;animal
-951;1;Saint Kitts and Nevis;address
-953;1;Burundi;address
-957;1;Dugtrio;pokemon
-961;1;mammoth;animal
-967;1;antelope;animal
-968;1;Farfetch'd;pokemon
-974;1;Czech Republic;address
-975;1;Bebe Stevens;southPark
-981;1;Mr. Mime;pokemon
-988;0;Abra;pokemon
-1000;1;Vietnam;address
+31;0;pig;animal
+32;1;Android 17;dragonBall
+33;0;bee;animal
+35;1;Mr. Mime;pokemon
+36;1;Super Saiyan Goten;dragonBall
+37;1;Padme Amidala;starWars
+38;1;Manuel Neuer;football
+39;1;Nidoking;pokemon
+40;1;Tentacruel;pokemon
+41;1;herring;animal
+42;0;Bendu;starWars
+44;1;New Caledonia;address
+45;1;marten;animal
+46;1;Brunei Darussalam;address
+49;1;antelope;animal
+50;1;hedgehog;animal
+51;1;Krillin;dragonBall
+52;1;Farfetch'd;pokemon
+53;1;Maz Kanata;starWars
+54;1;spider;animal
+56;1;Luke Skywalker;starWars
+58;1;Virgin Islands, U.S.;address
+59;1;Panaka;starWars
+60;0;Mew;pokemon
+61;0;clam;animal
+62;1;Sergio Aguero;football
+63;1;San Marino;address
+64;1;Nidoran;pokemon
+65;0;Watto;starWars
+66;1;Philippines;address
+67;0;goose;animal
+68;1;Chaozu;dragonBall
+70;1;Magmar;pokemon
+71;1;Horsea;pokemon
+72;1;Demon King Piccolo;dragonBall
+73;1;Juan Mata;football
+74;1;Omastar;pokemon
+75;1;Bhutan;address
+76;0;Yoda;starWars
+77;1;Venonat;pokemon
+78;1;Roberto Firmino;football
+79;1;Borvo the Hutt;starWars
+80;1;prairie dog;animal
+82;1;King Vegeta;dragonBall
+83;1;Franck Ribery;football
+84;0;frog;animal
+85;1;weasel;animal
+86;1;Zamasu;dragonBall
+87;1;woodchuck;animal
+88;1;Super Saiyan 2 Goku;dragonBall
+89;1;Robert Lewandoski;football
+90;1;Vaporeon;pokemon
+91;1;Alvaro Morata;football
+92;1;Captain Phasma;starWars
+93;1;Piccolo;dragonBall
+94;1;Voltorb;pokemon
+95;1;gerbil;animal
+96;0;dog;animal
+97;0;cat;animal
+98;1;Jordan;address
+99;1;Shellder;pokemon
+102;1;Uh Shenlong;dragonBall
+103;1;Gyarados;pokemon
+105;1;David De Gea;football
+106;1;badger;animal
+107;1;French Guiana;address
+108;1;Palestinian Territory;address
+109;1;Tajikistan;address
+110;1;Asajj Ventress;starWars
+111;0;China;address
+112;1;Harry Kane;football
+114;1;Paul Pogba;football
+115;1;Grandpa Gohan;dragonBall
+116;1;Rhyhorn;pokemon
+117;1;Slovenia;address
+118;1;Vice Admiral Holdo;starWars
+120;1;Sergio Ramos;football
+121;1;New Zealand;address
+122;1;Hitmonchan;pokemon
+123;1;Lyra Erso;starWars
+124;1;Kylo Ren;starWars
+127;1;Chi Shenlong;dragonBall
+129;1;Armenia;address
+130;0;fish;animal
+132;1;Bolivia;address
+134;0;Zubat;pokemon
+135;1;Sebulba;starWars
+137;1;chimpanzee;animal
+138;1;El Salvador;address
+139;1;Admiral Ackbar;starWars
+140;0;snail;animal
+141;1;Vegito;dragonBall
+142;1;Gastly;pokemon
+144;1;Guadeloupe;address
+145;1;Gareth Bale;football
+146;1;Taiwan;address
+147;0;shark;animal
+148;1;Yajirobe;dragonBall
+149;1;Finland;address
+150;0;raven;animal
+151;1;Antoine Griezmann;football
+152;1;Indonesia;address
+154;1;Gibraltar;address
+155;1;Shmi Skywalker;starWars
+157;1;Sabine Wren;starWars
+158;1;serval;animal
+162;1;Isle of Man;address
+163;1;Tunisia;address
+168;1;Saint Vincent and the Grenadines;address
+169;1;Grand Admiral Thrawn;starWars
+170;1;Alakazam;pokemon
+173;0;Nappa;dragonBall
+174;1;Champa;dragonBall
+175;1;lizard;animal
+176;0;Baby;dragonBall
+177;1;porpoise;animal
+178;1;Croatia;address
+181;0;tiger;animal
+182;1;Super Saiyan Trunks;dragonBall
+183;1;Han Solo;starWars
+184;0;Goten;dragonBall
+185;1;South Africa;address
+186;1;Supreme Leader Snoke;starWars
+187;1;Willian;football
+190;1;Russian Federation;address
+191;1;Kiribati;address
+193;1;Svalbard & Jan Mayen Islands;address
+194;1;Christmas Island;address
+195;1;Ki-Adi-Mundi;starWars
+196;1;Neymar;football
+197;1;Nidorino;pokemon
+198;1;Lickitung;pokemon
+199;1;alpaca;animal
+200;1;Qui-Gon Jinn;starWars
+203;1;Fearow;pokemon
+204;1;Magnemite;pokemon
+206;1;Bouvet Island (Bouvetoya);address
+207;1;cockroach;animal
+208;1;Nigeria;address
+209;1;British Indian Ocean Territory (Chagos Archipelago);address
+215;1;Czech Republic;address
+217;1;Greedo;starWars
+219;1;Albania;address
+221;1;oyster;animal
+222;1;Ben Solo;starWars
+223;1;Edinson Cavani;football
+226;1;Delle Alli;football
+227;1;Su Shenlong;dragonBall
+229;1;Mon Mothma;starWars
+230;0;Finn;starWars
+232;0;cod;animal
+233;0;Spain;address
+235;1;Grimer;pokemon
+236;1;Cape Verde;address
+238;1;Shenlong;dragonBall
+239;1;Cayman Islands;address
+240;0;swan;animal
+241;1;Super Saiyan 2 Vegeta;dragonBall
+242;0;ape;animal
+244;0;Tien;dragonBall
+245;1;Li Shenlong;dragonBall
+247;1;Reunion;address
+248;1;Ryuu Shenlong;dragonBall
+250;1;Somalia;address
+253;1;Zarbon;dragonBall
+254;0;pug;animal
+256;1;Zlatan Ibrahimovic;football
+257;1;Bellsprout;pokemon
+260;1;Lithuania;address
+261;1;Darth Caedus;starWars
+262;1;Guatemala;address
+263;0;yak;animal
+265;1;Freeza;dragonBall
+267;1;Mace Windu;starWars
+268;1;Moldova;address
+269;1;Jango Fett;starWars
+270;1;Aerodactyl;pokemon
+271;1;Golbat;pokemon
+272;0;Nail;dragonBall
+275;1;Republic of Korea;address
+276;1;Venusaur;pokemon
+278;1;Poland;address
+279;1;Darth Sidious;starWars
+281;0;Jaco;dragonBall
+282;0;ox;animal
+283;1;Bardock;dragonBall
+286;1;Rune Haako;starWars
+287;1;Poliwag;pokemon
+288;1;Spearow;pokemon
+289;0;Onix;pokemon
+290;0;louse;animal
+291;1;Mankey;pokemon
+293;0;trout;animal
+295;1;Darth Maul;starWars
+296;1;Charmeleon;pokemon
+297;0;crow;animal
+298;1;Marco Reus;football
+300;1;Latvia;address
+301;1;Caterpie;pokemon
+302;1;Nute Gunray;starWars
+303;1;Israel;address
+304;0;Seel;pokemon
+305;1;Gogeta;dragonBall
+308;1;Goku Black;dragonBall
+310;0;otter;animal
+314;1;Caulifla;dragonBall
+315;1;Magneton;pokemon
+316;0;Ditto;pokemon
+319;1;hippopotamus;animal
+322;0;bear;animal
+323;1;Mesut Ozil;football
+326;1;Porygon;pokemon
+327;0;Ghana;address
+328;0;Kami;dragonBall
+330;1;Canada;address
+333;1;Majin Buu;dragonBall
+334;0;macaw;animal
+335;1;Psyduck;pokemon
+338;1;Jolteon;pokemon
+341;1;Butterfree;pokemon
+342;0;Gabon;address
+343;1;gorilla;animal
+344;1;Android 20;dragonBall
+345;1;Cyprus;address
+346;1;tortoise;animal
+347;0;crab;animal
+350;1;Chirrut Imwe;starWars
+352;1;caribou;animal
+353;0;Hit;dragonBall
+359;0;eagle;animal
+360;0;Abra;pokemon
+361;1;Sheev Palpatine;starWars
+362;1;elephant;animal
+363;0;Guru;dragonBall
+364;0;Yemen;address
+367;1;Eden Hazard;football
+368;1;Rapidash;pokemon
+370;1;Gianluigi Buffon;football
+373;0;goat;animal
+375;1;Hitmonlee;pokemon
+376;1;Majin Vegeta;dragonBall
+378;1;raccoon;animal
+379;1;leopard;animal
+380;1;Sierra Leone;address
+381;1;donkey;animal
+383;1;Guinea;address
+385;1;Pidgeot;pokemon
+386;1;Diglett;pokemon
+393;0;Mali;address
+396;1;Maldives;address
+398;1;Democratic People's Republic of Korea;address
+400;1;French Polynesia;address
+404;1;Kadabra;pokemon
+405;1;Guernsey;address
+407;1;Count Dooku;starWars
+408;1;Electrode;pokemon
+410;1;Raichu;pokemon
+412;1;Dewgong;pokemon
+417;0;Vados;dragonBall
+425;0;fly;animal
+426;1;Persian;pokemon
+430;0;elk;animal
+432;1;Poe Dameron;starWars
+434;1;Mystic Gohan;dragonBall
+436;1;Scyther;pokemon
+442;1;Vileplume;pokemon
+444;0;Bra;dragonBall
+445;1;Belize;address
+446;1;Rose Tico;starWars
+447;1;Kangaskhan;pokemon
+448;1;Snorlax;pokemon
+449;1;Jar Jar Binks;starWars
+451;0;hound;animal
+452;1;hamster;animal
+454;1;Graveler;pokemon
+458;0;llama;animal
+459;1;French Southern Territories;address
+462;1;Dr. Gero;dragonBall
+463;1;Krabby;pokemon
+464;1;Mr. Popo;dragonBall
+469;1;Beerus;dragonBall
+470;1;Rhydon;pokemon
+471;1;Magikarp;pokemon
+472;1;buffalo;animal
+473;1;Dugtrio;pokemon
+474;1;Kuwait;address
+475;0;koala;animal
+480;1;Grand Moff Tarkin;starWars
+482;1;muskrat;animal
+483;1;Exeggutor;pokemon
+484;0;gnat;animal
+485;1;Chewbacca;starWars
+486;1;Malaysia;address
+487;1;Anguilla;address
+488;0;Eevee;pokemon
+492;0;Golem;pokemon
+496;1;Kanan Jarrus;starWars
+503;1;Vietnam;address
+504;1;Poliwhirl;pokemon
+507;1;Libyan Arab Jamahiriya;address
+508;1;South Georgia and the South Sandwich Islands;address
+518;1;Victreebel;pokemon
+519;0;Kenya;address
+520;1;Cloyster;pokemon
+521;0;duck;animal
+522;1;Liberia;address
+527;1;mosquito;animal
+529;0;deer;animal
+530;1;Geodude;pokemon
+531;0;Pan;dragonBall
+532;1;Beedrill;pokemon
+538;1;rabbit;animal
+539;1;Germany;address
+543;1;Drowzee;pokemon
+548;0;Videl;dragonBall
+551;1;jackal;animal
+555;1;Kabutops;pokemon
+557;1;coyote;animal
+558;1;Martinique;address
+560;0;hyena;animal
+561;0;Samoa;address
+565;1;General Hux;starWars
+567;1;cattle;animal
+571;1;Falkland Islands (Malvinas);address
+572;1;Squirtle;pokemon
+575;1;Ahsoka Tano;starWars
+577;1;Kabuto;pokemon
+580;1;Mongolia;address
+581;1;Slowpoke;pokemon
+583;1;hornet;animal
+585;1;Cooler;dragonBall
+586;1;Clefable;pokemon
+590;1;Launch;dragonBall
+593;1;Singapore;address
+594;1;Burkina Faso;address
+598;1;kangaroo;animal
+600;1;cricket;animal
+603;1;Equatorial Guinea;address
+604;1;Charmander;pokemon
+605;1;Suriname;address
+611;1;Jersey;address
+612;1;Android 16;dragonBall
+613;1;Cristiano Ronaldo;football
+616;1;Obi-Wan Kenobi;starWars
+617;1;porcupine;animal
+618;1;cicada;animal
+619;0;Peru;address
+622;1;Paraguay;address
+624;1;Savage Opress;starWars
+626;1;Ethiopia;address
+627;0;Muk;pokemon
+629;1;Ryan Shenlong;dragonBall
+632;1;Montenegro;address
+638;1;Nidorina;pokemon
+639;0;Tonga;address
+643;1;Garlic Jr;dragonBall
+645;1;Super Saiyan Vegeta;dragonBall
+648;1;crocodile;animal
+649;0;Arbok;pokemon
+651;1;Supreme Kai;dragonBall
+652;0;gnu;animal
+653;1;Wedge Antilles;starWars
+657;1;Cook Islands;address
+662;1;Cambodia;address
+665;1;Jabba the Hutt;starWars
+671;1;Malawi;address
+681;1;Growlithe;pokemon
+683;0;Macao;address
+689;1;chinchilla;animal
+690;1;Bosnia and Herzegovina;address
+692;1;Future Trunks;dragonBall
+694;1;Mayotte;address
+703;1;Boba Fett;starWars
+706;1;Exeggcute;pokemon
+707;0;eel;animal
+710;1;Super Saiyan 2 Gohan;dragonBall
+713;1;Pidgeotto;pokemon
+714;1;Jyn Erso;starWars
+715;1;Montserrat;address
+716;1;Darth Vader;starWars
+717;0;mouse;animal
+719;1;mammoth;animal
+721;1;Tauros;pokemon
+722;1;Barbados;address
+723;1;Android 19;dragonBall
+727;1;Dragonair;pokemon
+729;0;Doduo;pokemon
+732;1;Koffing;pokemon
+738;1;Sandshrew;pokemon
+740;1;Botswana;address
+750;1;salmon;animal
+751;1;Hera Syndulla;starWars
+754;1;Oolong;dragonBall
+759;1;Ivysaur;pokemon
+762;1;wallaby;animal
+765;1;Super Saiyan Goku;dragonBall
+768;0;wasp;animal
+769;0;Dende;dragonBall
+772;1;Chi-Chi;dragonBall
+779;1;Estonia;address
+782;1;Morocco;address
+784;1;Tentacool;pokemon
+786;0;Cell;dragonBall
+793;0;zebra;animal
+797;0;Jynx;pokemon
+799;0;Whis;dragonBall
+804;1;Argentina;address
+814;1;grasshopper;animal
+817;1;Denmark;address
+818;1;walrus;animal
+820;1;Pitcairn Islands;address
+823;1;Elder Kai;dragonBall
+824;1;sea lion;animal
+826;1;Sandslash;pokemon
+833;1;Shenron;dragonBall
+838;1;Sao Tome and Principe;address
+839;1;Super Saiyan 3 Goku;dragonBall
+843;0;moose;animal
+848;0;rat;animal
+854;0;lion;animal
+860;1;Meowth;pokemon
+865;1;Colombia;address
+867;1;Sri Lanka;address
+868;1;Marowak;pokemon
+870;0;wolf;animal
+872;1;cheetah;animal
+874;1;sardine;animal
+880;1;Metapod;pokemon
+887;0;panda;animal
+891;1;mallard;animal
+894;1;beetle;animal
+896;0;Uub;dragonBall
+898;1;Thailand;address
+901;1;Kakuna;pokemon
+913;1;Bahrain;address
+915;1;Nicaragua;address
+917;1;Andorra;address
+928;1;Heard Island and McDonald Islands;address
+935;1;Solomon Islands;address
+937;1;armadillo;animal
+946;1;Monaco;address
+951;1;Galen Erso;starWars
+953;1;Tanzania;address
+954;0;seal;animal
+957;0;Pilaf;dragonBall
+958;1;San Shenlong;dragonBall
+960;1;Slovakia (Slovak Republic);address
+961;1;Zimbabwe;address
+965;1;locust;animal
+969;1;Kazakhstan;address
+980;1;guinea pig;animal
+982;1;Machop;pokemon
+983;1;Ezra Bridger;starWars
+988;0;Italy;address
+994;1;Vegeta;dragonBall

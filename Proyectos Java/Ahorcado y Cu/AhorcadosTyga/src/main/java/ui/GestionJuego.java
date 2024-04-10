@@ -9,10 +9,10 @@ import java.util.*;
 public class GestionJuego {
 
 
-    public static void juego() {
+    public static void juego(GestionPalabras gestionPalabras) {
         Scanner entrada = new Scanner(System.in);
         System.out.println(Constantes.MENU_JUGADOR);
-        GestionPalabras gestionPalabras = new GestionPalabras();
+
         Juego juego = null;
         boolean valid = false, juegoCargado = false;
         int var = 0;

@@ -115,9 +115,9 @@ public class GestionPalabras implements IGestionPalabras {
         return false;
     }
 
-    public boolean escribirFichero2(GestionPalabras gestionPalabras) {
+    public boolean escribirFichero2() {
         try {
-            return DaoPalabrasFicheros.escribirFichero(gestionPalabras.listarPalabras(true),DaoPalabrasFicheros.FICHERO);
+            return DaoPalabrasFicheros.escribirFichero(listarPalabras(true),DaoPalabrasFicheros.FICHERO);
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
