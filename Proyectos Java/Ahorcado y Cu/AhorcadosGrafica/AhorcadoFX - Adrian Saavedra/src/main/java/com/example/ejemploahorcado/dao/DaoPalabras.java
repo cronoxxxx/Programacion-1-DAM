@@ -1,12 +1,14 @@
 package com.example.ejemploahorcado.dao;
 
 import com.example.ejemploahorcado.common.CategoriaException;
+import com.example.ejemploahorcado.domain.CategoriaDificultadExcepcion;
 import com.example.ejemploahorcado.domain.Palabra;
 
 import java.util.List;
 
 public interface DaoPalabras {
     //personal 1
+    public Palabras getLista();
     public List<Palabra> getListaDePalabras();
     public boolean isEmptyPalabrasList() ;
     public boolean insertarPalabra(Palabra Palabra) ;
@@ -21,4 +23,5 @@ public interface DaoPalabras {
     public boolean eliminarPalabra(int id) ;
     //personal 2
     public void idOK(int id )throws IDException;
-    }
+    public void categoriaDificultadOK(String categoria, int dificultad) throws CategoriaDificultadExcepcion;
+}

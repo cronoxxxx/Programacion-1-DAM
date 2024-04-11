@@ -24,25 +24,13 @@ public class Juego implements Serializable {
 
 
     //metodo para usar el try catch de una forma amena
-    public void categoriaDificultadOK(String categoria, int dificultad) throws CategoriaDificultadExcepcion {
-        boolean esta = false;
-        Palabras palabras = new Palabras();
-        if (palabras.getPalabraDificultadCategoria(dificultad, categoria) != null) {
-            esta = true;
-        }
-        if (!esta) {
-            throw new CategoriaDificultadExcepcion(categoria, dificultad);
-        }
 
-    }
 
-    public Juego(Jugador jugador, int dificutad, String categoria) throws CategoriaDificultadExcepcion {
-        categoriaDificultadOK(categoria, dificutad);
+    public Juego(Jugador jugador, int dificutad, String categoria, Palabra adivinar) throws CategoriaDificultadExcepcion {
         this.jugador = jugador;
         this.fallos = 0;
         //LLamo a clase de Palabras para implementar la palabra a adivinar, que me devuelve una palabra random
-        Palabras palabras = new Palabras();
-        this.aAdivinar = palabras.getPalabraDificultadCategoria(dificutad, categoria);
+        this.aAdivinar = adivinar;
         //paso la palabra a caracteres, uso el metodo toCharArray para ello, las ire implementando poco a poco
         palabraChar = aAdivinar.getIncognita().toCharArray();
     }

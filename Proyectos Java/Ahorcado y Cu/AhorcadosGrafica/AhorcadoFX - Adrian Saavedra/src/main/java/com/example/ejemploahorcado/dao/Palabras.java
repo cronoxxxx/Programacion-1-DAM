@@ -6,15 +6,21 @@ import com.example.ejemploahorcado.common.CategoriaException;
 import com.example.ejemploahorcado.domain.Palabra;
 import net.datafaker.Faker;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
 public class Palabras extends ArrayList<Palabra> {
-    private final ArrayList<Palabra> palabras;
+    private final List<Palabra> palabras;
     private static final int maxLength = 1000;
     public Palabras() {
-        HashSet<Palabra> hs = new HashSet<>();
+        try {
+            palabras = DaoPalabrasFicheros.leerFichero();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        /*HashSet<Palabra> hs = new HashSet<>();
         //try catch
         Faker fake = new Faker();
             for (int i = 0; i <maxLength;i++) {
@@ -36,7 +42,11 @@ public class Palabras extends ArrayList<Palabra> {
             }
         //System.out.println(hs);
         //Se añade el HashSet de palabras
-        palabras = new ArrayList<>(hs);
+        palabras = new ArrayList<>(hs);*/
+    }
+
+    public List<Palabra> getPalabras() {
+        return palabras;
     }
 
     public Palabras(ArrayList<Palabra> palabras) {

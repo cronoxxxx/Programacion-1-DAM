@@ -2,6 +2,7 @@ package com.example.ejemploahorcado.dao;
 
 import com.example.ejemploahorcado.common.CategoriaException;
 import com.example.ejemploahorcado.common.Constantes;
+import com.example.ejemploahorcado.domain.CategoriaDificultadExcepcion;
 import com.example.ejemploahorcado.domain.Palabra;
 
 import java.util.ArrayList;
@@ -14,6 +15,10 @@ public class DaoPalabrasImplementacion implements DaoPalabras {
 
     public DaoPalabrasImplementacion()  {
         this.lista = new Palabras();
+    }
+
+    public Palabras getLista() {
+        return lista;
     }
 
     @Override
@@ -154,5 +159,14 @@ public class DaoPalabrasImplementacion implements DaoPalabras {
             }
         }
         return cambio;
+    }
+    public void categoriaDificultadOK(String categoria, int dificultad) throws CategoriaDificultadExcepcion {
+        boolean esta = false;
+        if (lista.getPalabraDificultadCategoria(dificultad, categoria) != null) {
+            esta = true;
+        }
+        if (!esta) {
+            throw new CategoriaDificultadExcepcion(categoria, dificultad);
+        }
     }
 }

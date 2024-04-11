@@ -6,9 +6,13 @@ import com.example.ejemploahorcado.domain.CategoriaDificultadExcepcion;
 import com.example.ejemploahorcado.domain.Juego;
 import com.example.ejemploahorcado.domain.Jugador;
 import com.example.ejemploahorcado.service.GestionPalabras;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextInputDialog;
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class GestionJuego {
@@ -23,30 +27,41 @@ public class GestionJuego {
         int var = 0;
         do {
             try {
+
                 var = entrada.nextInt();
                 if (var == 1) {
                     try {
-                        juego = baseJuego();
+                        juego = baseJuego(gestionPalabras);
                         valid = true;
                     } catch (CategoriaDificultadExcepcion e) {
-                        System.out.println(Constantes.VALORES_JUEGO_NO_VALIDO);
-                        entrada.nextLine();
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setHeaderText("Error");
+                        alert.setContentText(Constantes.VALORES_JUEGO_NO_VALIDO);
+                        alert.showAndWait();
                     }
                 } else if (var == 2) {
                     juego = gestionPalabras.cargarFicheroBinario();
                     if (juego == null) {
                         System.out.println(Constantes.NO_SE_HA_PODIDO_ENCONTRAR_PARTIDA_GUARDADA);
                     } else {
-                        System.out.println(Constantes.CARGANDO);
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setHeaderText(Constantes.CARGANDO);
+                        alert.showAndWait();
                         juegoCargado = true;
                     }
                     valid = true;
                 } else {
-                    System.out.println(Constantes.OPCION_NO_VALIDA);
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText("Error");
+                    alert.setContentText(Constantes.OPCION_NO_VALIDA);
+                    alert.showAndWait();
+
                 }
             } catch (InputMismatchException in) {
-                System.out.println(Constantes.CARACTER_NO_VALIDO_SOLO_SE_PERMITEN_NUMEROS_INTRODUZCA_UN_CARACTER_VALIDO);
-                entrada.nextLine();
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("Error");
+                alert.setContentText(Constantes.CARACTER_NO_VALIDO_SOLO_SE_PERMITEN_NUMEROS_INTRODUZCA_UN_CARACTER_VALIDO);
+                alert.showAndWait();
             }
         } while (!valid);
         //proff
@@ -72,30 +87,72 @@ public class GestionJuego {
             System.out.println(Constantes.ERRORES);
         }*/
 
-return juego;
+        return juego;
     }
 
 
-    private static Juego baseJuego() throws CategoriaDificultadExcepcion {
+    private static Juego baseJuego(GestionPalabras gestionPalabras) throws CategoriaDificultadExcepcion {
+
+        TextInputDialog nombreDialog = new TextInputDialog();
+        nombreDialog.setTitle("Ahorcados");
+        nombreDialog.setHeaderText(Constantes.INTRODUZCA_SU_NOMBRE);
+        nombreDialog.setContentText("Por favor, introduzca su nombre:");
         Scanner entrada = new Scanner(System.in);
-        System.out.println(Constantes.INTRODUZCA_SU_NOMBRE);
-        String nombre = entrada.nextLine();
-        Jugador jugador = new Jugador(nombre);
-        int lvl = 0;
-        do {
-            System.out.println(Constantes.INTRODUZCA_LA_DIFICULTAD);
-            try {
-                lvl = entrada.nextInt();
-            } catch (InputMismatchException i) {
-                System.out.println(Constantes.CARACTER_NO_VALIDO_SOLO_SE_PERMITEN_NUMEROS_INTRODUZCA_UN_CARACTER_VALIDO);
-                entrada.nextLine();
-            }
-        } while (!(lvl == 0 || lvl == 1));
-        entrada.nextLine();
-        System.out.println(Constantes.INTRODUZCA_LA_CATEGORIA + Arrays.toString(Categoria.values()).replace("[", "").replace("]", ""));
+
+        //System.out.println(Constantes.INTRODUZCA_SU_NOMBRE);
+        Optional<String> nombreResult = nombreDialog.showAndWait();
+        Jugador jugador = null;
         String categoria = null;
-        categoria = entrada.nextLine();
-        return new Juego(jugador, lvl, categoria);
+        int lvl = -1;
+        if (nombreResult.isPresent()) {
+            String nombre = nombreResult.get();
+            jugador = new Jugador(nombre);
+            while (lvl != 0 && lvl != 1) {
+                TextInputDialog dialog = new TextInputDialog();
+                dialog.setHeaderText(Constantes.INTRODUZCA_LA_DIFICULTAD);
+                dialog.setContentText("Por favor, introduzca la dificultad (0 para fácil, 1 para difícil):");
+                Optional<String> result = dialog.showAndWait();
+
+                if (result.isPresent()) {
+                    try {
+                        lvl = Integer.parseInt(result.get());
+                    } catch (NumberFormatException e) {
+                        // Manejar la entrada no válida
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setHeaderText("Error");
+                        alert.setContentText(Constantes.CARACTER_NO_VALIDO_SOLO_SE_PERMITEN_NUMEROS_INTRODUZCA_UN_CARACTER_VALIDO);
+                        alert.showAndWait();
+                    }
+
+                    if (lvl!=0 && lvl!=1){
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setHeaderText("Error");
+                        alert.setContentText(Constantes.VALORES_JUEGO_NO_VALIDO);
+                        alert.showAndWait();
+                    }
+                }
+            }
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText(Constantes.INTRODUZCA_LA_CATEGORIA);
+            alert.setContentText(Arrays.toString(Categoria.values()).replace("[", "").replace("]", ""));
+
+
+            alert.getButtonTypes().clear(); //quitar botones de aceptar y cancelar
+
+            for (Categoria categorias : Categoria.values()) {
+                ButtonType botonCategoria = new ButtonType(categorias.toString());
+                alert.getButtonTypes().add(botonCategoria);
+            }
+
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.isPresent()) {
+                ButtonType botonSeleccionado = result.get();
+                categoria = botonSeleccionado.getText(); // Obtener el texto del botón seleccionado
+            }
+            gestionPalabras.getDaoPalabras().categoriaDificultadOK(categoria, lvl);
+        }
+        return new Juego(jugador, lvl, categoria, gestionPalabras.getDaoPalabras().getLista().getPalabraDificultadCategoria(lvl, categoria));
     }
 
 

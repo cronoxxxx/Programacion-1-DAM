@@ -30,7 +30,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Label fx:id="palabra" layoutX="14.0" layoutY="291.0" text="Esperando al usuario..." textFill="WHITE">
+      <Label fx:id="palabra" layoutX="14.0" layoutY="291.0" text="Esperando al usuario..." textFill="WHITE" visible="true">
          <font>
             <Font size="30.0" />
          </font>

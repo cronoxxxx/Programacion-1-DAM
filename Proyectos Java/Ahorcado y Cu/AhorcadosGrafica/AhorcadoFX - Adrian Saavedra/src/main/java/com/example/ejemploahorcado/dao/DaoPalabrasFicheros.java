@@ -1,9 +1,11 @@
 package com.example.ejemploahorcado.dao;
 
+import com.example.ejemploahorcado.common.CategoriaException;
 import com.example.ejemploahorcado.domain.Juego;
 import com.example.ejemploahorcado.domain.Palabra;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,12 +22,11 @@ public class DaoPalabrasFicheros {
             fichero2.createNewFile();
     }
 
-    /*Un poco obsoleto la verdad xd
+    //Un poco obsoleto la verdad xd
     public static List<Palabra> leerFichero() throws IOException {
         return leerFichero(FICHERO);
     }
     public static List<Palabra> leerFichero(String fichero) throws IOException {
-
         ArrayList<Palabra> auxiliar = null;
         try (Scanner sc = new Scanner(new File(fichero))) {
             auxiliar = new ArrayList<>();
@@ -46,7 +47,7 @@ public class DaoPalabrasFicheros {
 
         return auxiliar;
 
-    }*/
+    }
 
     public static void leerFile(String nombreFichero) throws IOException {
 

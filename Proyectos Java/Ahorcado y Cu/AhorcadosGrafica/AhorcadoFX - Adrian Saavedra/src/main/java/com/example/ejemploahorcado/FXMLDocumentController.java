@@ -41,10 +41,11 @@ public class FXMLDocumentController implements Initializable {
     private ImageView imagen;
     private int estado;  //fallos
     private String adivinar; //en este label podemos ir poniendo ____ y destapando
-    private GestionPalabras gestionPalabras = PruebaTotal.gestionPalabras; //lo vuelvo global
+    private GestionPalabras gestionPalabras; //lo vuelvo global
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        gestionPalabras = new GestionPalabras();
         iniciarDesdeCero();
     }
     private void iniciarDesdeCero() {
