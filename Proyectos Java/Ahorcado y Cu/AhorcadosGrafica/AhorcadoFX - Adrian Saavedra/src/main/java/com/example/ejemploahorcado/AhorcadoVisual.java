@@ -1,5 +1,6 @@
 package com.example.ejemploahorcado;
 
+import com.example.ejemploahorcado.service.GestionPalabras;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,6 +27,8 @@ public class AhorcadoVisual extends Application {
         }
 
     }
+
+
 
     public static void main(String[] args) {
         try {

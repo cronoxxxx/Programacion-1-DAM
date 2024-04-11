@@ -4,6 +4,7 @@ import com.example.ejemploahorcado.common.Constantes;
 import com.example.ejemploahorcado.domain.Juego;
 import com.example.ejemploahorcado.service.GestionPalabras;
 import com.example.ejemploahorcado.ui.GestionJuego;
+import com.example.ejemploahorcado.ui.PruebaTotal;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,16 +41,12 @@ public class FXMLDocumentController implements Initializable {
     private ImageView imagen;
     private int estado;  //fallos
     private String adivinar; //en este label podemos ir poniendo ____ y destapando
-    private GestionPalabras gestionPalabras = new GestionPalabras();
+    private GestionPalabras gestionPalabras = PruebaTotal.gestionPalabras; //lo vuelvo global
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         iniciarDesdeCero();
-
     }
-
-
-
     private void iniciarDesdeCero() {
         juego = GestionJuego.juego(gestionPalabras);
         mostrarTablero();

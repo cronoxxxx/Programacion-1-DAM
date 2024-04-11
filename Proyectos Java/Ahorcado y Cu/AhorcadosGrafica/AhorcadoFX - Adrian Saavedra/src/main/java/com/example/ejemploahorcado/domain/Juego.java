@@ -129,7 +129,7 @@ public class Juego implements Serializable {
                     for (char intento : jugador.getIntentos()) {
                         if (palabraChar[i] == intento || palabraChar[i] == intento + 32 || palabraChar[i] == intento - 32) {
                             obtenida[i] = palabraChar[i];
-                            sb.append(intento).append("");
+                            sb.append(intento).append(" ");
                             encontrado = true;
                             break;
                         }
@@ -160,7 +160,7 @@ public class Juego implements Serializable {
                 }
                 if (!esta){
                     //System.out.println(jugador.getIntentos().get(i)+" ");
-                    sb.append(jugador.getIntentos().get(i)).append("\n");
+                    sb.append(jugador.getIntentos().get(i)).append(" ");
                 }
             }
         }
@@ -192,22 +192,22 @@ public class Juego implements Serializable {
         char[] obtenido = new char[aAdivinar.getIncognita().length()];
 
         for (int i = 0; i < palabraChar.length; i++) {
-            if (palabraChar[i] == ' ') {
-                obtenido[i] = ' ';
-            }else if (palabraChar[i] == '-') {
-                obtenido[i] = '-';
-            }
-            else {
-                boolean encontrada = false;
-                for (char intento : jugador.getIntentos()) {
-                    if (palabraChar[i] == intento || palabraChar[i] == intento + 32 || palabraChar[i] == intento - 32) {
-                        obtenido[i] = palabraChar[i];
-                        encontrada = true;
+            switch (palabraChar[i]){
+                case ' '->obtenido[i] = ' ';
+                case '-'->obtenido[i]='-';
+                case '(',')'->obtenido[i]=palabraChar[i];
+                default -> {
+                    boolean encontrada = false;
+                    for (char intento : jugador.getIntentos()) {
+                        if (palabraChar[i] == intento || palabraChar[i] == intento + 32 || palabraChar[i] == intento - 32) {
+                            obtenido[i] = palabraChar[i];
+                            encontrada = true;
+                        }
                     }
-                }
-                if (!encontrada) {
-                    obtenido[i] = '_';
-                    palabraCompleta = false;
+                    if (!encontrada) {
+                        obtenido[i] = '_';
+                        palabraCompleta = false;
+                    }
                 }
             }
         }

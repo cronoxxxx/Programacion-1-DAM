@@ -8,10 +8,10 @@ import com.example.ejemploahorcado.service.GestionPalabras;
 import java.util.Scanner;
 
 public class PruebaTotal {
-
+public static GestionPalabras gestionPalabras = new GestionPalabras();
     public static void iniciarMenuJuego (String[]args)  {
         Scanner entrada= new Scanner(System.in);
-        GestionPalabras gestionPalabras = new GestionPalabras();
+
         int variant = 0;
         do {
             System.out.println(Constantes.MEEEEEEENUUUUU_PRIIIINCIIIPAAAL__UIIIIII);
@@ -24,7 +24,8 @@ public class PruebaTotal {
                         throw new RuntimeException(e);
                     }
                 }
-                case 2 -> AhorcadoVisual.main(args);
+                case 2 ->
+                    AhorcadoVisual.main(args);
                 // GestionJuego.juego(gestionPalabras);
                 case 3 -> System.out.println(Constantes.VUELVA_PRONTO);
                 default -> System.out.println(Constantes.SELECCIONA_UNA_OPCION_VALIDA);
