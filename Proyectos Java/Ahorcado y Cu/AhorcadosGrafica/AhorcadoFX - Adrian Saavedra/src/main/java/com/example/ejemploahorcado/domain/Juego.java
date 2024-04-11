@@ -102,36 +102,34 @@ public class Juego implements Serializable {
 
 
     //SI LA PALABRA ES IGUAL A ALGUNOS DE LOS INTENTOS DEL JUGADOR, QUE CONTIENE LAS LETRAS QUE EL JUGADOR VA AÑADIENDO, SE IGUALA AL CHAR CREADO CON LA LONHGITUD DE LA PALABRA
-    public String pintarpalabraChar() {
+    public StringBuilder pintarpalabraChar() {
         StringBuilder sb = new StringBuilder();
-        char[] obtenida = new char[aAdivinar.getIncognita().length()];
-
         for (int i = 0; i < palabraChar.length; i++) {
             switch (palabraChar[i]) {
-                case ' '-> obtenida[i] = ' ';
-                case '-' -> obtenida[i] = '-';
-                case '(', ')'->
-                    obtenida[i] = palabraChar[i];
-                default->{
+                case ' ', '(', ')' -> {
+                    sb.append(" ").append(palabraChar[i]).append(" ");
+                }
+                case '-' -> {
+                    sb.append(" -  ");
+                }
+                default -> {
                     boolean encontrado = false;
                     for (char intento : jugador.getIntentos()) {
                         if (palabraChar[i] == intento || palabraChar[i] == intento + 32 || palabraChar[i] == intento - 32) {
-                            obtenida[i] = palabraChar[i];
-                            sb.append(intento).append(" ");
+                            sb.append(palabraChar[i]).append(" ");
                             encontrado = true;
                             break;
                         }
                     }
                     if (!encontrado) {
-                        obtenida[i] = 95; // código ASCII de '_'
-                        sb.append(" _ ");
+                        sb.append("_ ");
                     }
+                    break;
                 }
             }
         }
-
-        System.out.println(Constantes.ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR + Arrays.toString(obtenida).replace(",", " ").replace("[", "").replace("]", ""));
-        return sb.toString();
+        System.out.println(Constantes.ESTA_ES_LA_PALABRA_QUE_TIENES_QUE_ADIVINAR + sb.toString());
+        return sb;
     }
 
     public String pintarFallidas (){ //getter de fallidos
@@ -148,7 +146,7 @@ public class Juego implements Serializable {
                 }
                 if (!esta){
                     //System.out.println(jugador.getIntentos().get(i)+" ");
-                    sb.append(jugador.getIntentos().get(i)).append(" ");
+                    sb.append(jugador.getIntentos().get(i)).append("  ");
                 }
             }
         }

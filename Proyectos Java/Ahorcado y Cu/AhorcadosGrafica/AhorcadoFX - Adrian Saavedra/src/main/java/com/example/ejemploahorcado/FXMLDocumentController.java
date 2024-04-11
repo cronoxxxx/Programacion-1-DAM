@@ -51,7 +51,7 @@ public class FXMLDocumentController implements Initializable {
     private void iniciarDesdeCero() {
         juego = GestionJuego.juego(gestionPalabras);
         mostrarTablero();
-        saludo.setText(juego.pintarpalabraChar());
+        saludo.setText(juego.pintarpalabraChar().toString());
         fallos.setText("Fallos: " + juego.getFallos() + "/7 " + juego.pintarFallidas());
         imagen.setImage(new Image("File:src/main/resources/com/example/ejemploahorcado/images/" + juego.getFallos() + ".png"));
     }
@@ -90,23 +90,23 @@ public class FXMLDocumentController implements Initializable {
     }
 
     private void accion(int fila, int columna) {
-        saludo.setText(juego.pintarpalabraChar());
+        saludo.setText(juego.pintarpalabraChar().toString());
         if (juego.fin() == 0) {
             int posicion_pulsada = fila * 8 + columna + 65;
             String letra_pulsada = String.valueOf((char) posicion_pulsada);
             String jugada = juego.jugada(letra_pulsada.charAt(0));
             System.out.println("Letra pulsada:  " + letra_pulsada);
             if (jugada == null) {
-                saludo.setText(juego.pintarpalabraChar());
+                saludo.setText(juego.pintarpalabraChar().toString());
                 palabra.setText(Constantes.INGRESA_LA_PALABRA_A_ADIVINAR);
             } else {
                 palabra.setText(jugada);
-                fallos.setText("Fallos: " + juego.getFallos() + "/7" + juego.pintarFallidas());
+                fallos.setText("Fallos: " + juego.getFallos() + "/7 -> ("+juego.pintarFallidas()+")");
                 imagen.setImage(new Image("File:src/main/resources/com/example/ejemploahorcado/images/" + juego.getFallos() + ".png"));
             }
         }
         if (juego.fin() == 1) {
-            palabra.setText(Constantes.HAS_GASTADO_TODOS_TUS_INTENTOS_GAME_OVER);
+            palabra.setText("GAME OVER. "+Constantes.ESTA_ERA_LA_PALABRA_QUE_TENIAS_QUE_ADIVINAR +"\n"+juego.getaAdivinar().getIncognita()+"\n");
         } else if (juego.fin() == 2) {
             palabra.setText(Constantes.ENHORABUENA_LO_HAS_LOGRADO + " " + juego.getJugador().getNombre());
 
