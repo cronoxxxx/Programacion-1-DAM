@@ -22,7 +22,7 @@ public class DaoPalabrasFicheros {
             fichero2.createNewFile();
     }
 
-    //Un poco obsoleto la verdad xd
+
     public static List<Palabra> leerFichero() throws IOException {
         return leerFichero(FICHERO);
     }
@@ -48,7 +48,7 @@ public class DaoPalabrasFicheros {
         return auxiliar;
 
     }
-
+//manera cutre
     public static void leerFile(String nombreFichero) throws IOException {
 
         Scanner lector = new Scanner(new File(nombreFichero));
@@ -86,7 +86,6 @@ public class DaoPalabrasFicheros {
         Juego auxiliar = null;
         try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(FICHEROB))) {
             auxiliar = (Juego) is.readObject();
-
         } catch (IOException | ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(DaoPalabrasFicheros.class.getName()).log(java.util.logging.Level.SEVERE, ex.getMessage(), ex);
         }

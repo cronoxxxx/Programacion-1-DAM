@@ -67,7 +67,7 @@ public class FXMLDocumentController implements Initializable {
                     if (j % 2 == 0 && i % 2 == 0 || j % 2 != 0 && i % 2 != 0) {
                         pane.setStyle("-fx-background-color: #07004f;");
                     } else {
-                        pane.setStyle("-fx-background-color: #56e15c");
+                        pane.setStyle("-fx-background-color: #174d93");
                     }
                     Label letra = new Label(String.valueOf(caracter));
                     letra.setTextFill(Color.web("#ffffff"));
@@ -106,7 +106,7 @@ public class FXMLDocumentController implements Initializable {
             }
         }
         if (juego.fin() == 1) {
-            palabra.setText("GAME OVER. "+Constantes.ESTA_ERA_LA_PALABRA_QUE_TENIAS_QUE_ADIVINAR +"\n"+juego.getaAdivinar().getIncognita()+"\n");
+            palabra.setText(Constantes.HAS_GASTADO_TODOS_TUS_INTENTOS_GAME_OVER+"\n"+Constantes.ESTA_ERA_LA_PALABRA_QUE_TENIAS_QUE_ADIVINAR +"\n"+juego.getaAdivinar().getIncognita()+"\n");
         } else if (juego.fin() == 2) {
             palabra.setText(Constantes.ENHORABUENA_LO_HAS_LOGRADO + " " + juego.getJugador().getNombre());
 

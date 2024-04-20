@@ -32,14 +32,14 @@
       </GridPane>
       <Label fx:id="palabra" layoutX="14.0" layoutY="291.0" text="Esperando al usuario..." textFill="WHITE" visible="true">
          <font>
-            <Font size="16.0" />
+            <Font size="14.0" />
          </font>
       </Label>
       <ImageView fx:id="imagen" fitHeight="380.0" fitWidth="380.0" layoutX="500.0" />
       <Button layoutX="477.0" layoutY="336.0" mnemonicParsing="false" onAction="#guardarPartida" text="Guardar" />
       <Button layoutX="393.0" layoutY="336.0" mnemonicParsing="false" onAction="#reiniciarPartida" text="Reiniciar" />
       <Button fx:id="botonSalir" layoutX="335.0" layoutY="336.0" mnemonicParsing="false" onAction="#salirPartida" text="Salir" />
-      <Label fx:id="fallos" layoutX="14.0" layoutY="349.0" prefHeight="25.0" prefWidth="309.0" text="Fallos: 0/8" textFill="WHITE">
+      <Label fx:id="fallos" layoutX="14.0" layoutY="356.0" prefHeight="25.0" prefWidth="309.0" text="Fallos: 0/8" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>

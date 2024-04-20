@@ -201,7 +201,6 @@ public class Juego implements Serializable {
         if (palabraCompleta) {
             fin = 2;//cuando ganas
         } else if (fallos == 7) {
-
             fin = 1;
         }
 

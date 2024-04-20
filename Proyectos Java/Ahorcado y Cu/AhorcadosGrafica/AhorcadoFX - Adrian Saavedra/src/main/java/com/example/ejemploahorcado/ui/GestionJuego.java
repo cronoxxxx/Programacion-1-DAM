@@ -116,18 +116,17 @@ public class GestionJuego {
                 if (result.isPresent()) {
                     try {
                         lvl = Integer.parseInt(result.get());
+                        if (lvl!=0 && lvl!=1){
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setHeaderText("Error");
+                            alert.setContentText(Constantes.VALORES_JUEGO_NO_VALIDO);
+                            alert.showAndWait();
+                        }
                     } catch (NumberFormatException e) {
                         // Manejar la entrada no válida
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setHeaderText("Error");
                         alert.setContentText(Constantes.CARACTER_NO_VALIDO_SOLO_SE_PERMITEN_NUMEROS_INTRODUZCA_UN_CARACTER_VALIDO);
-                        alert.showAndWait();
-                    }
-
-                    if (lvl!=0 && lvl!=1){
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setHeaderText("Error");
-                        alert.setContentText(Constantes.VALORES_JUEGO_NO_VALIDO);
                         alert.showAndWait();
                     }
                 }
