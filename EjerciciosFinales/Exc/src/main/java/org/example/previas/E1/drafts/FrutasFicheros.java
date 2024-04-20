@@ -1,5 +1,6 @@
 package org.example.previas.E1.drafts;
 
+import org.example.previas.E1.common.ProvinciaSpainException;
 import org.example.previas.E1.dao.Mostrador;
 import org.example.previas.E1.domain.Fruta;
 import org.example.previas.E1.dao.Fruteria;
@@ -42,7 +43,7 @@ public class FrutasFicheros {
             double precioVenta = entrada.nextDouble();
             try {
                 a.darAltaFruta(new Fruta(nombre, procedencia, nKilos, precioCoste, precioVenta));
-            } catch (precioVentaExcepcion e) {
+            } catch (precioVentaExcepcion | ProvinciaSpainException e) {
                 System.out.println(e.getMessage());
             }
         } catch (IOException | NoSuchElementException e){

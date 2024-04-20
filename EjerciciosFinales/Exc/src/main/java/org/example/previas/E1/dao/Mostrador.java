@@ -200,10 +200,20 @@ public class Mostrador implements Serializable {
         }
         // Pedir al usuario que ingrese la ID del cliente
         // Eliminar al cliente del mapa (opcional)
-
-
+        Cliente clienteFinal = clienteCompradorOnline;
+        clientesEsperaCompra.entrySet().stream()
+                .filter(entry -> entry.getValue().equals(clienteFinal))
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .ifPresent(idCliente -> clientesEsperaCompra.remove(idCliente));
         return true;
+
+
     }
+
+//Buscar cliente por ID: Un método para buscar un cliente por su ID.
+//Eliminar cliente por ID: Un método para eliminar un cliente de la lista de espera de compra usando su ID.
+    //Aplicar descuento a clientes: Un método para aplicar un descuento a los clientes en espera de compra,  basado en un atributo boolean hasDescuento.
 
 
 }

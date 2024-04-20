@@ -1,29 +1,26 @@
 package org.example.previas.E1.domain;
 
 import net.datafaker.Faker;
+import org.example.previas.E1.common.EnumComprobacionDirecta;
 import org.example.previas.E1.common.FechaInvalidaException;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class ClienteOnline extends Cliente implements Serializable {
+public class ClienteOnline extends Cliente {
     private LocalDate fechaEntregaPedido;
     private String direccionEntregaPedido;
 
-    public void fechaOK() throws FechaInvalidaException {
-        if (fechaEntregaPedido.isBefore(LocalDate.now())){
-                throw new FechaInvalidaException ();
-        }
-    }
+
 
 
 
     public ClienteOnline(String nombre, LocalDate fechaEntregaPedido, String direccionEntregaPedido) throws FechaInvalidaException {
         super(nombre);
-        fechaOK();
         this.fechaEntregaPedido = fechaEntregaPedido;
         this.direccionEntregaPedido = direccionEntregaPedido;
+        EnumComprobacionDirecta.fechaOK(fechaEntregaPedido);
     }
 
     public ClienteOnline() {

@@ -2,7 +2,7 @@ package org.example.previas.E1.domain;
 
 import java.io.Serializable;
 
-public class ClienteFisico extends Cliente implements Serializable {
+public class ClienteFisico extends Cliente {
 
     private int ordenFila;
     private static int asignacion = 1;

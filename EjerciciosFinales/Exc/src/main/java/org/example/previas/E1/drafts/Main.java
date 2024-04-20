@@ -2,6 +2,7 @@ package org.example.previas.E1.drafts;
 
 
 import net.datafaker.Faker;
+import org.example.previas.E1.common.ProvinciaSpainException;
 import org.example.previas.E1.common.precioVentaExcepcion;
 import org.example.previas.E1.dao.DaoFicherosFruta;
 import org.example.previas.E1.dao.Fruteria;
@@ -37,7 +38,7 @@ public class Main {
             try {
                 a.darAltaFruta(new Fruta(nombre,procedencia,nKilos,precioCoste,precioVenta));
 
-            } catch (precioVentaExcepcion e) {
+            } catch (precioVentaExcepcion | ProvinciaSpainException e) {
                 System.out.println(e.getMessage());
             }
 

@@ -7,9 +7,10 @@ import org.example.previas.E1.domain.ClienteOnline;
 import org.example.previas.E1.domain.Fruta;
 
 import java.io.FileNotFoundException;
+import java.io.Serializable;
 import java.util.*;
 
-public class Fruteria {
+public class Fruteria implements Serializable {
     List<Fruta> frutas;
     private double beneficios;
 
@@ -106,7 +107,7 @@ public class Fruteria {
 
         return valid;
     }
-
+    //otros metodos : darBaja, isEmpty, buscarFrutaPorNombre, calcularInventarioTotal, buscarFrutaporProvincia (excepcion de provincia
     public boolean escribirFichero() {
         try {
             return DaoFicherosFruta.escribirFichero(mostrarInformacion(true));

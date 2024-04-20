@@ -1,8 +1,8 @@
 package org.example.previas.E1.domain;
 
-import org.example.previas.E1.common.Frutas;
-import org.example.previas.E1.common.Provincias;
-import org.example.previas.E1.common.precioVentaExcepcion;
+import org.example.previas.E1.common.*;
+
+import java.io.Serializable;
 
 /*
 * En un almacén se guarda fruta para su posterior venta. Por cada cargamento se tiene la siguiente
@@ -28,25 +28,22 @@ Para probar dicha clase hacer un main que:
 • Muestre el beneficio obtenido por el almacén.
 * caducidad - patatas
 * */
-public class Fruta implements Comparable<Fruta> {
+public class Fruta implements Comparable<Fruta>, Serializable {
     private String nombre,procedencia;
     private int numeroKilos;
     private double precioCostePorKilo,precioVentaPorKilo;
 public static int autonumerico = 1;
 
 
-public void precioVentaOK() throws precioVentaExcepcion {
-    if (precioVentaPorKilo<precioCostePorKilo){
-        throw new precioVentaExcepcion();
-    }
-}
-    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo) throws precioVentaExcepcion {
+
+    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo) throws precioVentaExcepcion, ProvinciaSpainException {
         this.nombre = nombre;
         this.procedencia = procedencia;
         this.numeroKilos = numeroKilos;
         this.precioCostePorKilo = precioCostePorKilo;
         this.precioVentaPorKilo = precioVentaPorKilo;
-        precioVentaOK();
+        EnumComprobacionDirecta.precioVentaOK(precioVentaPorKilo,precioCostePorKilo);
+        EnumComprobacionDirecta.provinciaOK(procedencia);
     }
 
     public Fruta (double precioCostePorKilo, double precioVentaPorKilo) throws precioVentaExcepcion {

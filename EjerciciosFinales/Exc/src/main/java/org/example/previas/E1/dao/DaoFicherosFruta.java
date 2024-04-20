@@ -1,5 +1,7 @@
 package org.example.previas.E1.dao;
 
+import org.example.previas.E1.common.Constantes;
+import org.example.previas.E1.common.ProvinciaSpainException;
 import org.example.previas.E1.domain.Fruta;
 import org.example.previas.E1.common.precioVentaExcepcion;
 
@@ -48,15 +50,15 @@ public class DaoFicherosFruta {
                     Fruta fruta = new Fruta(nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo);
                     frutas.add(fruta);
                 } else {
-                    System.out.println("Formato incorrecto en la línea: " + cadena);
+                    System.out.println(Constantes.FORMATO_INCORRECTO_EN_LA_LINEA + cadena);
                     // Manejo de líneas con formato incorrecto si es necesario
                 }
             }
         } catch (IOException e) {
             // Manejo de errores de lectura
             e.printStackTrace();
-        } catch (precioVentaExcepcion e) {
-            throw new RuntimeException(e);
+        } catch (precioVentaExcepcion | ProvinciaSpainException e) {
+            System.out.println(e.getMessage());
         }
         return frutas;
     }
