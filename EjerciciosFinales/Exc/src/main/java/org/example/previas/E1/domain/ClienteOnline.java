@@ -11,13 +11,8 @@ import java.time.temporal.ChronoUnit;
 public class ClienteOnline extends Cliente {
     private LocalDate fechaEntregaPedido;
     private String direccionEntregaPedido;
-
-
-
-
-
-    public ClienteOnline(String nombre, LocalDate fechaEntregaPedido, String direccionEntregaPedido) throws FechaInvalidaException {
-        super(nombre);
+    public ClienteOnline(String nombre, String apellidos, LocalDate fechaEntregaPedido, String direccionEntregaPedido, boolean hasDescuento) throws FechaInvalidaException {
+        super(nombre, apellidos,hasDescuento);
         this.fechaEntregaPedido = fechaEntregaPedido;
         this.direccionEntregaPedido = direccionEntregaPedido;
         EnumComprobacionDirecta.fechaOK(fechaEntregaPedido);
@@ -60,6 +55,6 @@ public class ClienteOnline extends Cliente {
 
     @Override
     public String toString() {
-        return String.format("Nombre: %s\nDireccion del pedido: %s\nFecha de la entrega: %s\n",nombre,direccionEntregaPedido,fechaEntregaPedido);
+        return String.format("Nombre: %s\nApellido %s\nDireccion del pedido: %s\nTicket descuento: %b\nFecha de la entrega: %s\n",nombre,apellidos,direccionEntregaPedido,hasDescuento,fechaEntregaPedido);
     }
 }

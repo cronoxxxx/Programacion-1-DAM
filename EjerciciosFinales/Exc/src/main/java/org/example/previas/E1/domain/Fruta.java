@@ -36,14 +36,13 @@ public static int autonumerico = 1;
 
 
 
-    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo) throws precioVentaExcepcion, ProvinciaSpainException {
+    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo) throws precioVentaExcepcion {
         this.nombre = nombre;
         this.procedencia = procedencia;
         this.numeroKilos = numeroKilos;
         this.precioCostePorKilo = precioCostePorKilo;
         this.precioVentaPorKilo = precioVentaPorKilo;
-        EnumComprobacionDirecta.precioVentaOK(precioVentaPorKilo,precioCostePorKilo);
-        EnumComprobacionDirecta.provinciaOK(procedencia);
+        EnumComprobacionDirecta.precioVentaOK(precioVentaPorKilo, precioCostePorKilo);
     }
 
     public Fruta (double precioCostePorKilo, double precioVentaPorKilo) throws precioVentaExcepcion {

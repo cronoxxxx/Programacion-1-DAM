@@ -1,8 +1,6 @@
 package org.example.previas.E1.drafts;
 
 
-import net.datafaker.Faker;
-import org.example.previas.E1.common.ProvinciaSpainException;
 import org.example.previas.E1.common.precioVentaExcepcion;
 import org.example.previas.E1.dao.DaoFicherosFruta;
 import org.example.previas.E1.dao.Fruteria;
@@ -38,7 +36,7 @@ public class Main {
             try {
                 a.darAltaFruta(new Fruta(nombre,procedencia,nKilos,precioCoste,precioVenta));
 
-            } catch (precioVentaExcepcion | ProvinciaSpainException e) {
+            } catch (precioVentaExcepcion  e) {
                 System.out.println(e.getMessage());
             }
 
@@ -69,13 +67,13 @@ public class Main {
                 nombre=entradaReader.readLine();
                 System.out.println("Ingrese el numero de kilos a vender");
                 nKilos = Integer.parseInt(entradaReader.readLine());
-                if(mostrador.vender(nKilos,nombre)){
+                if(mostrador.venderClienteFisico(nKilos,nombre)){
                     System.out.println("Vendido con exito");
                 } else {
                     System.err.println("No se pudo realizar la accion");
                 }
             }
-            System.out.println("Beneficio total: "+a.getBeneficios());
+            System.out.println("Beneficio total: "+mostrador.getBeneficios());
 
         }catch (IOException e) {
             throw new RuntimeException(e);

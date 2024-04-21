@@ -1,7 +1,6 @@
 package org.example.previas.E1.dao;
 
 import org.example.previas.E1.common.Constantes;
-import org.example.previas.E1.common.ProvinciaSpainException;
 import org.example.previas.E1.domain.Fruta;
 import org.example.previas.E1.common.precioVentaExcepcion;
 
@@ -42,11 +41,11 @@ public class DaoFicherosFruta {
                 String cadena = sc.nextLine();
                 String[] partes = cadena.split(";");
                 if (partes.length >=5) { // Verificar que hay 5 partes en la línea
-                    String nombre = partes[0].trim();
-                    String procedencia = partes[1].trim();
-                    int numeroKilos = Integer.parseInt(partes[2].trim());
-                    double precioCostePorKilo = Double.parseDouble(partes[3].trim());
-                    double precioVentaPorKilo = Double.parseDouble(partes[4].trim());
+                    String nombre = partes[0];
+                    String procedencia = partes[1];
+                    int numeroKilos = Integer.parseInt(partes[2]);
+                    double precioCostePorKilo = Double.parseDouble(partes[3]);
+                    double precioVentaPorKilo = Double.parseDouble(partes[4]);
                     Fruta fruta = new Fruta(nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo);
                     frutas.add(fruta);
                 } else {
@@ -57,10 +56,12 @@ public class DaoFicherosFruta {
         } catch (IOException e) {
             // Manejo de errores de lectura
             e.printStackTrace();
-        } catch (precioVentaExcepcion | ProvinciaSpainException e) {
+        } catch (precioVentaExcepcion  e) {
             System.out.println(e.getMessage());
         }
         return frutas;
     }
+
+
 
 }
