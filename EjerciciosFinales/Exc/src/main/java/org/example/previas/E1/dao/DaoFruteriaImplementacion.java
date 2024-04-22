@@ -4,79 +4,101 @@ import org.example.previas.E1.domain.Fruta;
 
 import java.util.List;
 
-public class DaoFruteriaImplementacion implements DaoFruteria{
+public class DaoFruteriaImplementacion implements DaoFruteria {
+    private Fruteria fruteria;
+
+    public DaoFruteriaImplementacion(Fruteria fruteria) {
+        this.fruteria = fruteria;
+    }
+
+    public DaoFruteriaImplementacion() {
+        this.fruteria = new Fruteria();
+    }
+    //JUnit5
     @Override
     public List<Fruta> getFrutas() {
-        return null;
+        return fruteria.getFrutas();
     }
-
+    //JUnit5
     @Override
     public boolean isEmptyFrutas() {
-        return false;
+        return fruteria.isEmptyFrutas();
     }
-
+    //JUnit5
     @Override
     public List<Fruta> mostrarInformacion(boolean ascendente) {
-        return null;
+        return fruteria.mostrarInformacion(ascendente);
     }
-
+    //JUnit5
     @Override
     public boolean darAltaFruta(Fruta fruta) {
-        return false;
+        return fruteria.darAltaFruta(fruta);
     }
-
+    //JUnit5
     @Override
     public boolean darBajaFrutaPorNombre(String nombreFruta) {
-        return false;
+        return fruteria.darBajaFrutaPorNombre(nombreFruta);
     }
-
+    //JUnit5
     @Override
     public boolean darBajaFrutasPorProcedencia(String procedencia) {
-        return false;
+        return fruteria.darBajaFrutasPorProcedencia(procedencia);
     }
-
+    //JUnit5
     @Override
     public boolean rebajar(double cantidad, int indexFruta) {
-        return false;
+        return fruteria.rebajar(cantidad, indexFruta);
     }
-
+    //JUnit5
+    @Override
+    public boolean rebajarNombreFruta(double cantidad, String nombreFruta) {
+        return fruteria.rebajarNombreFruta(cantidad,nombreFruta);
+    }
+    //JUnit5
     @Override
     public boolean subir(double cantidad, int indexFruta) {
-        return false;
+        return fruteria.subir(cantidad,indexFruta);
+    }
+    //JUnit5
+    @Override
+    public boolean subirNombreFruta(double cantidad, String nombreFruta) {
+        return fruteria.subirNombreFruta(cantidad,nombreFruta);
     }
 
     @Override
     public double calcularInventarioTotal() {
-        return 0;
+        return fruteria.calcularInventarioTotal();
     }
-
+    //JUnit5
     @Override
     public boolean actualizarPrecioVenta(String nombreFruta, double nuevoPrecioVenta) {
-        return false;
+        return fruteria.actualizarPrecioVenta(nombreFruta,nuevoPrecioVenta);
     }
-
+//JUnit5
     @Override
     public boolean frutasDeMismaProcedencia(String nombre1, String nombre2) {
-        return false;
+        return fruteria.frutasDeMismaProcedencia(nombre1,nombre2);
     }
 
     @Override
     public boolean reunirFrutasporProcedencia() {
-        return false;
+        return fruteria.reunirFrutasporProcedencia();
     }
-
+    //JUnit5
     @Override
     public boolean buscarFrutaPorNombre(String nombreFruta) {
-        return false;
+        return fruteria.buscarFrutaPorNombre(nombreFruta);
     }
 
-    @Override
-    public boolean limpiarFrutasSinContenido() {
-        return false;
-    }
 
+    //JUnit5
     @Override
     public boolean removeFrutasSinContenido() {
-        return false;
+        return fruteria.removeFrutasSinContenido();
+    }
+    //JUnit5
+    @Override
+    public boolean eliminarFrutasCaducadas() {
+        return fruteria.eliminarFrutasCaducadas();
     }
 }

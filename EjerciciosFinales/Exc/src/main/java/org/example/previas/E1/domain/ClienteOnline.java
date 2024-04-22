@@ -1,5 +1,7 @@
 package org.example.previas.E1.domain;
 
+import lombok.Getter;
+import lombok.Setter;
 import net.datafaker.Faker;
 import org.example.previas.E1.common.EnumComprobacionDirecta;
 import org.example.previas.E1.common.FechaInvalidaException;
@@ -7,7 +9,8 @@ import org.example.previas.E1.common.FechaInvalidaException;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-
+@Getter
+@Setter
 public class ClienteOnline extends Cliente {
     private LocalDate fechaEntregaPedido;
     private String direccionEntregaPedido;
@@ -24,23 +27,6 @@ public class ClienteOnline extends Cliente {
         this.direccionEntregaPedido = f.address().fullAddress();
 
     }
-
-    public LocalDate getFechaEntregaPedido() {
-        return fechaEntregaPedido;
-    }
-
-    public void setFechaEntregaPedido(LocalDate fechaEntregaPedido) {
-        this.fechaEntregaPedido = fechaEntregaPedido;
-    }
-
-    public String getDireccionEntregaPedido() {
-        return direccionEntregaPedido;
-    }
-
-    public void setDireccionEntregaPedido(String direccionEntregaPedido) {
-        this.direccionEntregaPedido = direccionEntregaPedido;
-    }
-
     public LocalDate generarFechaAleatoria() {
         // Obtener la fecha actual
         LocalDate fechaActual = LocalDate.now();

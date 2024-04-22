@@ -1,10 +1,12 @@
 package org.example.previas.E1.dao;
 
 import org.example.previas.E1.common.Constantes;
+import org.example.previas.E1.common.FechaInvalidaException;
 import org.example.previas.E1.domain.Fruta;
 import org.example.previas.E1.common.precioVentaExcepcion;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.*;
 
 public class DaoFicherosFruta {
@@ -46,17 +48,18 @@ public class DaoFicherosFruta {
                     int numeroKilos = Integer.parseInt(partes[2]);
                     double precioCostePorKilo = Double.parseDouble(partes[3]);
                     double precioVentaPorKilo = Double.parseDouble(partes[4]);
-                    Fruta fruta = new Fruta(nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo);
+                    LocalDate fechaCaducidad = LocalDate.parse(partes[5]);
+                    Fruta fruta = new Fruta(nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo,fechaCaducidad);
                     frutas.add(fruta);
                 } else {
-                    System.out.println(Constantes.FORMATO_INCORRECTO_EN_LA_LINEA + cadena);
+                    System.out.println(Constantes.FORMATOINCORRECTOENLALINEA + cadena);
                     // Manejo de líneas con formato incorrecto si es necesario
                 }
             }
         } catch (IOException e) {
             // Manejo de errores de lectura
             e.printStackTrace();
-        } catch (precioVentaExcepcion  e) {
+        } catch (precioVentaExcepcion | FechaInvalidaException e) {
             System.out.println(e.getMessage());
         }
         return frutas;

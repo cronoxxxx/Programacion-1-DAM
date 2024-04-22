@@ -5,57 +5,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="038f8823-2d78-4a32-89cd-97996332c0c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Comparadores/ComparatorEmpleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Comparadores/Tester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/HashCode/Tester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Map/MapasTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Set/ConjuntosTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ProyectoFinal/TemplateFX/data/actividades.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/ejercicios/listas/Entregable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/ejercicios/listas/Serie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/ejercicios/listas/Tester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/ejercicios/listas/Videojuego.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/ejercicios/listas/completado/Entregable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/ejercicios/listas/completado/Serie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/ejercicios/listas/completado/Tester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/ejercicios/listas/completado/Videojuego.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/equalsNhashcode/Empleado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/equalsNhashcode/TestEmpleado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/listas/TestListas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/listas/comparable/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/HashCode/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/listas/comparable/Tester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/listas/comparador/ComparatorEmpleado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/listas/comparador/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Comparadores/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/listas/comparador/Tester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/colecciones/listas/sets/Set1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion - Walther Saavedra 1DAM.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/ExamenSegundaEvaluacion.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/src/Autobus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/src/Coche.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/src/Direccion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/src/Empresa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/src/Tester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ExamenSegundaEvaluacion/src/Vehiculo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/FicheroBinario" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/FicheroBinario" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/FXMLDocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/FXMLDocumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/dao/DaoPalabrasFicheros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/dao/DaoPalabrasFicheros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/domain/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/domain/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/ui/GestionJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/ui/GestionJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/FXMLDocument.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/FXMLDocument.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/domain/Comparators.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/domain/Factura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/drafts/JUnitFruteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/drafts/JUnitMostrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/dao/DaoFruteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/dao/DaoFruteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/dao/DaoFruteriaImplementacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/dao/DaoFruteriaImplementacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/dao/Fruteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/dao/Fruteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/dao/Mostrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/dao/Mostrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/domain/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/domain/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/domain/ClienteFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/domain/ClienteFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/domain/ClienteOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/domain/ClienteOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/drafts/FrutasFicheros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/drafts/FrutasFicheros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/drafts/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/drafts/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/drafts/TesterFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjerciciosFinales/Exc/src/main/java/org/example/previas/E1/drafts/TesterMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/Fichero" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/FicheroBinario" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/common/ComparacionNombre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/common/Comprobacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/common/Constantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/common/HabilidadException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/common/HabilidadRepetidaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/common/Habilidades.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/common/IdException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/dao/DaoCampeones.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/dao/DaoCampeonesFicheros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/dao/DaoCampeonesImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/dao/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/domain/Asesino.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/domain/Campeon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/domain/Mago.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/service/ServiceInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/service/ServiceInterfaceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/ui/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/java/org/example/ui/MainCampeones.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/src/test/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/common/ComparacionNombre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/common/Comprobacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/common/Constantes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/common/HabilidadException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/common/HabilidadRepetidaException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/common/Habilidades.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/common/IdException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/dao/DaoCampeones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/dao/DaoCampeonesFicheros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/dao/DaoCampeonesImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/dao/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/domain/Asesino.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/domain/Campeon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/domain/Mago.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/service/ServiceInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/service/ServiceInterfaceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/ui/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/classes/org/example/ui/MainCampeones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/test-classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/test-classes/org/example/dao/DaoAlojamientosTest$Actualizacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/test-classes/org/example/dao/DaoAlojamientosTest$AddAlojamiento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/test-classes/org/example/dao/DaoAlojamientosTest$estaVacia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/test-classes/org/example/dao/DaoAlojamientosTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/test-classes/org/example/service/ServiciosAlojamientosImplTest$ActualizarCategoria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/test-classes/org/example/service/ServiciosAlojamientosImplTest$Excepciones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex3evav_DavidRoldán/target/test-classes/org/example/service/ServiciosAlojamientosImplTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Proyectos Java/Ajedrez/fx/fx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyectos Java/Ajedrez/fx/fx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,6 +175,7 @@
       <workItem from="1713284447906" duration="91000" />
       <workItem from="1713284634706" duration="113000" />
       <workItem from="1713344222955" duration="12000" />
+      <workItem from="1713809708039" duration="10000" />
     </task>
     <servers />
   </component>

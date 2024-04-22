@@ -23,7 +23,7 @@ public abstract class Cliente implements Serializable {
 
     public Cliente() {
         Faker f = new Faker();
-        this.nombre = f.name().name();
+        this.nombre = f.name().firstName();
         this.apellidos = f.name().lastName();
         hasDescuento = (int) (Math.random() * 2) == 1; //si se evalua a 1, sale verdadero
     }

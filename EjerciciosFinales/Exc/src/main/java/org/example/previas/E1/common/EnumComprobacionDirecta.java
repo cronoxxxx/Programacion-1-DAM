@@ -15,7 +15,6 @@ public class EnumComprobacionDirecta {
             throw new FechaInvalidaException ();
         }
     }
-
     public static void provinciaOK(String provinciaAgregar) throws AgregarProvinciasException {
         Provincias[] aux = Provincias.values();
         boolean valid = false;

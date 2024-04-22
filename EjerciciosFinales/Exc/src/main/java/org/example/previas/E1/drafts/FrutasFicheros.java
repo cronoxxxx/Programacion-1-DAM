@@ -2,6 +2,7 @@ package org.example.previas.E1.drafts;
 
 import org.example.previas.E1.common.AgregarProvinciasException;
 import org.example.previas.E1.common.EnumComprobacionDirecta;
+import org.example.previas.E1.common.FechaInvalidaException;
 import org.example.previas.E1.dao.Mostrador;
 import org.example.previas.E1.domain.Fruta;
 import org.example.previas.E1.dao.Fruteria;
@@ -10,6 +11,8 @@ import org.example.previas.E1.common.precioVentaExcepcion;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -20,13 +23,13 @@ public class FrutasFicheros {
         //System.out.println(a.mostrarInformacion(true));
         System.out.println(mostrador.mostrarInformacion(true));
         System.out.println(a.mostrarInformacion(true));
-        mostrador.venderClienteOnline();
+        mostrador.venderClienteFisico();
         try(BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));){
             System.out.println("Ingrese el nombre");
             String nombre=entradaReader.readLine();
             System.out.println("Ingrese el numero de kilos a vender");
             int nKilos = Integer.parseInt(entradaReader.readLine());
-            if(mostrador.venderClienteFisico(nKilos,nombre)){
+            if(mostrador.venderClienteFisico()){
                 System.out.println("Vendido con exito");
             } else {
                 System.err.println("No se pudo realizar la accion");
@@ -47,9 +50,22 @@ public class FrutasFicheros {
             double precioCoste = entrada.nextDouble();
             System.out.println("Ingrese el precio de venta por kilo");
             double precioVenta = entrada.nextDouble();
+            System.out.println("Ingrese una fecha en formato dd-mm-yy:");
+            String fechaStr = entrada.nextLine();
+
+            // Definir el formato de fecha esperado
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yy");
+            LocalDate fecha = null;
             try {
-                a.darAltaFruta(new Fruta(nombre, procedencia, nKilos, precioCoste, precioVenta));
-            } catch (precioVentaExcepcion e) {
+                // Parsear la fecha ingresada en un objeto LocalDate
+                fecha = LocalDate.parse(fechaStr, formatter);
+                System.out.println("Fecha ingresada: " + fecha);
+            } catch (Exception e) {
+                System.out.println("Formato de fecha incorrecto. Por favor, ingrese la fecha en formato dd-mm-yy.");
+            }
+            try {
+                a.darAltaFruta(new Fruta(nombre, procedencia, nKilos, precioCoste, precioVenta,fecha));
+            } catch (precioVentaExcepcion | FechaInvalidaException e) {
                 System.out.println(e.getMessage());
             }
         } catch (IOException | NoSuchElementException e){

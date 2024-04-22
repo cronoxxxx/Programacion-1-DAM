@@ -1,7 +1,11 @@
 package org.example.previas.E1.domain;
 
-import java.io.Serializable;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.io.Serializable;
+@Getter
+@Setter
 public class ClienteFisico extends Cliente {
 
     private int ordenFila;
@@ -23,13 +27,7 @@ public class ClienteFisico extends Cliente {
     }
 
     //hacer constructores con valores randoms y copiar esto a un archivo binario o ver lo de los properties y el json (preguntar a gema)
-    public int getOrdenFila() {
-        return ordenFila;
-    }
 
-    public void setOrdenFila(int ordenFila) {
-        this.ordenFila = ordenFila;
-    }
 
     @Override
     public String toString() {
