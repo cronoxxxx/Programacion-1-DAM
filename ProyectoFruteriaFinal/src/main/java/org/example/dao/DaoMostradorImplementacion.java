@@ -1,10 +1,11 @@
-package org.example.previas.E1.dao;
+package org.example.dao;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.example.previas.E1.domain.Cliente;
-import org.example.previas.E1.domain.Factura;
+import org.example.domain.Cliente;
+import org.example.domain.Factura;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 @Getter@Setter
@@ -43,9 +44,10 @@ public class DaoMostradorImplementacion implements DaoMostrador{
     }
 
     @Override
-    public boolean venderClienteFisico() {
-        return mostrador.venderClienteFisico();
+    public boolean venderClienteFisico(Cliente clienteComprador, StringBuilder sb, int... cantidadKilos) {
+        return mostrador.venderClienteFisico(clienteComprador,sb,cantidadKilos);
     }
+
 
     @Override
     public double getBeneficios() {
@@ -53,9 +55,10 @@ public class DaoMostradorImplementacion implements DaoMostrador{
     }
 
     @Override
-    public boolean venderClienteOnline() {
-        return mostrador.venderClienteOnline();
+    public boolean venderClienteOnline(Cliente clienteCompradorOnline, StringBuilder sb, int... cantidadKilos) {
+        return mostrador.venderClienteOnline(clienteCompradorOnline,sb,cantidadKilos);
     }
+
     //JUnit5
     @Override
     public boolean buscarClienteporID(int id) {
@@ -73,8 +76,8 @@ public class DaoMostradorImplementacion implements DaoMostrador{
     }
 
     @Override
-    public boolean removeClienteporNombreApellidos(String nombre, String apellidos) {
-        return mostrador.removeClienteporNombreApellidos(nombre,apellidos);
+    public boolean removeClienteporNombreApellidos(Cliente cliente) {
+        return mostrador.removeClienteporNombreApellidos(cliente);
     }
     //JUnit5
     @Override
@@ -83,7 +86,22 @@ public class DaoMostradorImplementacion implements DaoMostrador{
     }
 
     @Override
-    public boolean aplicarDescuentosporClienteNombreApellidos(String nombre, String apellidos) {
-        return mostrador.aplicarDescuentosporClienteNombreApellidos(nombre,apellidos);
+    public boolean aplicarDescuentosporClienteNombreApellidos(Cliente descontar) {
+        return mostrador.aplicarDescuentosporClienteNombreApellidos(descontar);
+    }
+
+    @Override
+    public Cliente devolverClienteOnline(int id) {
+        return mostrador.devolverClienteOnline(id);
+    }
+
+    @Override
+    public Cliente devolverClienteFisico() {
+        return mostrador.devolverClienteFisico();
+    }
+
+    @Override
+    public List<Cliente> clienteAccion(String nombre, String apellidos) {
+        return mostrador.clienteAccion(nombre,apellidos);
     }
 }
