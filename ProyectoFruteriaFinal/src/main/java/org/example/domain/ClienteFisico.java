@@ -3,9 +3,13 @@ package org.example.domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
-public class ClienteFisico extends Cliente {
+
+
+public class ClienteFisico extends Cliente implements Serializable {
 
     private int ordenFila;
     private static int asignacion = 1;

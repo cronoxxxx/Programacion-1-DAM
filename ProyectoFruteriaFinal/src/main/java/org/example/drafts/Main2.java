@@ -45,13 +45,13 @@ public class Main2 {
             System.out.println("Formato de fecha incorrecto. Por favor, ingrese la fecha en formato dd-mm-yy.");
         }
         try {
-            a.darAltaFruta(new Fruta(nombre,procedencia,nKilos,precioCoste,precioVenta,fecha));
+            a.darAltaFruta(new Fruta(nombre,procedencia,nKilos,precioCoste,precioVenta,fecha,200));
 
         } catch (precioVentaExcepcion | FechaInvalidaException e) {
             System.out.println(e.getMessage());
         }
         try {
-            a.darAltaFruta(new Fruta(nombre, procedencia, nKilos, precioCoste, precioVenta, fecha));
+            a.darAltaFruta(new Fruta(nombre, procedencia, nKilos, precioCoste, precioVenta, fecha,200));
         } catch (precioVentaExcepcion | FechaInvalidaException e) {
             System.out.println(e.getMessage());
         }

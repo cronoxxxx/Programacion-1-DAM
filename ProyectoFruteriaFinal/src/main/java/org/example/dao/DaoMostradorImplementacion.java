@@ -104,4 +104,13 @@ public class DaoMostradorImplementacion implements DaoMostrador{
     public List<Cliente> clienteAccion(String nombre, String apellidos) {
         return mostrador.clienteAccion(nombre,apellidos);
     }
+
+    @Override
+    public boolean reunirClientesPorCiudad(String ciudad) {
+        return mostrador.reunirClientesPorCiudad(ciudad);
+    }
+
+    public void eliminarTodo(){
+        mostrador.eliminarTodo();
+    }
 }

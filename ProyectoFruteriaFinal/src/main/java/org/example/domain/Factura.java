@@ -2,12 +2,13 @@ package org.example.domain;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 @Data
-public class Factura {
+public class Factura implements Serializable {
     final Cliente cliente;
     LocalDateTime fechaHora = LocalDateTime.now();
     final List<Fruta> frutasVendidas;

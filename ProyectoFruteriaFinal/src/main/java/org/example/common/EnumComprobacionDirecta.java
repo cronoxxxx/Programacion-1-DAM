@@ -1,6 +1,8 @@
 package org.example.common;
 
 import java.time.LocalDate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EnumComprobacionDirecta {
 
@@ -26,6 +28,14 @@ public class EnumComprobacionDirecta {
 
         if (!valid){
             throw new AgregarProvinciasException();
+        }
+    }
+
+    public static void direccionOK (String direccionEntregaPedido) throws direccionInvalidoException {
+        Pattern pattern = Pattern.compile("^[,\\p{L}0-9 ]+$");
+        Matcher matcher = pattern.matcher(direccionEntregaPedido);
+        if (!matcher.matches()) {
+            throw new direccionInvalidoException();
         }
     }
 

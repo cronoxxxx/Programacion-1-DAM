@@ -37,7 +37,6 @@ public class Constantes {
     public static final String NO_EXISTE_CLIENTE_ONLINE_CON_ESA_ID_O_ESA_ID_NO_EXISTE = "No existe un cliente online con esa id o esa id no existe";
 
 
-
     public static final String LO_SENTIMOS_SOLO_TENEMOS_ESTA_CANTIDAD_DE_KILOS_PARA = "Lo sentimos, solo tenemos esta cantidad de kilos para ";
     public static final String DESCUENTO_EN_LECTURA = "Descuento  del 30% en lectura";
     public static final String NO_DESCUENTO_EN_LECTURA = "No hay descuento en lectura";
@@ -45,23 +44,32 @@ public class Constantes {
 
     public static final String NOMBRE_DEL_CLIENTE = "Nombre del cliente: ";
 
+    public static final String CLIENTES_DE_LA_CIUDAD = "Clientes de la ciudad: ";
+    public static final String NO_SE_HAN_ENCONTRADO_CLIENTES_EN_LA_CIUDAD = "No se han encontrado clientes en la ciudad: ";
+    public static final String MENU_FRUTERIA = "1. Mostrar información\n2. Dar alta fruta\n3. Dar baja fruta \n4. Rebajar precio de venta de fruta\n5. Subir precio de coste de fruta  \n5. Mostrar el calculo de inventario total \n6. Mostrar el precio de coste de una fruta \n7. Buscar fruta por nombre\n8. Salir\n\nElija una de las opciones: ";
+    public static final String DEBE_INGRESAR_UN_NUMERO = "Debe introducir un número.";
+    public static final String ERROR_ENTRADA_SALIDA = "Error en la entrada/salida. Por favor, pruebe de nuevo.";
 
+    public static final String INGRESE_EL_NOMBRE_DE_LA_FRUTA = "Ingrese el nombre de la fruta: ";
+    public static final String INGRESE_EL_PRECIO_COSTE = "Ingrese el precio de coste: ";
+    public static final String INGRESE_EL_PRECIO_VENTA = "Ingrese el precio de venta: ";
+    public static final String INGRESE_LA_FECHA_DE_CADUCIDAD = "Ingrese la fecha de caducidad: ";
+    public static final String DEBE_INGRESAR_FECHA_VALIDA = "Debe introducir una fecha válida.";
+    public static final String DEBE_INGRESAR_PRECIO_VENTA_MAYOR_A_PRECIO_COSTE = "Debe introducir un precio de venta mayor al precio de coste.";
+    public static final String INGRESO_EXITOSO = "Ingreso exitoso.";
+    public static final String INGRESO_FALLIDO = "Ingreso fallido.";
+    public static final String MENU_BAJA_FRUTA = "1. Dar baja fruta por nombre\n2. Dar baja fruta por procedencian\nElija una de las opciones: ";
+    public static final String ELIMINADO_EXITOSO = "Eliminado exitoso.";
+    public static final String ELIMINADO_FALLIDO = "Eliminado fallido.";
+    public static final String DEBE_INGRESAR_UNA_OPCION_VALIDA = "Debe introducir una opción valida.";
+    public static final String INGRESE_UNA_OPCION_VALIDA = "Ingrese una opción valida.";
+    public static final String INGRESE_LA_CANTIDAD_A_REBAJAR = "Ingrese la cantidad a rebajar: ";
+    public static final String MENU_REBAJAR_FRUTA = "1. Rebaajar precio de venta de fruta por indice\n2. Rebaajar precio de venta de fruta por nombre\nElija una de las opciones: ";
+    public static final String INGRESE_EL_INDICE_DE_LA_FRUTA = "Ingrese el indice de la fruta: ";
+    public static final String MENU_SUBIR_FRUTA = "1. Subir precio de coste de fruta por indice\n2. Subir precio de coste de fruta por nombre\nElija una de las opciones: ";
+    public static final String INGRESE_LA_CANTIDAD_A_SUBIR = "Ingrese la cantidad a subir: ";
+    public static final String CONTRASENA_INCORRECTA_INGRESE_UNA_VALIDA = "Contrasena incorrecta. Ingrese una contrasena valida.";
+    public static final String INGRESE_CONTRASENA = "Ingrese la contraseña: ";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public static final String INGRESE_NUEVA_CONTRASENA = "Ingrese la nueva contrasena: ";
 }

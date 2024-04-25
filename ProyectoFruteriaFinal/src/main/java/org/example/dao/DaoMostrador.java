@@ -30,5 +30,7 @@ public interface DaoMostrador {
     Cliente devolverClienteOnline (int id);
     Cliente devolverClienteFisico ();
     List<Cliente> clienteAccion (String nombre, String apellidos);
+    boolean reunirClientesPorCiudad(String ciudad);
+    void eliminarTodo();
 
 }

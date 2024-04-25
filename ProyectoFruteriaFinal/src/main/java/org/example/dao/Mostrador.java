@@ -14,6 +14,7 @@ public class Mostrador implements Serializable {
     private double beneficios;
     private static int iterador = 1;
     private Set<Factura> facturas; //No colocará doble factura
+
     public Mostrador(int cantidad) {
         fruteria = new Fruteria();
         facturas = new TreeSet<>(new Comparators.ComparatorFactura());
@@ -27,6 +28,8 @@ public class Mostrador implements Serializable {
             }
         }
     }
+
+
     public Mostrador() {
         this(20);
     }
@@ -60,21 +63,17 @@ public class Mostrador implements Serializable {
         return sortedMap;
     }
 
-    public Cliente devolverClienteFisico (){ //volverlo a objeto cliente, y que retorne un objeto cliente nuevo que pasara arguemento en venderClienteFisico
+    public Cliente devolverClienteFisico() {
         ClienteFisico clienteComprador = null;
-        for (Cliente cliente : clientesEsperaCompra.values()) {
-            if (cliente instanceof ClienteFisico clienteFisico) {
-                if (clienteFisico.getOrdenFila() == iterador) {
-                    clienteComprador = clienteFisico;
-                    System.out.println(Constantes.NOMBRE_DEL_CLIENTE + clienteComprador.getNombre());
-                    iterador++;
-                    break;
-                }
-            }
-        }
-        if (clienteComprador == null) {
+        List<Cliente> clientesEnEspera = new LinkedList<>(clientesEsperaCompra.values());
+        //Uso del optional
+        Optional<Cliente> clienteEncontrado = clientesEnEspera.stream().filter(c -> c instanceof ClienteFisico).filter(c -> ((ClienteFisico) c).getOrdenFila() == iterador).findFirst();
+        if (clienteEncontrado.isPresent()) {
+            clienteComprador = (ClienteFisico) clienteEncontrado.get();
+            System.out.println(Constantes.NOMBRE_DEL_CLIENTE + clienteComprador.getNombre());
+            iterador++;
+        } else {
             System.out.println(Constantes.CLIENTE_NO_ENCONTRADO);
-            return null;
         }
         return clienteComprador;
     }
@@ -82,6 +81,7 @@ public class Mostrador implements Serializable {
         List<Fruta> agregarCompraFrutasFactura = new ArrayList<>();
         String nombreFruta = null;
         double sumadorVenta = 0;
+        double descuento = 0;
         List<Double> almacenPrecios = new LinkedList<>();
 
         String nombreFrutasString = sb.toString();
@@ -106,23 +106,26 @@ public class Mostrador implements Serializable {
                         double precioVentaFruta = precioUnitario * cantidadKilos[j];
 
                         if (clienteComprador.isHasDescuento()) {
-                            precioVentaFruta *= 0.7; // Aplicar descuento del 30%
+                            descuento =precioVentaFruta * 0.7; // Aplicar descuento del 30%
+                            almacenPrecios.add(precioVentaFruta * 0.7);
                             System.out.println(Constantes.DESCUENTO_EN_LECTURA);
                         } else {
+                            descuento =precioVentaFruta;
+                            almacenPrecios.add(precioVentaFruta);
                             System.out.println(Constantes.NO_DESCUENTO_EN_LECTURA);
                         }
 
                         fruta.setNumeroKilos(fruta.getNumeroKilos() - cantidadKilos[j]);
-                        beneficios += precioVentaFruta;
-                        sumadorVenta += precioVentaFruta;
-                        almacenPrecios.add(precioVentaFruta);
+                        beneficios += descuento;
+                        sumadorVenta += descuento;
+
                         System.out.println(Constantes.KILOS_VENDIDOS+cantidadKilos[j]);
                         System.out.println(Constantes.NOMBRE_FRUTA+fruta.getNombre());
-                        System.out.println(Constantes.TOTAL_EUROS+precioUnitario);
+                        System.out.println(Constantes.TOTAL_EUROS+descuento);
                         agregarCompraFrutasFactura.add(fruta);
 
 
-                        break;
+
                     }
                     j++;
                 }
@@ -167,8 +170,8 @@ public class Mostrador implements Serializable {
     }
     public boolean venderClienteOnline(Cliente clienteCompradorOnline, StringBuilder sb, int ...cantidadKilos) {
         List<Fruta> agregarCompraFrutasFactura = new LinkedList<>();
-        double precioVenta = 0;
         double sumadorPrecio = 0;
+        double descontado = 0;
         String nombreFrutasString = sb.toString();
         List<Double> almacenPrecios = new LinkedList<>();
         nombreFrutasString = nombreFrutasString.substring(0, nombreFrutasString.length() - 2); // Eliminar la ultima coma y espacio
@@ -194,21 +197,22 @@ public class Mostrador implements Serializable {
                         double precioVentaFruta = precioUnitario * cantidadKilos[j];
 
                         if (clienteCompradorOnline.isHasDescuento()) {
-                            precioVentaFruta *= 0.7; // Aplicar descuento del 30%
+                            descontado = precioVentaFruta * 0.7; // Aplicar descuento del 30%
+                            almacenPrecios.add(precioVentaFruta * 0.7);
                             System.out.println(Constantes.DESCUENTO_EN_LECTURA);
                         } else {
+                            descontado = precioVentaFruta;
+                            almacenPrecios.add(precioVentaFruta);
                             System.out.println(Constantes.NO_DESCUENTO_EN_LECTURA);
                         }
 
                         fruta.setNumeroKilos(fruta.getNumeroKilos() - cantidadKilos[j]);
                         agregarCompraFrutasFactura.add(fruta);
-                        beneficios += precioVentaFruta;
-                        sumadorPrecio += precioVentaFruta;
+                        beneficios += descontado;
+                        sumadorPrecio += descontado;
                         System.out.println(Constantes.KILOS_VENDIDOS+cantidadKilos[j]);
                         System.out.println(Constantes.NOMBRE_FRUTA+fruta.getNombre());
-                        System.out.println(Constantes.TOTAL_EUROS+precioUnitario);
-                        almacenPrecios.add(precioVentaFruta);
-                        break;
+                        System.out.println(Constantes.TOTAL_EUROS+descontado);
                     }
                     j++;
                 }
@@ -264,6 +268,20 @@ public class Mostrador implements Serializable {
         }
 
         return clienteEncontrado;
+    }
+
+    public boolean reunirClientesPorCiudad(String ciudad) {
+        Map<String, List<ClienteOnline>> clientesPorCiudad = clientesEsperaCompra.values().stream().filter(cliente -> cliente instanceof ClienteOnline)
+                .map(cliente -> (ClienteOnline) cliente).collect(Collectors.groupingBy(ClienteOnline::getCiudad));
+        if (!clientesPorCiudad.isEmpty()) {
+            System.out.println(Constantes.CLIENTES_DE_LA_CIUDAD+ciudad);
+            System.out.println(Constantes.SEPARADOR);
+            clientesPorCiudad.get(ciudad).forEach(System.out::println);
+            return true;
+        } else {
+            System.out.println(Constantes.NO_SE_HAN_ENCONTRADO_CLIENTES_EN_LA_CIUDAD+ciudad);
+        }
+        return false;
     }
 
     public boolean removeClienteporID(int id) {
@@ -327,6 +345,12 @@ public class Mostrador implements Serializable {
         }
         return aplicado;
     }
+
+    public void eliminarTodo(){
+        clientesEsperaCompra.clear();
+    }
+
+
 
     }
 

@@ -1,8 +1,9 @@
 package org.example.domain;
 
+import java.io.Serializable;
 import java.util.Comparator;
 public class Comparators{
-    public static class ComparatorFactura implements Comparator<Factura> {
+    public static class ComparatorFactura implements Comparator<Factura>, Serializable {
         public ComparatorFactura() {
         }
 

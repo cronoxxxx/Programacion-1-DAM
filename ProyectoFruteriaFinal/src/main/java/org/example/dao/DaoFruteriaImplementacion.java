@@ -106,4 +106,7 @@ public class DaoFruteriaImplementacion implements DaoFruteria {
     public boolean eliminarFrutasCaducadas() {
         return fruteria.eliminarFrutasCaducadas();
     }
+    public void eliminarTodo(){
+        fruteria.eliminarTodo();
+    };
 }

@@ -11,9 +11,6 @@ public interface DaoFruteria {
     boolean isEmptyFrutas();
     List<Fruta> mostrarInformacion(boolean ascendente);
     boolean darAltaFruta(Fruta fruta);
-
-
-
     boolean darBajaFrutaPorNombre(String nombreFruta);
     boolean darBajaFrutasPorProcedencia(String procedencia);
     boolean rebajar(double cantidad, int indexFruta);
@@ -27,5 +24,6 @@ public interface DaoFruteria {
     boolean buscarFrutaPorNombre(String nombreFruta);
     boolean removeFrutasSinContenido();
     boolean eliminarFrutasCaducadas();
+    void eliminarTodo();
 
 }

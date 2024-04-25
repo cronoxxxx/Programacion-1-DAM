@@ -7,6 +7,7 @@ import org.example.common.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 
 
 @Getter@Setter
@@ -15,9 +16,23 @@ public class Fruta implements Comparable<Fruta>, Serializable {
     private int numeroKilos;
     private double precioCostePorKilo,precioVentaPorKilo;
     private LocalDate fechaCaducidad;
+    private int cuantasVecesSeVendio;
 public static int autonumerico = 1;
 
 
+
+
+    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo,LocalDate fechaCaducidad, int cuantasVecesSeVendio) throws precioVentaExcepcion, FechaInvalidaException {
+        this.nombre = nombre;
+        this.procedencia = procedencia;
+        this.numeroKilos = numeroKilos;
+        this.precioCostePorKilo = precioCostePorKilo;
+        this.precioVentaPorKilo = precioVentaPorKilo;
+        this.fechaCaducidad = fechaCaducidad;
+        this.cuantasVecesSeVendio = cuantasVecesSeVendio;
+        EnumComprobacionDirecta.precioVentaOK(precioVentaPorKilo, precioCostePorKilo);
+        EnumComprobacionDirecta.fechaOK(fechaCaducidad);
+    }
 
     public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo,LocalDate fechaCaducidad) throws precioVentaExcepcion, FechaInvalidaException {
         this.nombre = nombre;
@@ -26,6 +41,7 @@ public static int autonumerico = 1;
         this.precioCostePorKilo = precioCostePorKilo;
         this.precioVentaPorKilo = precioVentaPorKilo;
         this.fechaCaducidad = fechaCaducidad;
+        this.cuantasVecesSeVendio = 0;
         EnumComprobacionDirecta.precioVentaOK(precioVentaPorKilo, precioCostePorKilo);
         EnumComprobacionDirecta.fechaOK(fechaCaducidad);
     }
@@ -40,8 +56,15 @@ public static int autonumerico = 1;
         this.fechaCaducidad = generarFechaAleatoria();
         this.precioCostePorKilo= precioCostePorKilo;
         this.precioVentaPorKilo=precioVentaPorKilo;
+        this.cuantasVecesSeVendio = (int) (Math.random() * 200);
         autonumerico++;
     }
+
+    public void setCuantasVecesSeVendio(int aumento) {
+        this.cuantasVecesSeVendio = cuantasVecesSeVendio + aumento;
+    }
+
+    //mostrador.getFruteria.getFrutas pasa al texto de la fruta cuando se realiza una compra de venta de fruta en el sistema por parte de clientes
 
     public LocalDate generarFechaAleatoria() {
         // Obtener la fecha actual
@@ -55,12 +78,12 @@ public static int autonumerico = 1;
         return fechaAleatoria;
     }
     public String toString() {
-        return String.format("Nombre de la fruta: %s\nProcedencia: %s\nNumero de kilos: %d\nPrecio Coste por kilo: %.2f\nPrecio de venta por kilo: %.2f\nFecha de caducidad %s\n",
-                nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo,fechaCaducidad);
+        return String.format("Nombre de la fruta: %s\nProcedencia: %s\nNumero de kilos: %d\nPrecio Coste por kilo: %.2f\nPrecio de venta por kilo: %.2f\nFecha de caducidad %s\nVeces vendidas: %d",
+                nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo,fechaCaducidad,cuantasVecesSeVendio);
     }
 
     public String toStringFile(){
-    return nombre+";"+procedencia+";"+numeroKilos+";"+precioCostePorKilo+";"+precioVentaPorKilo+";"+fechaCaducidad;
+    return nombre+";"+procedencia+";"+numeroKilos+";"+precioCostePorKilo+";"+precioVentaPorKilo+";"+fechaCaducidad+";"+cuantasVecesSeVendio;
     }
 
     @Override

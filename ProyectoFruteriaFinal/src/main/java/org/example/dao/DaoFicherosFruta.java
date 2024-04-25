@@ -7,10 +7,7 @@ import org.example.common.FechaInvalidaException;
 import org.example.common.precioVentaExcepcion;
 import org.example.domain.Fruta;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +53,8 @@ public class DaoFicherosFruta {
                     double precioCostePorKilo = Double.parseDouble(partes[3]);
                     double precioVentaPorKilo = Double.parseDouble(partes[4]);
                     LocalDate fechaCaducidad = LocalDate.parse(partes[5]);
-                    Fruta fruta = new Fruta(nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo,fechaCaducidad);
+                    int cantidadesVendidas = Integer.parseInt(partes[6]);
+                    Fruta fruta = new Fruta(nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo,fechaCaducidad,cantidadesVendidas);
                     frutas.add(fruta);
                 } else {
                     System.out.println(Constantes.FORMATO_INCORRECTO_EN_LA_LINEA + cadena);
@@ -70,6 +68,29 @@ public class DaoFicherosFruta {
             System.out.println(e.getMessage());
         }
         return frutas;
+    }
+
+    public static Mostrador leerFicheroBinario()  {
+        Mostrador auxiliar = null;
+        try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(FICHEROBINARIO))) {
+            auxiliar = (Mostrador) is.readObject();
+        } catch (IOException | ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(DaoFicherosFruta.class.getName()).log(java.util.logging.Level.SEVERE, ex.getMessage(), ex);
+        }
+        return auxiliar;
+    }
+
+
+
+    public static boolean escribirFicheroBinario(Mostrador mostrador) {
+        boolean escrito = false;
+        try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(FICHEROBINARIO))) {
+            os.writeObject(mostrador);
+            escrito = true;
+        } catch (IOException ex) {
+            java.util.logging.Logger.getLogger(DaoFicherosFruta.class.getName()).log(java.util.logging.Level.SEVERE, ex.getMessage(), ex);
+        }
+        return escrito;
     }
 
 

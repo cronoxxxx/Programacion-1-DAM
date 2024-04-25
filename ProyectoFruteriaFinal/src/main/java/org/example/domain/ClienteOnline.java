@@ -6,25 +6,33 @@ import lombok.Setter;
 import net.datafaker.Faker;
 import org.example.common.EnumComprobacionDirecta;
 import org.example.common.FechaInvalidaException;
+import org.example.common.Provincias;
+import org.example.common.direccionInvalidoException;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 @Getter
 @Setter
-public class ClienteOnline extends Cliente {
+public class ClienteOnline extends Cliente implements Serializable {
     private LocalDate fechaEntregaPedido;
-    private String direccionEntregaPedido;
-    public ClienteOnline(String nombre, String apellidos, LocalDate fechaEntregaPedido, String direccionEntregaPedido, boolean hasDescuento) throws FechaInvalidaException {
+    private String direccionEntregaPedido,ciudad;
+
+    public ClienteOnline(String nombre, String apellidos, LocalDate fechaEntregaPedido, String direccionEntregaPedido, boolean hasDescuento, String ciudad) throws FechaInvalidaException, direccionInvalidoException {
         super(nombre, apellidos,hasDescuento);
         this.fechaEntregaPedido = fechaEntregaPedido;
         this.direccionEntregaPedido = direccionEntregaPedido;
         EnumComprobacionDirecta.fechaOK(fechaEntregaPedido);
+        EnumComprobacionDirecta.direccionOK(direccionEntregaPedido);
+        this.ciudad = ciudad;
     }
 
     public ClienteOnline() {
+        Provincias [] p = Provincias.values();
         Faker f = new Faker();
         this.fechaEntregaPedido = generarFechaAleatoria();
         this.direccionEntregaPedido = f.address().fullAddress();
+        this.ciudad = String.valueOf(p[(int)(Math.random()*p.length)]);
 
     }
     public LocalDate generarFechaAleatoria() {
@@ -36,11 +44,14 @@ public class ClienteOnline extends Cliente {
         long diasAleatorios = (long) (Math.random() * (diasHasta2026 + 1));
         // Calcular la fecha aleatoria sumando los días aleatorios a la fecha actual
         LocalDate fechaAleatoria = fechaActual.plusDays(diasAleatorios);
+
         return fechaAleatoria;
     }
 
+
+
     @Override
     public String toString() {
-        return String.format("Nombre: %s\nApellido %s\nDireccion del pedido: %s\nTicket descuento: %b\nFecha de la entrega: %s\n",nombre,apellidos,direccionEntregaPedido,hasDescuento,fechaEntregaPedido);
+        return String.format("Nombre: %s\nApellido %s\nDireccion del pedido: %s\nTicket descuento: %b\nFecha de la entrega: %s\nCiudad %s\n",nombre,apellidos,direccionEntregaPedido,hasDescuento,fechaEntregaPedido,ciudad);
     }
 }

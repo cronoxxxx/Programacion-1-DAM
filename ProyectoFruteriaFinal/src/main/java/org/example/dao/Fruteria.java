@@ -20,14 +20,13 @@ public class Fruteria implements Serializable {
     }
 
     public Fruteria() {
-
-
         try {
             frutas = DaoFicherosFruta.leerFichero();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
-        }
-        /*for (int i = 0; i < cantidadAlmacen; i++) {
+        }}
+/*
+        for (int i = 0; i < cantidadAlmacen; i++) {
             try {
                 double precioCoste = (Math.random() * 40) + 1;
                 double precioVenta = precioCoste + (Math.random() * 40) + 1;
@@ -37,9 +36,9 @@ public class Fruteria implements Serializable {
                 entrada.nextLine();
                 i--;
             }
-        }*/
 
-    }
+
+        }*/
 
 
 
@@ -171,6 +170,7 @@ public class Fruteria implements Serializable {
                 .filter(fruta -> fruta.getNombre().equalsIgnoreCase(nombreFruta))
                 .peek(fruta -> fruta.setPrecioVentaPorKilo(nuevoPrecioVenta >= fruta.getPrecioCostePorKilo() ? nuevoPrecioVenta : fruta.getPrecioVentaPorKilo()))
                 .findFirst().isPresent();
+
     }
 
     public boolean frutasDeMismaProcedencia(String nombre1, String nombre2) {
@@ -193,9 +193,6 @@ public class Fruteria implements Serializable {
 
 
     public boolean reunirFrutasporProcedencia(String procedencia) {
-        Scanner entrada = new Scanner(System.in);
-
-        System.out.println(Constantes.INGRESE_LA_PROCENDENCIA);
         Map<String, List<Fruta>> frutasPorProcedencia = frutas.stream().collect(Collectors.groupingBy(Fruta::getProcedencia));
         List<Fruta> frutasProcedencia = frutasPorProcedencia.get(procedencia);
         if (!frutasProcedencia.isEmpty()) {
@@ -210,14 +207,14 @@ public class Fruteria implements Serializable {
     public boolean buscarFrutaPorNombre(String nombreFruta) {
         boolean valido = false;
         Fruta aux = null;
-        for (Fruta fruta : frutas) {
-            if (fruta.getNombre().strip().equalsIgnoreCase(nombreFruta)) {
-                aux = fruta;
-                valido = true;
-                break;
-            }
-        }
-        if (aux == null) {
+        List<Fruta> frutasEncontradas = frutas.stream().filter(fruta -> fruta.getNombre().strip().equalsIgnoreCase(nombreFruta)).toList();
+        if (!frutasEncontradas.isEmpty()) {
+            aux = frutasEncontradas.get(0);
+            System.out.println(Constantes.NO_SE_HA_ENCONTRADO_LA_FRUTA_LLAMADA+aux.getNombre());
+            System.out.println(Constantes.SEPARADOR);
+            System.out.println(aux);
+            valido = true;
+        } else {
             System.out.println(Constantes.LA_FRUTA_NO_SE_ENCONTRO_EN_EL_INVENTARIO);
         }
         return valido;
@@ -231,14 +228,12 @@ public class Fruteria implements Serializable {
         return frutas.removeIf(fruta -> fruta.getFechaCaducidad().equals(LocalDate.now()));
     }
 
-    public boolean escribirFichero() {
-        try {
-            return DaoFicherosFruta.escribirFichero(mostrarInformacion(true));
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-            return false;
-        }
+    public void eliminarTodo() {
+        frutas.clear();
     }
+
+
+
 
 
 }

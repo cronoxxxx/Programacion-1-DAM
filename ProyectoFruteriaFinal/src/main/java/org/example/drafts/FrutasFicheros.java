@@ -4,9 +4,12 @@ import org.example.common.AgregarProvinciasException;
 import org.example.common.EnumComprobacionDirecta;
 import org.example.common.FechaInvalidaException;
 import org.example.common.precioVentaExcepcion;
+import org.example.dao.DaoFicherosFruta;
+import org.example.dao.DaoFruteriaImplementacion;
 import org.example.dao.Fruteria;
 import org.example.dao.Mostrador;
 import org.example.domain.Fruta;
+import org.example.service.GestionFruteria;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -60,7 +63,7 @@ public class FrutasFicheros {
                 System.out.println("Formato de fecha incorrecto. Por favor, ingrese la fecha en formato dd-mm-yy.");
             }
             try {
-                a.darAltaFruta(new Fruta(nombre, procedencia, nKilos, precioCoste, precioVenta,fecha));
+                a.darAltaFruta(new Fruta(nombre, procedencia, nKilos, precioCoste, precioVenta,fecha,200));
             } catch (precioVentaExcepcion | FechaInvalidaException e) {
                 System.out.println(e.getMessage());
             }
@@ -69,12 +72,8 @@ public class FrutasFicheros {
         }
 
 
-
-
-
-
-
-        a.escribirFichero();
+        GestionFruteria gestionFruteria = new GestionFruteria();
+        gestionFruteria.escribirFichero();
 
 
 
