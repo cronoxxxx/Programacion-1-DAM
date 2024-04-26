@@ -162,7 +162,8 @@ public class Fruteria implements Serializable {
     }
 
     public double calcularInventarioTotal() {
-        return frutas.stream().mapToDouble(fruta -> fruta.getPrecioVentaPorKilo() * fruta.getNumeroKilos()).sum();
+        double sum = frutas.stream().mapToDouble(fruta -> fruta.getPrecioVentaPorKilo() * fruta.getNumeroKilos()).sum();
+        return  sum <=0 ? -1 : sum;
     }
 
     public boolean actualizarPrecioVenta(String nombreFruta, double nuevoPrecioVenta) {
@@ -210,7 +211,7 @@ public class Fruteria implements Serializable {
         List<Fruta> frutasEncontradas = frutas.stream().filter(fruta -> fruta.getNombre().strip().equalsIgnoreCase(nombreFruta)).toList();
         if (!frutasEncontradas.isEmpty()) {
             aux = frutasEncontradas.get(0);
-            System.out.println(Constantes.NO_SE_HA_ENCONTRADO_LA_FRUTA_LLAMADA+aux.getNombre());
+            System.out.println(Constantes.SE_HA_ENCONTRADO_LA_FRUTA_LLAMADA+aux.getNombre());
             System.out.println(Constantes.SEPARADOR);
             System.out.println(aux);
             valido = true;

@@ -1,18 +1,14 @@
 package org.example.service;
 
 import lombok.Getter;
-import org.example.dao.DaoFicherosFruta;
-import org.example.dao.DaoMostradorImplementacion;
-import org.example.dao.Mostrador;
-import org.example.domain.Cliente;
-import org.example.domain.Factura;
+import org.example.dao.*;
+import org.example.domain.*;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.io.FileNotFoundException;
+import java.util.*;
 @Getter
 public class GestionMostrador implements IGestionMostrador{
-    private DaoMostradorImplementacion daoMostradorImplementacion;
+    private final DaoMostradorImplementacion daoMostradorImplementacion;
     public GestionMostrador() {
         this.daoMostradorImplementacion = new DaoMostradorImplementacion();
     }
@@ -117,5 +113,23 @@ public class GestionMostrador implements IGestionMostrador{
     @Override
     public boolean escribirFicheroBinario(Mostrador mostrador) {
         return DaoFicherosFruta.escribirFicheroBinario(mostrador);
+    }
+
+    @Override
+    public boolean escribirCambiosFrutaTexto() {
+        try {
+            return DaoFicherosFruta.escribirFichero(daoMostradorImplementacion.getMostrador().getFruteria().getFrutas());
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public List<Fruta> leerCambiosFrutaTexto() {
+        try {
+            return DaoFicherosFruta.leerFichero();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

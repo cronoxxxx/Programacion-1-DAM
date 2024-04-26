@@ -46,7 +46,7 @@ public class Constantes {
 
     public static final String CLIENTES_DE_LA_CIUDAD = "Clientes de la ciudad: ";
     public static final String NO_SE_HAN_ENCONTRADO_CLIENTES_EN_LA_CIUDAD = "No se han encontrado clientes en la ciudad: ";
-    public static final String MENU_FRUTERIA = "1. Mostrar información\n2. Dar alta fruta\n3. Dar baja fruta \n4. Rebajar precio de venta de fruta\n5. Subir precio de coste de fruta  \n5. Mostrar el calculo de inventario total \n6. Mostrar el precio de coste de una fruta \n7. Buscar fruta por nombre\n8. Salir\n\nElija una de las opciones: ";
+    public static final String MENU_FRUTERIA = "1. Mostrar información\n2. Dar alta fruta\n3. Dar baja fruta \n4. Rebajar precio de venta de fruta\n5. Subir precio de coste de fruta  \n6. Mostrar el calculo de inventario total \n7. Actualizar el precio de venta de una fruta \n8. Comparar dos frutas si son de la misma procedencia\n9. Reunir frutas de la misma procedencia\n10.\n\nElija una de las opciones: ";
     public static final String DEBE_INGRESAR_UN_NUMERO = "Debe introducir un número.";
     public static final String ERROR_ENTRADA_SALIDA = "Error en la entrada/salida. Por favor, pruebe de nuevo.";
 
@@ -71,5 +71,14 @@ public class Constantes {
     public static final String CONTRASENA_INCORRECTA_INGRESE_UNA_VALIDA = "Contrasena incorrecta. Ingrese una contrasena valida.";
     public static final String INGRESE_CONTRASENA = "Ingrese la contraseña: ";
 
-    public static final String INGRESE_NUEVA_CONTRASENA = "Ingrese la nueva contrasena: ";
+
+    public static final String PRECIOS_DE_VENTA_MAL_INGRESADOS_VERIFICAR_PROGRAMA = "Los precios de venta están mal ingresados. Verificar el programa.";
+    public static final String EL_INVENTARIO_TOTAL_ES = "El inventario total es: ";
+    public static final String INGRESE_LA_CANTIDAD_A_ACTUALIZAR = "Ingrese la cantidad a actualizar: ";
+    public static final String COMPARACION_EXITOSA = "Comparacion exitosa.";
+
+    public static final String COMPARACION_FALLIDA = "Comparacion fallida.";
+    public static final String SE_HA_ENCONTRADO_LA_FRUTA_LLAMADA = "Se ha encontrado la fruta llamada: ";
+    public static final String ENCONTRADO_EXITOSO = "Encontrado exitoso.";
+    public static final String ENCONTRADO_FALLIDO = "Encontrado fallido.";
 }

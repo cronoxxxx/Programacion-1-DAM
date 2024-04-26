@@ -3,6 +3,7 @@ package org.example.service;
 import org.example.dao.Mostrador;
 import org.example.domain.Cliente;
 import org.example.domain.Factura;
+import org.example.domain.Fruta;
 
 import java.util.List;
 import java.util.Map;
@@ -33,4 +34,8 @@ public interface IGestionMostrador {
 
     Mostrador leerFicheroBinario();
     boolean escribirFicheroBinario(Mostrador mostrador);
+
+    boolean escribirCambiosFrutaTexto();
+
+    List<Fruta> leerCambiosFrutaTexto();
 }

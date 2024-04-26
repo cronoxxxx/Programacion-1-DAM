@@ -10,19 +10,18 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 
-@Getter@Setter
+@Getter
+@Setter
 public class Fruta implements Comparable<Fruta>, Serializable {
-    private String nombre,procedencia;
+    private String nombre, procedencia;
     private int numeroKilos;
-    private double precioCostePorKilo,precioVentaPorKilo;
+    private double precioCostePorKilo, precioVentaPorKilo;
     private LocalDate fechaCaducidad;
     private int cuantasVecesSeVendio;
-public static int autonumerico = 1;
+    private static int autonumerico = 1;
 
 
-
-
-    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo,LocalDate fechaCaducidad, int cuantasVecesSeVendio) throws precioVentaExcepcion, FechaInvalidaException {
+    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo, LocalDate fechaCaducidad, int cuantasVecesSeVendio) throws precioVentaExcepcion, FechaInvalidaException {
         this.nombre = nombre;
         this.procedencia = procedencia;
         this.numeroKilos = numeroKilos;
@@ -34,7 +33,7 @@ public static int autonumerico = 1;
         EnumComprobacionDirecta.fechaOK(fechaCaducidad);
     }
 
-    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo,LocalDate fechaCaducidad) throws precioVentaExcepcion, FechaInvalidaException {
+    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo, LocalDate fechaCaducidad) throws precioVentaExcepcion, FechaInvalidaException {
         this.nombre = nombre;
         this.procedencia = procedencia;
         this.numeroKilos = numeroKilos;
@@ -46,16 +45,16 @@ public static int autonumerico = 1;
         EnumComprobacionDirecta.fechaOK(fechaCaducidad);
     }
 
-    public Fruta (double precioCostePorKilo, double precioVentaPorKilo) throws precioVentaExcepcion {
+    public Fruta(double precioCostePorKilo, double precioVentaPorKilo) throws precioVentaExcepcion {
 
-        Frutas[] frutas= Frutas.values();
+        Frutas[] frutas = Frutas.values();
         Provincias[] provincias = Provincias.values();
-        this.nombre = String.valueOf(frutas[(int) (Math.random() * frutas.length-1) +1]) + autonumerico;
-        this.procedencia = provincias[(int) (Math.random() * provincias.length-1) + 1].toString();
+        this.nombre = String.valueOf(frutas[(int) (Math.random() * frutas.length - 1) + 1]) + autonumerico;
+        this.procedencia = provincias[(int) (Math.random() * provincias.length - 1) + 1].toString();
         this.numeroKilos = (int) (Math.random() * 10000) + 1;
         this.fechaCaducidad = generarFechaAleatoria();
-        this.precioCostePorKilo= precioCostePorKilo;
-        this.precioVentaPorKilo=precioVentaPorKilo;
+        this.precioCostePorKilo = precioCostePorKilo;
+        this.precioVentaPorKilo = precioVentaPorKilo;
         this.cuantasVecesSeVendio = (int) (Math.random() * 200);
         autonumerico++;
     }
@@ -77,17 +76,18 @@ public static int autonumerico = 1;
         LocalDate fechaAleatoria = fechaActual.plusDays(diasAleatorios);
         return fechaAleatoria;
     }
+
     public String toString() {
         return String.format("Nombre de la fruta: %s\nProcedencia: %s\nNumero de kilos: %d\nPrecio Coste por kilo: %.2f\nPrecio de venta por kilo: %.2f\nFecha de caducidad %s\nVeces vendidas: %d",
-                nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo,fechaCaducidad,cuantasVecesSeVendio);
+                nombre, procedencia, numeroKilos, precioCostePorKilo, precioVentaPorKilo, fechaCaducidad, cuantasVecesSeVendio);
     }
 
-    public String toStringFile(){
-    return nombre+";"+procedencia+";"+numeroKilos+";"+precioCostePorKilo+";"+precioVentaPorKilo+";"+fechaCaducidad+";"+cuantasVecesSeVendio;
+    public String toStringFile() {
+        return nombre + ";" + procedencia + ";" + numeroKilos + ";" + precioCostePorKilo + ";" + precioVentaPorKilo + ";" + fechaCaducidad + ";" + cuantasVecesSeVendio;
     }
 
     @Override
     public int compareTo(Fruta o) {
-        return Double.compare(this.precioVentaPorKilo,o.precioVentaPorKilo);
+        return Double.compare(this.precioVentaPorKilo, o.precioVentaPorKilo);
     }
 }
