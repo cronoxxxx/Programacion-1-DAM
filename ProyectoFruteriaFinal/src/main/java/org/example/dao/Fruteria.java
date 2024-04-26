@@ -221,6 +221,14 @@ public class Fruteria implements Serializable {
         return valido;
     }
 
+    public List<Fruta> frutasConMayorNumeroVendido() {
+        return frutas.stream().sorted(Comparator.comparingDouble(Fruta::getCuantasVecesSeVendio).reversed()).limit(5).toList();
+    }
+
+    public List<Fruta> frutasConMenorNumeroVendido() {
+        return frutas.stream().sorted(Comparator.comparingDouble(Fruta::getCuantasVecesSeVendio)).limit(5).toList();
+    }
+
     public boolean removeFrutasSinContenido() {
         return frutas.removeIf(fruta -> fruta.getNumeroKilos() <= 0);
     }
