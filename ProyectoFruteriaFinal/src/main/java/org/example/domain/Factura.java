@@ -19,13 +19,14 @@ public class Factura implements Serializable {
     public String toString() {
         StringBuilder nombres = new StringBuilder();
         nombres.append("-------------------------------------------------------\n");
-        String var = String.format("Cliente %sFecha de la venta %s\n", cliente, fechaHora.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        String var = String.format("Cliente %s\nFecha de la venta %s\n", cliente, fechaHora.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         nombres.append(var);
         nombres.append("Frutas compradas\n---------\n");
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         for (int i = 0; i<frutasVendidas.size(); i++) {
-            nombres.append(i + 1).append(". ").append(frutasVendidas.get(i).getNombre()).append("\t->\t").append(decimalFormat.format(almacenVenta.get(i))).append("$\n");
+            nombres.append(i + 1).append(". ").append(frutasVendidas.get(i).getNombre()).append("\t->\t").append(decimalFormat.format(almacenVenta.get(i))).append("€\n");
         }
+        nombres.append("Total: ").append(decimalFormat.format(precioCompra)).append("€\n");
         nombres.append("-------------------------------------------------------\n");
         return String.valueOf(nombres);
     }

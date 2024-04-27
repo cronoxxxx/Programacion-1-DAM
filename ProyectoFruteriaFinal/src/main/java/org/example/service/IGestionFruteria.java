@@ -26,4 +26,7 @@ public interface IGestionFruteria {
 
     boolean escribirFichero() throws FileNotFoundException;
     List<Fruta> leerFichero() throws FileNotFoundException;
+    void eliminarTodo();
+    List<Fruta> frutasConMenorNumeroVendido();
+    List<Fruta> frutasConMayorNumeroVendido();
 }

@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.util.List;
 @Getter
 public class GestionFruteria implements IGestionFruteria {
-    private DaoFruteriaImplementacion daoFruteriaImplementacion;
+    private final DaoFruteriaImplementacion daoFruteriaImplementacion;
 
     public GestionFruteria() {
         this.daoFruteriaImplementacion = new DaoFruteriaImplementacion();
@@ -116,5 +116,20 @@ public class GestionFruteria implements IGestionFruteria {
     @Override
     public List<Fruta> leerFichero() throws FileNotFoundException {
         return DaoFicherosFruta.leerFichero();
+    }
+
+    @Override
+    public void eliminarTodo() {
+        daoFruteriaImplementacion.eliminarTodo();
+    }
+
+    @Override
+    public List<Fruta> frutasConMenorNumeroVendido() {
+        return daoFruteriaImplementacion.frutasConMenorNumeroVendido();
+    }
+
+    @Override
+    public List<Fruta> frutasConMayorNumeroVendido() {
+        return daoFruteriaImplementacion.frutasConMayorNumeroVendido();
     }
 }

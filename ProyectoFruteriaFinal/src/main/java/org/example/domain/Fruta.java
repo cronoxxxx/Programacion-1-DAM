@@ -7,7 +7,6 @@ import org.example.common.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.util.List;
 
 
 @Getter
@@ -33,7 +32,7 @@ public class Fruta implements Comparable<Fruta>, Serializable {
         EnumComprobacionDirecta.fechaOK(fechaCaducidad);
     }
 
-    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo, LocalDate fechaCaducidad) throws precioVentaExcepcion, FechaInvalidaException {
+    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo, LocalDate fechaCaducidad) throws precioVentaExcepcion, FechaInvalidaException, AgregarProvinciasException {
         this.nombre = nombre;
         this.procedencia = procedencia;
         this.numeroKilos = numeroKilos;
@@ -41,6 +40,7 @@ public class Fruta implements Comparable<Fruta>, Serializable {
         this.precioVentaPorKilo = precioVentaPorKilo;
         this.fechaCaducidad = fechaCaducidad;
         this.cuantasVecesSeVendio = 0;
+        EnumComprobacionDirecta.provinciaOK(procedencia);
         EnumComprobacionDirecta.precioVentaOK(precioVentaPorKilo, precioCostePorKilo);
         EnumComprobacionDirecta.fechaOK(fechaCaducidad);
     }
@@ -59,8 +59,8 @@ public class Fruta implements Comparable<Fruta>, Serializable {
         autonumerico++;
     }
 
-    public void setCuantasVecesSeVendio(int aumento) {
-        this.cuantasVecesSeVendio = cuantasVecesSeVendio + aumento;
+    public void setAgregarNumeroVentas() {
+        this.cuantasVecesSeVendio = cuantasVecesSeVendio + 1;
     }
 
     //mostrador.getFruteria.getFrutas pasa al texto de la fruta cuando se realiza una compra de venta de fruta en el sistema por parte de clientes

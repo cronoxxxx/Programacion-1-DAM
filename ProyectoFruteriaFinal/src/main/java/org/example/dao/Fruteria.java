@@ -88,14 +88,20 @@ public class Fruteria implements Serializable {
     public boolean rebajar(double cantidad, int indexFruta) {
         if (indexFruta >= 0 && indexFruta < frutas.size()) {
             Fruta fruta = frutas.get(indexFruta);
-            double nuevoPrecioVenta = fruta.getPrecioVentaPorKilo() - cantidad;
-            if (nuevoPrecioVenta >= fruta.getPrecioCostePorKilo()) {
-                fruta.setPrecioVentaPorKilo(nuevoPrecioVenta);
-                System.out.println(fruta);
-                return true;
+            if (fruta != null) {
+                double nuevoPrecioVenta = fruta.getPrecioVentaPorKilo() - cantidad;
+                if (nuevoPrecioVenta >= fruta.getPrecioCostePorKilo()) {
+                    fruta.setPrecioVentaPorKilo(nuevoPrecioVenta);
+                    System.out.println(fruta);
+                    return true;
+                } else {
+                    System.out.println(Constantes.LA_CANTIDAD_DE_REBAJA_ES_DEMASIADO_GRANDE_Y_HARIA_QUE_EL_PRECIO_DE_VENTA_SEA_MENOR_QUE_EL_PRECIO_DE_COSTE);
+                }
             } else {
-                System.out.println(Constantes.LA_CANTIDAD_DE_REBAJA_ES_DEMASIADO_GRANDE_Y_HARIA_QUE_EL_PRECIO_DE_VENTA_SEA_MENOR_QUE_EL_PRECIO_DE_COSTE);
+                System.out.println(Constantes.ERROR_FRUTA_NULA);
             }
+        } else {
+            System.out.println(Constantes.INDICE_FUERA_DE_RANGO);
         }
         return false;
     }
@@ -126,14 +132,21 @@ public class Fruteria implements Serializable {
     public boolean subir(double cantidad, int indexFruta) {
         if (indexFruta >= 0 && indexFruta < frutas.size()) {
             Fruta fruta = frutas.get(indexFruta);
-            double nuevoPrecioVenta = fruta.getPrecioVentaPorKilo() + cantidad;
-            if (nuevoPrecioVenta >= fruta.getPrecioCostePorKilo() && nuevoPrecioVenta < 1000000) {
-                fruta.setPrecioVentaPorKilo(nuevoPrecioVenta);
-                System.out.println(fruta);
-                return true;
+            if (fruta != null) {
+                double nuevoPrecioVenta = fruta.getPrecioVentaPorKilo() + cantidad;
+                if (nuevoPrecioVenta >= fruta.getPrecioCostePorKilo() && nuevoPrecioVenta < 1000000) {
+                    fruta.setPrecioVentaPorKilo(nuevoPrecioVenta);
+                    System.out.println(fruta);
+                    return true;
+                } else {
+                    System.out.println(Constantes.LA_CANTIDAD_DE_PRECIO_ES_DEMASIADO_GRANDE_Y_HARIA_QUE_EL_PRECIO_DE_VENTA_SEA_INNACESIBLE_PARA_NUESTROS_CLIENTES);
+                }
             } else {
-                System.out.println(Constantes.LA_CANTIDAD_DE_PRECIO_ES_DEMASIADO_GRANDE_Y_HARIA_QUE_EL_PRECIO_DE_VENTA_SEA_INNACESIBLE_PARA_NUESTROS_CLIENTES);
+                System.out.println(Constantes.ERROR_FRUTA_NULA);
             }
+
+        } else {
+            System.out.println(Constantes.INDICE_FUERA_DE_RANGO);
         }
         return false;
     }
@@ -196,25 +209,33 @@ public class Fruteria implements Serializable {
     public boolean reunirFrutasporProcedencia(String procedencia) {
         Map<String, List<Fruta>> frutasPorProcedencia = frutas.stream().collect(Collectors.groupingBy(Fruta::getProcedencia));
         List<Fruta> frutasProcedencia = frutasPorProcedencia.get(procedencia);
-        if (!frutasProcedencia.isEmpty()) {
+        if (frutasProcedencia != null && !frutasProcedencia.isEmpty()) {
             System.out.println(Constantes.FRUTAS_DE + procedencia);
             System.out.println(Constantes.SEPARADOR);
             frutasProcedencia.forEach(System.out::println);
             return true;
+        } else {
+            System.out.println(Constantes.NO_EXISTEN_FRUTAS_DE + procedencia);
+            return false;
         }
-        return false;
     }
-
     public boolean buscarFrutaPorNombre(String nombreFruta) {
         boolean valido = false;
         Fruta aux = null;
-        List<Fruta> frutasEncontradas = frutas.stream().filter(fruta -> fruta.getNombre().strip().equalsIgnoreCase(nombreFruta)).toList();
+        List<Fruta> frutasEncontradas = frutas.stream()
+                .filter(fruta -> fruta.getNombre().strip().equalsIgnoreCase(nombreFruta))
+                .toList();
+
         if (!frutasEncontradas.isEmpty()) {
             aux = frutasEncontradas.get(0);
-            System.out.println(Constantes.SE_HA_ENCONTRADO_LA_FRUTA_LLAMADA+aux.getNombre());
-            System.out.println(Constantes.SEPARADOR);
-            System.out.println(aux);
-            valido = true;
+            if (aux != null) {
+                System.out.println(Constantes.SE_HA_ENCONTRADO_LA_FRUTA_LLAMADA + aux.getNombre());
+                System.out.println(Constantes.SEPARADOR);
+                System.out.println(aux);
+                valido = true;
+            } else {
+                System.out.println(Constantes.ERROR_FRUTA_NULA);
+            }
         } else {
             System.out.println(Constantes.LA_FRUTA_NO_SE_ENCONTRO_EN_EL_INVENTARIO);
         }

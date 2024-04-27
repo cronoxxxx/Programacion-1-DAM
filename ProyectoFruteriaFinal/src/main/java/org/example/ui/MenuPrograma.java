@@ -1,9 +1,12 @@
 package org.example.ui;
 
 import org.example.common.Constantes;
+import org.example.service.GestionFruteria;
 
 public class MenuPrograma {
     public static void main(String[] args) {
-        System.out.println(Constantes.MENU_FRUTERIA);
+        GestionFruteria gestionFruteria = new GestionFruteria();
+
+        InterfazFruteria.getInterfazFruteria(gestionFruteria);
     }
 }

@@ -25,5 +25,7 @@ public interface DaoFruteria {
     boolean removeFrutasSinContenido();
     boolean eliminarFrutasCaducadas();
     void eliminarTodo();
+    List<Fruta> frutasConMenorNumeroVendido();
+    List<Fruta> frutasConMayorNumeroVendido();
 
 }

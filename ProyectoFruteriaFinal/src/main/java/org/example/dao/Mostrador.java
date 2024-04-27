@@ -10,16 +10,16 @@ import java.util.stream.Collectors;
 @Getter
 public class Mostrador implements Serializable {
     private final Map<Integer, Cliente> clientesEsperaCompra;
-    private Fruteria fruteria;
+    private final Fruteria fruteria;
     private double beneficios;
     private static int iterador = 1;
-    private Set<Factura> facturas; //No colocará doble factura
+    private final Set<Factura> facturas; //No colocará doble factura
 
     public Mostrador(int cantidad) {
         fruteria = new Fruteria();
         facturas = new TreeSet<>(new Comparators.ComparatorFactura());
         this.clientesEsperaCompra = new HashMap<>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < cantidad; i++) {
             int randoMizer = (int) (Math.random() * 2);
             if (randoMizer == 1) {
                 clientesEsperaCompra.put(i + 1, new ClienteFisico());
@@ -123,9 +123,7 @@ public class Mostrador implements Serializable {
                         System.out.println(Constantes.NOMBRE_FRUTA+fruta.getNombre());
                         System.out.println(Constantes.TOTAL_EUROS+descuento);
                         agregarCompraFrutasFactura.add(fruta);
-
-
-
+                        fruta.setAgregarNumeroVentas();
                     }
                     j++;
                 }
@@ -141,12 +139,11 @@ public class Mostrador implements Serializable {
         Factura factura = new Factura(clienteComprador, agregarCompraFrutasFactura, sumadorVenta,almacenPrecios);
         facturas.add(factura);
         // Eliminar al cliente del mapa lambda
-        Cliente clienteFinal = clienteComprador;
         clientesEsperaCompra.entrySet().stream()
-                .filter(entry -> entry.getValue().equals(clienteFinal))
+                .filter(entry -> entry.getValue().equals(clienteComprador))
                 .map(Map.Entry::getKey)
                 .findFirst()
-                .ifPresent(idCliente -> clientesEsperaCompra.remove(idCliente));
+                .ifPresent(clientesEsperaCompra::remove);
         return true;
     }
 
@@ -213,6 +210,7 @@ public class Mostrador implements Serializable {
                         System.out.println(Constantes.KILOS_VENDIDOS+cantidadKilos[j]);
                         System.out.println(Constantes.NOMBRE_FRUTA+fruta.getNombre());
                         System.out.println(Constantes.TOTAL_EUROS+descontado);
+                        fruta.setAgregarNumeroVentas(); // Incrementar el contador de ventas
                     }
                     j++;
                 }
@@ -228,9 +226,8 @@ public class Mostrador implements Serializable {
         facturas.add(factura);
         System.out.println("Total a pagar: " + sumadorPrecio);
         // Eliminar al cliente del mapa
-        Cliente clienteFinal = clienteCompradorOnline;
         clientesEsperaCompra.entrySet().stream()
-                .filter(entry -> entry.getValue().equals(clienteFinal))
+                .filter(entry -> entry.getValue().equals(clienteCompradorOnline))
                 .map(Map.Entry::getKey)
                 .findFirst()
                 .ifPresent(clientesEsperaCompra::remove);
@@ -273,7 +270,7 @@ public class Mostrador implements Serializable {
     public boolean reunirClientesPorCiudad(String ciudad) {
         Map<String, List<ClienteOnline>> clientesPorCiudad = clientesEsperaCompra.values().stream().filter(cliente -> cliente instanceof ClienteOnline)
                 .map(cliente -> (ClienteOnline) cliente).collect(Collectors.groupingBy(ClienteOnline::getCiudad));
-        if (!clientesPorCiudad.isEmpty()) {
+        if (!clientesPorCiudad.isEmpty() && clientesPorCiudad.containsKey(ciudad)) {
             System.out.println(Constantes.CLIENTES_DE_LA_CIUDAD+ciudad);
             System.out.println(Constantes.SEPARADOR);
             clientesPorCiudad.get(ciudad).forEach(System.out::println);
@@ -349,8 +346,5 @@ public class Mostrador implements Serializable {
     public void eliminarTodo(){
         clientesEsperaCompra.clear();
     }
-
-
-
     }
 

@@ -1,18 +1,17 @@
 package org.example.ui;
 
-import org.example.common.Constantes;
-import org.example.common.FechaInvalidaException;
-import org.example.common.precioVentaExcepcion;
+import org.example.common.*;
 import org.example.domain.Fruta;
 import org.example.service.GestionFruteria;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Optional;
-import java.util.Scanner;
 
 public class InterfazFruteria {
     private static final String pass = "messi";
@@ -31,28 +30,53 @@ public class InterfazFruteria {
         if (contraOptional.isPresent() && !contraOptional.get().equals(pass)) {
             System.out.println(Constantes.CONTRASENA_INCORRECTA_INGRESE_UNA_VALIDA);
         } else {
-            System.out.println(Constantes.MENU_FRUTERIA);
-            int op = menu();
-            switch (op) {
-                case 1 -> gestionFruteria.mostrarInformacion(true);
-                case 2 -> darAltaFruta(gestionFruteria);
-                case 3 -> darBajaFruta(gestionFruteria);
-                case 4 -> rebajarPrecioFruta(gestionFruteria);
-                case 5 -> subirPrecioFruta(gestionFruteria);
-                case 6 -> calcularInventarioTotal(gestionFruteria);
-                case 7 -> actualizarPrecioVentaFruta(gestionFruteria);
-                case 8 -> compararFrutasProcedencia(gestionFruteria);
-                case 9 -> reunirFrutasporProcedencia(gestionFruteria);
-                case 10 -> buscarFrutaPorNombre(gestionFruteria);
+            int op;
+            do {
+                System.out.println(Constantes.MENU_FRUTERIA);
+                op = menu();
+                switch (op) {
+                    case 1 -> mostrarInformacion(gestionFruteria);
+                    case 2 -> darAltaFruta(gestionFruteria);
+                    case 3 -> darBajaFruta(gestionFruteria);
+                    case 4 -> rebajarPrecioFruta(gestionFruteria);
+                    case 5 -> subirPrecioFruta(gestionFruteria);
+                    case 6 -> calcularInventarioTotal(gestionFruteria);
+                    case 7 -> actualizarPrecioVentaFruta(gestionFruteria);
+                    case 8 -> compararFrutasProcedencia(gestionFruteria);
+                    case 9 -> reunirFrutasporProcedencia(gestionFruteria);
+                    case 10 -> buscarFrutaPorNombre(gestionFruteria);
+                    case 11 -> limpiezaFrutas(gestionFruteria);
+                    case 12 -> Top5FrutasVendidas(gestionFruteria);
+                    case 13 -> lecturaFinal(gestionFruteria);
+                    default -> System.out.println(Constantes.INGRESE_UNA_OPCION_VALIDA);
+                }
+            } while (op!=13);
 
-                default -> System.out.println(Constantes.INGRESE_UNA_OPCION_VALIDA);
-
-            }
         }
 
 
     }
 
+    public static void lecturaFinal (GestionFruteria gestionFruteria) {
+        System.out.println(Constantes.VUELVA_PRONTO);
+        gestionFruteria.escribirFichero();
+        try {
+            System.out.println(gestionFruteria.leerFichero());
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void mostrarInformacion(GestionFruteria gestionFruteria) {
+        System.out.println(Constantes.SELECCIONE_ORDEN_DE_MUESTRA);
+        int op = menu();
+        switch (op) {
+            case 1 -> System.out.println(gestionFruteria.mostrarInformacion(true));
+            case 2 -> System.out.println(gestionFruteria.mostrarInformacion(false));
+            default -> System.out.println(Constantes.INGRESE_UNA_OPCION_VALIDA);
+        }
+
+    }
     public static void calcularInventarioTotal(GestionFruteria gestionFruteria) {
         if (gestionFruteria.calcularInventarioTotal() != -1) {
             System.out.println(Constantes.EL_INVENTARIO_TOTAL_ES + gestionFruteria.calcularInventarioTotal());
@@ -63,18 +87,23 @@ public class InterfazFruteria {
 
 
     public static void darAltaFruta(GestionFruteria gestionFruteria) {
-        try (BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in))) {
+
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
             System.out.println(Constantes.INGRESE_EL_NOMBRE_DE_LA_FRUTA);
             String nombre = entradaReader.readLine();
             System.out.println(Constantes.INGRESE_LA_PROCENDENCIA);
             String procedencia = entradaReader.readLine();
+            System.out.println(Constantes.INGRESE_EL_NUMERO_DE_KILOS);
+            int numeroKilos = Integer.parseInt(entradaReader.readLine());
             System.out.println(Constantes.INGRESE_EL_PRECIO_COSTE);
             double precioCoste = Double.parseDouble(entradaReader.readLine());
             System.out.println(Constantes.INGRESE_EL_PRECIO_VENTA);
             double precioVenta = Double.parseDouble(entradaReader.readLine());
             System.out.println(Constantes.INGRESE_LA_FECHA_DE_CADUCIDAD);
-            LocalDate fechaCaducidad = LocalDate.parse(entradaReader.readLine());
-            Fruta fruta = new Fruta(nombre, procedencia, 1, precioCoste, precioVenta, fechaCaducidad, 200);
+            String fechaCaducidadStr = entradaReader.readLine();
+            LocalDate fechaCaducidad = LocalDate.parse(fechaCaducidadStr, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+            Fruta fruta = new Fruta(nombre, procedencia, numeroKilos, precioCoste, precioVenta, fechaCaducidad);
             if (gestionFruteria.darAltaFruta(fruta)) {
                 System.out.println(Constantes.INGRESO_EXITOSO);
 
@@ -83,26 +112,34 @@ public class InterfazFruteria {
             }
         } catch (IOException e) {
             System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
+
         } catch (NumberFormatException e) {
             System.out.println(Constantes.DEBE_INGRESAR_UN_NUMERO);
+
         } catch (DateTimeParseException | FechaInvalidaException e) {
             System.out.println(Constantes.DEBE_INGRESAR_FECHA_VALIDA);
+
         } catch (precioVentaExcepcion e) {
             System.out.println(Constantes.DEBE_INGRESAR_PRECIO_VENTA_MAYOR_A_PRECIO_COSTE);
+
+        } catch (AgregarProvinciasException e) {
+            System.out.println(Constantes.DEBE_INGRESAR_PROVINCIA_VALIDA);
         }
     }
 
     public static void darBajaFruta(GestionFruteria gestionFruteria) {
-        int op = 0;
-        try (BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in))) {
+
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
             System.out.println(Constantes.MENU_BAJA_FRUTA);
-            op = menu();
+            int op = menu();
             switch (op) {
                 case 1 -> {
                     System.out.println(Constantes.INGRESE_EL_NOMBRE_DE_LA_FRUTA);
                     String nombre = entradaReader.readLine();
                     if (gestionFruteria.darBajaFrutaPorNombre(nombre)) {
                         System.out.println(Constantes.ELIMINADO_EXITOSO);
+
                     } else {
                         System.out.println(Constantes.ELIMINADO_FALLIDO);
                     }
@@ -112,20 +149,22 @@ public class InterfazFruteria {
                     String procedencia = entradaReader.readLine();
                     if (gestionFruteria.darBajaFrutasPorProcedencia(procedencia)) {
                         System.out.println(Constantes.ELIMINADO_EXITOSO);
+
                     } else {
                         System.out.println(Constantes.ELIMINADO_FALLIDO);
                     }
                 }
                 default -> System.out.println(Constantes.DEBE_INGRESAR_UNA_OPCION_VALIDA);
             }
-
         } catch (IOException e) {
             System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
         }
+
     }
 
     public static void rebajarPrecioFruta(GestionFruteria gestionFruteria) {
-        try (BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in))) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try  {
             System.out.println(Constantes.MENU_REBAJAR_FRUTA);
             int op = menu();
             switch (op) {
@@ -135,9 +174,9 @@ public class InterfazFruteria {
                     System.out.println(Constantes.INGRESE_LA_CANTIDAD_A_REBAJAR);
                     double cantidad = Double.parseDouble(entradaReader.readLine());
                     if (gestionFruteria.rebajar(cantidad, indice)) {
-                        System.out.println(Constantes.ELIMINADO_EXITOSO);
+                        System.out.println(Constantes.REBAJA_EXITOSA);
                     } else {
-                        System.out.println(Constantes.ELIMINADO_FALLIDO);
+                        System.out.println(Constantes.REBAJA_FALLIDA);
                     }
                 }
                 case 2 -> {
@@ -146,9 +185,9 @@ public class InterfazFruteria {
                     System.out.println(Constantes.INGRESE_LA_CANTIDAD_A_REBAJAR);
                     double cantidad = Double.parseDouble(entradaReader.readLine());
                     if (gestionFruteria.rebajarNombreFruta(cantidad, nombre)) {
-                        System.out.println(Constantes.ELIMINADO_EXITOSO);
+                        System.out.println(Constantes.REBAJA_EXITOSA);
                     } else {
-                        System.out.println(Constantes.ELIMINADO_FALLIDO);
+                        System.out.println(Constantes.REBAJA_FALLIDA);
                     }
                 }
                 default -> System.out.println(Constantes.DEBE_INGRESAR_UNA_OPCION_VALIDA);
@@ -160,7 +199,8 @@ public class InterfazFruteria {
     }
 
     public static void subirPrecioFruta(GestionFruteria gestionFruteria) {
-        try (BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in))) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try  {
             System.out.println(Constantes.MENU_SUBIR_FRUTA);
             int op = menu();
             switch (op) {
@@ -170,9 +210,9 @@ public class InterfazFruteria {
                     System.out.println(Constantes.INGRESE_LA_CANTIDAD_A_SUBIR);
                     double cantidad = Double.parseDouble(entradaReader.readLine());
                     if (gestionFruteria.subir(cantidad, indice)) {
-                        System.out.println(Constantes.ELIMINADO_EXITOSO);
+                        System.out.println(Constantes.SUBIDA_EXITOSA);
                     } else {
-                        System.out.println(Constantes.ELIMINADO_FALLIDO);
+                        System.out.println(Constantes.SUBIDA_FALLIDA);
                     }
                 }
                 case 2 -> {
@@ -181,7 +221,9 @@ public class InterfazFruteria {
                     System.out.println(Constantes.INGRESE_LA_CANTIDAD_A_SUBIR);
                     double cantidad = Double.parseDouble(entradaReader.readLine());
                     if (gestionFruteria.subirNombreFruta(cantidad, nombre)) {
-                        System.out.println(Constantes.ELIMINADO_EXITOSO);
+                        System.out.println(Constantes.SUBIDA_EXITOSA);
+                    } else {
+                        System.out.println(Constantes.SUBIDA_FALLIDA);
                     }
                 }
                 default -> System.out.println(Constantes.DEBE_INGRESAR_UNA_OPCION_VALIDA);
@@ -192,7 +234,8 @@ public class InterfazFruteria {
     }
 
     public static void actualizarPrecioVentaFruta(GestionFruteria gestionFruteria) {
-        try (BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in))) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
             System.out.println(Constantes.INGRESE_EL_NOMBRE_DE_LA_FRUTA);
             String nombre = entradaReader.readLine();
             System.out.println(Constantes.INGRESE_LA_CANTIDAD_A_ACTUALIZAR);
@@ -208,7 +251,8 @@ public class InterfazFruteria {
     }
 
     public static void compararFrutasProcedencia(GestionFruteria gestionFruteria) {
-        try (BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in))) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try  {
             System.out.println(Constantes.INGRESE_EL_NOMBRE_DE_LA_FRUTA + 1);
             String fruta1 = entradaReader.readLine();
             System.out.println(Constantes.INGRESE_EL_NOMBRE_DE_LA_FRUTA + 2);
@@ -224,13 +268,14 @@ public class InterfazFruteria {
     }
 
     public static void reunirFrutasporProcedencia(GestionFruteria gestionFruteria) {
-        try (BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in))) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try  {
             System.out.println(Constantes.INGRESE_LA_PROCENDENCIA);
             String procedencia = entradaReader.readLine();
             if (gestionFruteria.reunirFrutasporProcedencia(procedencia)) {
-                System.out.println(Constantes.ELIMINADO_EXITOSO);
+                System.out.println(Constantes.FRUTAS_REUNIDAS_EXITOSAMENTE);
             } else {
-                System.out.println(Constantes.ELIMINADO_FALLIDO);
+                System.out.println(Constantes.FRUTAS_REUNIDAS_FALLIDAS);
             }
         } catch (IOException e) {
             System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
@@ -238,7 +283,8 @@ public class InterfazFruteria {
     }
 
     public static void buscarFrutaPorNombre(GestionFruteria gestionFruteria) {
-        try (BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in))) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
             System.out.println(Constantes.INGRESE_EL_NOMBRE_DE_LA_FRUTA);
             String nombre = entradaReader.readLine();
             if (gestionFruteria.buscarFrutaPorNombre(nombre)) {
@@ -251,6 +297,54 @@ public class InterfazFruteria {
         }
     }
 
+    public static void limpiezaFrutas(GestionFruteria gestionFruteria) {
+        System.out.println(Constantes.MENU_LIMPIEZA_FRUTAS);
+            int op = menu();
+            switch (op) {
+                case 1 -> {
+                    if (gestionFruteria.eliminarFrutasCaducadas()){
+                        System.out.println(Constantes.ELIMINADO_EXITOSO);
+                    } else {
+                        System.out.println(Constantes.ELIMINADO_FALLIDO);
+                    }
+                }
+                case 2 -> {
+                    if (gestionFruteria.removeFrutasSinContenido()){
+                        System.out.println(Constantes.ELIMINADO_EXITOSO);
+                    } else {
+                        System.out.println(Constantes.ELIMINADO_FALLIDO);
+                    }
+                }
+                case 3 -> gestionFruteria.eliminarTodo();
+                default -> System.out.println(Constantes.DEBE_INGRESAR_UNA_OPCION_VALIDA);
+            }
+    }
+
+    public static void Top5FrutasVendidas(GestionFruteria gestionFruteria) {
+        System.out.println(Constantes.MENU_TOP_FRUTAS);
+        int op = menu();
+        switch (op) {
+            case 1 -> {
+                if (gestionFruteria.frutasConMenorNumeroVendido() != null && !gestionFruteria.frutasConMenorNumeroVendido().isEmpty()) {
+                    System.out.println(Constantes.SEPARADOR);
+                    System.out.println(gestionFruteria.frutasConMayorNumeroVendido());
+                    System.out.println(Constantes.SEPARADOR);
+                } else {
+                    System.out.println(Constantes.NO_SE_ENCONTRARON_FRUTAS_PARA_SER_MOSTRADAS);
+                }
+            }
+            case 2 -> {
+                if (gestionFruteria.frutasConMayorNumeroVendido()!=null && !gestionFruteria.frutasConMayorNumeroVendido().isEmpty()) {
+                    System.out.println(Constantes.SEPARADOR);
+                    System.out.println(gestionFruteria.frutasConMayorNumeroVendido());
+                    System.out.println(Constantes.SEPARADOR);
+                } else {
+                    System.out.println(Constantes.NO_SE_ENCONTRARON_FRUTAS_PARA_SER_MOSTRADAS);
+                }
+            }
+            default -> System.out.println(Constantes.DEBE_INGRESAR_UNA_OPCION_VALIDA);
+        }
+    }
 
     public static int menu() {
         int op = 0;
@@ -260,6 +354,7 @@ public class InterfazFruteria {
             try {
                 op = Integer.parseInt(entradaReader.readLine());
                 valido = true;
+
             } catch (NumberFormatException e) {
                 System.out.println(Constantes.DEBE_INGRESAR_UN_NUMERO);
             } catch (IOException e) {

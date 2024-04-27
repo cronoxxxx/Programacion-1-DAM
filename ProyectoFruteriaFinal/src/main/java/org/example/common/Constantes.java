@@ -46,11 +46,11 @@ public class Constantes {
 
     public static final String CLIENTES_DE_LA_CIUDAD = "Clientes de la ciudad: ";
     public static final String NO_SE_HAN_ENCONTRADO_CLIENTES_EN_LA_CIUDAD = "No se han encontrado clientes en la ciudad: ";
-    public static final String MENU_FRUTERIA = "1. Mostrar información\n2. Dar alta fruta\n3. Dar baja fruta \n4. Rebajar precio de venta de fruta\n5. Subir precio de coste de fruta  \n6. Mostrar el calculo de inventario total \n7. Actualizar el precio de venta de una fruta \n8. Comparar dos frutas si son de la misma procedencia\n9. Reunir frutas de la misma procedencia\n10.\n\nElija una de las opciones: ";
+    public static final String MENU_FRUTERIA = "1. Mostrar información\n2. Dar alta fruta\n3. Dar baja fruta \n4. Rebajar precio de venta de fruta\n5. Subir precio de venta de fruta  \n6. Mostrar el calculo de inventario total \n7. Actualizar el precio de venta de una fruta \n8. Comparar dos frutas si son de la misma procedencia\n9. Reunir frutas de la misma procedencia\n10. Buscar fruta por nombre\n11.Limpieza de frutas por categoria\n12.Categoria de frutas por numero de ventas\n13.Salir\n\nElija una de las opciones: ";
     public static final String DEBE_INGRESAR_UN_NUMERO = "Debe introducir un número.";
     public static final String ERROR_ENTRADA_SALIDA = "Error en la entrada/salida. Por favor, pruebe de nuevo.";
 
-    public static final String INGRESE_EL_NOMBRE_DE_LA_FRUTA = "Ingrese el nombre de la fruta: ";
+    public static final String INGRESE_EL_NOMBRE_DE_LA_FRUTA = "Ingrese el nombre de la fruta ";
     public static final String INGRESE_EL_PRECIO_COSTE = "Ingrese el precio de coste: ";
     public static final String INGRESE_EL_PRECIO_VENTA = "Ingrese el precio de venta: ";
     public static final String INGRESE_LA_FECHA_DE_CADUCIDAD = "Ingrese la fecha de caducidad: ";
@@ -58,7 +58,7 @@ public class Constantes {
     public static final String DEBE_INGRESAR_PRECIO_VENTA_MAYOR_A_PRECIO_COSTE = "Debe introducir un precio de venta mayor al precio de coste.";
     public static final String INGRESO_EXITOSO = "Ingreso exitoso.";
     public static final String INGRESO_FALLIDO = "Ingreso fallido.";
-    public static final String MENU_BAJA_FRUTA = "1. Dar baja fruta por nombre\n2. Dar baja fruta por procedencian\nElija una de las opciones: ";
+    public static final String MENU_BAJA_FRUTA = "1. Dar baja fruta por nombre\n2. Dar baja fruta por procedencia\nElija una de las opciones: ";
     public static final String ELIMINADO_EXITOSO = "Eliminado exitoso.";
     public static final String ELIMINADO_FALLIDO = "Eliminado fallido.";
     public static final String DEBE_INGRESAR_UNA_OPCION_VALIDA = "Debe introducir una opción valida.";
@@ -81,4 +81,23 @@ public class Constantes {
     public static final String SE_HA_ENCONTRADO_LA_FRUTA_LLAMADA = "Se ha encontrado la fruta llamada: ";
     public static final String ENCONTRADO_EXITOSO = "Encontrado exitoso.";
     public static final String ENCONTRADO_FALLIDO = "Encontrado fallido.";
+    public static final String MENU_LIMPIEZA_FRUTAS = "1. Eliminar frutas caducadas\n2. Eliminar frutas sin cantidad de kilos disponibles\n3. Eliminar todas las frutas\n\nElija una de las opciones: ";
+    public static final String MENU_TOP_FRUTAS = "1. Top 5 frutas con mayor numero de ventas\n2. Top 5 frutas con menor numero de ventas\nElija una de las opciones: ";
+    public static final String NO_SE_ENCONTRARON_FRUTAS_PARA_SER_MOSTRADAS = "No se encontraron frutas para ser mostradas.";
+    public static final String VUELVA_PRONTO = "Vuelva pronto ! ! !";
+    public static final String INGRESE_EL_NUMERO_DE_KILOS = "Ingrese el numero de kilos: ";
+    public static final String DEBE_INGRESAR_PROVINCIA_VALIDA = "Debe introducir una provincia valida.";
+    public static final String REBAJA_EXITOSA = "Rebaja exitosa.";
+
+    public static final String REBAJA_FALLIDA = "Rebaja fallida.";
+    public static final String SUBIDA_EXITOSA = "Subida exitosa.";
+
+    public static final String SUBIDA_FALLIDA = "Subida fallida.";
+    public static final String ERROR_FRUTA_NULA = "Error. Fruta nula.";
+    public static final String NO_EXISTEN_FRUTAS_DE = "No existen frutas de ";
+    public static final String INDICE_FUERA_DE_RANGO = "Indice fuera de rango.";
+    public static final String FRUTAS_REUNIDAS_EXITOSAMENTE = "Frutas reunidas exitosamente.";
+    public static final String FRUTAS_REUNIDAS_FALLIDAS = "Frutas reunidas fallidas.";
+    public static final String MENU_MOSTRADOR = "";
+    public static final String  SELECCIONE_ORDEN_DE_MUESTRA = "Seleccione el orden de muestra:\n1.Mostrar en orden ascendente\n2.Mostrar en orden descendente\nElija una de las opciones: ";
 }

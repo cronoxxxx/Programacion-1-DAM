@@ -108,5 +108,16 @@ public class DaoFruteriaImplementacion implements DaoFruteria {
     }
     public void eliminarTodo(){
         fruteria.eliminarTodo();
-    };
+    }
+
+    @Override
+    public List<Fruta> frutasConMenorNumeroVendido() {
+        return fruteria.frutasConMenorNumeroVendido();
+    }
+
+    @Override
+    public List<Fruta> frutasConMayorNumeroVendido() {
+        return fruteria.frutasConMayorNumeroVendido();
+    }
+
 }
