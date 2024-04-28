@@ -10,7 +10,10 @@ import java.io.IOException;
 public class ReescribirMostrador
 {
     public static void main(String[] args) throws IOException {
-
+    Mostrador mostrador = new Mostrador();
+    DaoFicherosFruta.escribirFicheroBinario(mostrador);
+    mostrador = DaoFicherosFruta.leerFicheroBinario();
+        System.out.println(mostrador.mostrarInformacion(true));
 
 
 

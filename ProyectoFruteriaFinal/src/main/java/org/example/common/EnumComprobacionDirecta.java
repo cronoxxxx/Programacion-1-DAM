@@ -1,5 +1,7 @@
 package org.example.common;
 
+import net.datafaker.Faker;
+
 import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -38,6 +40,8 @@ public class EnumComprobacionDirecta {
             throw new direccionInvalidoException();
         }
     }
+
+
 
 
 }

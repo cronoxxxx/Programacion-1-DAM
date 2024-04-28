@@ -98,6 +98,26 @@ public class Constantes {
     public static final String INDICE_FUERA_DE_RANGO = "Indice fuera de rango.";
     public static final String FRUTAS_REUNIDAS_EXITOSAMENTE = "Frutas reunidas exitosamente.";
     public static final String FRUTAS_REUNIDAS_FALLIDAS = "Frutas reunidas fallidas.";
-    public static final String MENU_MOSTRADOR = "";
+    public static final String MENU_MOSTRADOR = "1.Mostrar información de clientes\n2.Realizar venta a un cliente\n3.Mostar los beneficios obtenidos de transacciones\n4.Agregar a un nuevo cliente en espera de una compra\n5.Buscar cliente\n6.Eliminar cliente\n7.Aplicar descuentos a un cliente\n8.Reunir clientes por ciudad\n9.Mostrar facturas hechas\n10.Salir\nElija una de las opciones: ";
     public static final String  SELECCIONE_ORDEN_DE_MUESTRA = "Seleccione el orden de muestra:\n1.Mostrar en orden ascendente\n2.Mostrar en orden descendente\nElija una de las opciones: ";
+    public static final String ORDENAR_MOSTRAR_MOSTRADOR = "1.Ordenar por claves\n2.Ordenar por nombre\nElija una de las opciones: ";
+    public static final String INGRESE_EL_NOMBRE_DEL_CLIENTE = "Ingrese el nombre del cliente: ";
+    public static final String QUE_CLIENTE_DAR_ALTA = "Que cliente dar de alta?\n1.Cliente físico\n2.Cliente en línea\nElija una de las opciones: ";
+    public static final String INGRESE_SUS_APELLIDOS = "Ingrese sus apellidos: ";
+    public static final String SE_DESEA_AGREGA_DESCUENTO_AL_CLIENTE = "¿Se desea agregar descuento al cliente?(Si/No): ";
+    public static final String ERROR_SOLO_SE_ACEPTAN_VALORES_SI_O_NO = "Error. Solo se aceptan valores SI o NO.";
+    public static final String INGRESE_LA_FECHA_DE_ENTREGA = "Ingrese la fecha de entrega: ";
+    public static final String INGRESE_LA_DIRECCION_DEL_CLIENTE = "Ingrese la direccion del cliente: ";
+    public static final String INGRESE_LA_CIUDAD_DEL_CLIENTE = "Ingrese la ciudad del cliente: ";
+    public static final String DEBE_INGRESAR_FORMATO_DE_DIRECCION_VALIDA = "Debe introducir un formato de direccion valido.";
+    public static final String SELECCIONE_QUE_CLIENTE_VENDER = "Seleccione que cliente vender\n1. Cliente fisico\n2. Cliente en linea\nElija una de las opciones: ";
+    public static final String INGRESE_CUANTAS_FRUTAS_DESEA_VENDER = "Ingrese cuantas frutas desea vender: ";
+    public static final String INGRESE_LA_FRUTA = "Ingresa la fruta ";
+    public static final String CLIENTE_VACIO = "No hay cliente en lista de espera.";
+    public static final String OPERACION_EXITOSA = "Operacion exitosa.";
+    public static final String OPERACION_FALLIDA = "Operacion fallida.";
+    public static final String SELECCIONE_POR_ID_O_NOMBRE_APELLIDO = "1. Por ID\n2. Por Nombre y Apellidos\nElija una de las opciones: ";
+    public static final String INGRESE_ID_DEL_CLIENTE = "Ingrese el ID del cliente: ";
+    public static final String INGRESE_NOMBRE_DEL_CLIENTE = "Ingrese el Nombre del cliente: ";
+    public static final String INGRESE_APELLIDO_DEL_CLIENTE = "Ingrese el Apellido del cliente: ";
 }

@@ -22,9 +22,9 @@ public class Mostrador implements Serializable {
         for (int i = 0; i < cantidad; i++) {
             int randoMizer = (int) (Math.random() * 2);
             if (randoMizer == 1) {
-                clientesEsperaCompra.put(i + 1, new ClienteFisico());
+                clientesEsperaCompra.put(iterador++, new ClienteFisico());
             } else {
-                clientesEsperaCompra.put(i + 1, new ClienteOnline());
+                clientesEsperaCompra.put(iterador++, new ClienteOnline());
             }
         }
     }
@@ -37,12 +37,8 @@ public class Mostrador implements Serializable {
     public boolean isEmptyClientes() {
         return clientesEsperaCompra.isEmpty();
     }
-    public boolean putCliente(int clave, Cliente valor) {
-        if (clientesEsperaCompra.containsKey(clave)) {
-            System.out.println(Constantes.LA_CLAVE_YA_ESTA_EN_USO_NO_SE_PUEDE_ANADIR_EL_CLIENTE);
-            return false;
-        }
-        return clientesEsperaCompra.putIfAbsent(clave, valor) == null;
+    public boolean putCliente(Cliente valor) {
+        return clientesEsperaCompra.putIfAbsent(iterador++, valor) == null;
     }
 
     public Map<Integer, Cliente> mostrarInformacion(boolean ascendente) {
@@ -93,7 +89,6 @@ public class Mostrador implements Serializable {
             int j =0;
             for (int i = 0; i < fruteria.getFrutas().size(); i++) {
                 Fruta fruta = fruteria.getFrutas().get(i);
-
                 if (fruta.getNombre().strip().equalsIgnoreCase(nombreFruta.strip())) {
 
                     // Se encontró la fruta, realizar la venta
@@ -165,6 +160,8 @@ public class Mostrador implements Serializable {
         }
         return null;
     }
+
+
     public boolean venderClienteOnline(Cliente clienteCompradorOnline, StringBuilder sb, int ...cantidadKilos) {
         List<Fruta> agregarCompraFrutasFactura = new LinkedList<>();
         double sumadorPrecio = 0;

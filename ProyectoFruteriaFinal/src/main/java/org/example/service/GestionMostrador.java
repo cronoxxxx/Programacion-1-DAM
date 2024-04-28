@@ -26,8 +26,8 @@ public class GestionMostrador implements IGestionMostrador{
     }
 
     @Override
-    public boolean putCliente(int clave, Cliente valor) {
-        return daoMostradorImplementacion.putCliente(clave, valor);
+    public boolean putCliente(Cliente valor) {
+        return daoMostradorImplementacion.putCliente(valor);
     }
 
     @Override
@@ -118,7 +118,7 @@ public class GestionMostrador implements IGestionMostrador{
     @Override
     public boolean escribirCambiosFrutaTexto() {
         try {
-            return DaoFicherosFruta.escribirFichero(daoMostradorImplementacion.getMostrador().getFruteria().getFrutas());
+            return DaoFicherosFruta.escribirFichero(daoMostradorImplementacion.getMostrador().getFruteria().mostrarInformacion(true));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

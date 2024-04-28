@@ -12,7 +12,7 @@ import java.util.Set;
 public interface DaoMostrador {
     Set<Factura> getFacturas();
     boolean isEmptyClientes();
-    boolean putCliente(int clave, Cliente valor);
+    boolean putCliente(Cliente valor);
     Map<Integer, Cliente> mostrarInformacion(boolean ascendente);
     Map<Integer, Cliente> mostrarInformacionporNombre(boolean ascendente);
 

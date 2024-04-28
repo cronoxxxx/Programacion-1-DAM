@@ -4,10 +4,7 @@ package org.example.domain;
 import lombok.Getter;
 import lombok.Setter;
 import net.datafaker.Faker;
-import org.example.common.EnumComprobacionDirecta;
-import org.example.common.FechaInvalidaException;
-import org.example.common.Provincias;
-import org.example.common.direccionInvalidoException;
+import org.example.common.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -18,13 +15,15 @@ public class ClienteOnline extends Cliente implements Serializable {
     private LocalDate fechaEntregaPedido;
     private String direccionEntregaPedido,ciudad;
 
-    public ClienteOnline(String nombre, String apellidos, LocalDate fechaEntregaPedido, String direccionEntregaPedido, boolean hasDescuento, String ciudad) throws FechaInvalidaException, direccionInvalidoException {
+    public ClienteOnline(String nombre, String apellidos, LocalDate fechaEntregaPedido, String direccionEntregaPedido, boolean hasDescuento, String ciudad) throws FechaInvalidaException, direccionInvalidoException, AgregarProvinciasException {
         super(nombre, apellidos,hasDescuento);
         this.fechaEntregaPedido = fechaEntregaPedido;
         this.direccionEntregaPedido = direccionEntregaPedido;
+        this.ciudad = ciudad;
         EnumComprobacionDirecta.fechaOK(fechaEntregaPedido);
         EnumComprobacionDirecta.direccionOK(direccionEntregaPedido);
-        this.ciudad = ciudad;
+        EnumComprobacionDirecta.provinciaOK(ciudad);
+
     }
 
     public ClienteOnline() {

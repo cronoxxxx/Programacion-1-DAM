@@ -28,8 +28,8 @@ public class DaoMostradorImplementacion implements DaoMostrador{
     }
     //JUnit5
     @Override
-    public boolean putCliente(int clave, Cliente valor) {
-        return mostrador.putCliente(clave,valor);
+    public boolean putCliente(Cliente valor) {
+        return mostrador.putCliente(valor);
 
     }
 
