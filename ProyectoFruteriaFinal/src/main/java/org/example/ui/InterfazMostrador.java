@@ -134,6 +134,7 @@ public class InterfazMostrador  {
                         default -> System.out.println(Constantes.OPCION_NO_VALIDA);
                     }
                 }
+                default -> System.out.println(Constantes.OPCION_NO_VALIDA);
             }
             } catch(IOException ignored){
                 System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
