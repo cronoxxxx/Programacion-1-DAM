@@ -1,0 +1,44 @@
+[
+  {
+    "cliente": "Antonietta",
+    "apellido": "Waters",
+    "fechaHora": "2024-04-30T00:45:26.936990100",
+    "frutasVendidas": [
+      {
+        "nombre": "Naranja1",
+        "procedencia": "Zamora",
+        "numeroKilos": 6506,
+        "precioCostePorKilo": 40.0,
+        "precioVentaPorKilo": 40.0,
+        "fechaCaducidad": "2027-07-03",
+        "cuantasVecesSeVendio": 27
+      }
+    ],
+    "precioCompra": 20.0,
+    "almacenVenta": [
+      10.0,
+      20.0
+    ]
+  },
+  {
+    "cliente": "Gregg",
+    "apellido": "Doyle",
+    "fechaHora": "2024-04-30T00:45:26.937988100",
+    "frutasVendidas": [
+      {
+        "nombre": "Mandarina2",
+        "procedencia": "Barcelona",
+        "numeroKilos": 1958,
+        "precioCostePorKilo": 40.0,
+        "precioVentaPorKilo": 40.0,
+        "fechaCaducidad": "2027-01-14",
+        "cuantasVecesSeVendio": 175
+      }
+    ],
+    "precioCompra": 20.0,
+    "almacenVenta": [
+      10.0,
+      20.0
+    ]
+  }
+]
