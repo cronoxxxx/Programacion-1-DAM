@@ -13,8 +13,8 @@ public class ClienteFisico extends Cliente implements Serializable {
 
     private int ordenFila;
     private static int asignacion = 1;
-    public ClienteFisico(String nombre, String apellidos, int ordenFila, boolean hasDescuento) {
-        super(nombre, apellidos,hasDescuento);
+    public ClienteFisico(int ordenFila) {
+        super();
         this.ordenFila = ordenFila;
     }
 

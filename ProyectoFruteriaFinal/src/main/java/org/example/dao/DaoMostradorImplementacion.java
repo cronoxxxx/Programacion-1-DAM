@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 @Getter@Setter
-public class DaoMostradorImplementacion implements DaoMostrador{
+public class DaoMostradorImplementacion implements DaoMostrador {
     private Mostrador mostrador;
 
     public DaoMostradorImplementacion() {
-        this.mostrador = new Mostrador();
+        this.mostrador = DaoFicherosFruta.leerFicheroBinario();
     }
 
 
@@ -112,5 +112,22 @@ public class DaoMostradorImplementacion implements DaoMostrador{
 
     public void eliminarTodo(){
         mostrador.eliminarTodo();
+    }
+
+    @Override
+    public Set<Factura> buscarFacturasPorFecha(String date) {
+        return mostrador.buscarFacturasPorFecha(date);
+    }
+
+
+
+    @Override
+    public Set<Factura> devolverFacturasNombreSet(String nombre, String apellidos){
+        return mostrador.devolverFacturasNombreSet(nombre,apellidos);
+    }
+
+    @Override
+    public boolean actualizarFactura(Factura factura,String nombre, String apellidos) {
+        return mostrador.actualizarFactura(factura,nombre,apellidos);
     }
 }

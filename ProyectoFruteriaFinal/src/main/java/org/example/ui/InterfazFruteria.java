@@ -13,6 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Optional;
 
+
 public class InterfazFruteria {
     private static final String pass = "messi";
 
@@ -51,10 +52,7 @@ public class InterfazFruteria {
                     default -> System.out.println(Constantes.INGRESE_UNA_OPCION_VALIDA);
                 }
             } while (op!=13);
-
         }
-
-
     }
 
     public static void lecturaFinal (GestionFruteria gestionFruteria) {

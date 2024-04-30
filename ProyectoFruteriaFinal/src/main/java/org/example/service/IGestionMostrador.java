@@ -33,9 +33,15 @@ public interface IGestionMostrador {
     boolean reunirClientesPorCiudad(String ciudad);
 
     Mostrador leerFicheroBinario();
-    boolean escribirFicheroBinario(Mostrador mostrador);
+    boolean escribirFicheroBinario();
 
     boolean escribirCambiosFrutaTexto();
 
     List<Fruta> leerCambiosFrutaTexto();
+
+    Set<Factura> buscarFacturasPorFecha(String date);
+
+    boolean actualizarFactura(Factura factura,String nombre, String apellidos);
+
+    Set<Factura> devolverFacturasNombreSet(String nombre, String apellidos);
 }

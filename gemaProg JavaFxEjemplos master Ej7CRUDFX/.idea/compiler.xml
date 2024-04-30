@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CRUD FX" />
         <module name="Ej7CRUD FX" />
+        <module name="CRUDFX" />
       </profile>
     </annotationProcessing>
   </component>

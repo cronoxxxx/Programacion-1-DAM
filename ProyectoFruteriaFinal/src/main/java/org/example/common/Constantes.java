@@ -2,6 +2,8 @@ package org.example.common;
 
 public class Constantes {
 
+
+
     public static final String FORMATO_INCORRECTO_EN_LA_LINEA = "Formato incorrecto en la línea: ";
     public static final String LA_CANTIDAD_DE_PRECIO_ES_DEMASIADO_GRANDE_Y_HARIA_QUE_EL_PRECIO_DE_VENTA_SEA_INNACESIBLE_PARA_NUESTROS_CLIENTES = "La cantidad de precio es demasiado grande y haría que el precio de venta sea inaccesible para nuestros clientes";
     public static final String NO_SE_HA_ENCONTRADO_LA_FRUTA_LLAMADA = "No se ha encontrado la fruta llamada: ";
@@ -40,7 +42,7 @@ public class Constantes {
     public static final String LO_SENTIMOS_SOLO_TENEMOS_ESTA_CANTIDAD_DE_KILOS_PARA = "Lo sentimos, solo tenemos esta cantidad de kilos para ";
     public static final String DESCUENTO_EN_LECTURA = "Descuento  del 30% en lectura";
     public static final String NO_DESCUENTO_EN_LECTURA = "No hay descuento en lectura";
-    public static final String LA_CLAVE_YA_ESTA_EN_USO_NO_SE_PUEDE_ANADIR_EL_CLIENTE = "La clave ya está en uso. No se puede añadir el cliente.";
+
 
     public static final String NOMBRE_DEL_CLIENTE = "Nombre del cliente: ";
 
@@ -98,8 +100,8 @@ public class Constantes {
     public static final String INDICE_FUERA_DE_RANGO = "Indice fuera de rango.";
     public static final String FRUTAS_REUNIDAS_EXITOSAMENTE = "Frutas reunidas exitosamente.";
     public static final String FRUTAS_REUNIDAS_FALLIDAS = "Frutas reunidas fallidas.";
-    public static final String MENU_MOSTRADOR = "1.Mostrar información de clientes\n2.Realizar venta a un cliente\n3.Mostar los beneficios obtenidos de transacciones\n4.Agregar a un nuevo cliente en espera de una compra\n5.Buscar cliente\n6.Eliminar cliente\n7.Aplicar descuentos a un cliente\n8.Reunir clientes por ciudad\n9.Mostrar facturas hechas\n10.Salir\nElija una de las opciones: ";
-    public static final String  SELECCIONE_ORDEN_DE_MUESTRA = "Seleccione el orden de muestra:\n1.Mostrar en orden ascendente\n2.Mostrar en orden descendente\nElija una de las opciones: ";
+    public static final String MENU_MOSTRADOR = "1.Mostrar información de clientes\n2.Realizar venta a un cliente\n3.Mostar los beneficios obtenidos de transacciones\n4.Agregar a un nuevo cliente en espera de una compra\n5.Buscar cliente\n6.Eliminar cliente\n7.Aplicar descuentos a un cliente\n8.Reunir clientes por ciudad\n9.Mostrar facturas hechas\n10.Buscar facturas por argumento\n11.Actualizar datos de una factura\n12.Salir\nElija una de las opciones: ";
+    public static final String SELECCIONE_ORDEN_DE_MUESTRA = "Seleccione el orden de muestra:\n1.Mostrar en orden ascendente\n2.Mostrar en orden descendente\nElija una de las opciones: ";
     public static final String ORDENAR_MOSTRAR_MOSTRADOR = "1.Ordenar por claves\n2.Ordenar por nombre\nElija una de las opciones: ";
     public static final String INGRESE_EL_NOMBRE_DEL_CLIENTE = "Ingrese el nombre del cliente: ";
     public static final String QUE_CLIENTE_DAR_ALTA = "Que cliente dar de alta?\n1.Cliente físico\n2.Cliente en línea\nElija una de las opciones: ";
@@ -120,4 +122,30 @@ public class Constantes {
     public static final String INGRESE_ID_DEL_CLIENTE = "Ingrese el ID del cliente: ";
     public static final String INGRESE_NOMBRE_DEL_CLIENTE = "Ingrese el Nombre del cliente: ";
     public static final String INGRESE_APELLIDO_DEL_CLIENTE = "Ingrese el Apellido del cliente: ";
+    public static final String NO_HAY_NINGUN_BENEFICIO = "No hay ningun beneficio obtenido.";
+    public static final String BENEFICIOS_TOTALES = "Los beneficios totales son: ";
+    public static final String MENU_BUSCAR_CLIENTE = "1. Buscar por ID\n2. Buscar por Nombre y Apellidos\nElija una de las opciones: ";
+    public static final String INGRESE_APELLIDOS_DEL_CLIENTE = "Ingrese los apellidos del cliente: ";
+    public static final String MENU_ELIMINAR_CLIENTE = "1. Eliminar por ID\n2. Eliminar por Nombre y Apellidos\nElija una de las opciones: ";
+    public static final String ELIMINADO_EXITOSAMENTE = "Eliminado exitosamente.";
+    public static final String MENU_DESCUENTOS = "1. Aplicar descuento por ID\n2. Aplicar descuento por Nombre y Apellidos\nElija una de las opciones: ";
+    public static final String DESCUENTO_APLICADO_CON_EXITO =  "Descuento aplicado con exito.";
+    public static final String DESCUENTO_NO_APLICADO = "Descuento no aplicado.";
+    public static final String CIUDAD_VALOR_NULO = "La ciudad no puede ser nula.";
+    public static final String INGRESE_CIUDAD = "Ingrese la ciudad: ";
+    public static final String CLIENTES_REUNIDOS_CON_EXITO = "Los clientes han sido reunidos con exito.";
+    public static final String CLIENTES_NO_REUNIDOS = "Los clientes no han sido reunidos.";
+    public static final String MOSTRAR_FACTURAS = "FACTURAS:";
+    public static final String NO_HAY_FACTURAS = "No hay facturas.";
+    public static final String INGRESE_FECHA = "Ingrese la fecha: ";
+    public static final String MENU_BUSCAR_FACTURAS = "1. Buscar por Fecha\n2. Buscar por Nombre y Apellidos\nElija una de las opciones: ";
+    public static final String INGRESE_LA_FACTURA_A_ACTUALIZAR = "Ingrese la factura a actualizar: ";
+    public static final String INGRESE_NUEVO_NOMBRE_DEL_CLIENTE = "Ingrese el nuevo Nombre del cliente: ";
+    public static final String INGRESE_NUEVOS_APELLIDOS_DEL_CLIENTE = "Ingrese los nuevos Apellidos del cliente: ";
+    public static final String ACTUALIZADO_EXITOSO = "Actualizado exitosamente.";
+    public static final String ACTUALIZADO_FALLIDO = "Actualizado fallido.";
+    public static final String FACTURAS_NO_ENCONTRADAS = "Las facturas no han sido encontradas.";
+    public static final String INGRESE_LA_CANTIDAD = "Ingrese la cantidad: ";
+    public static final String MENU_BIENVENIDA = "Bienvenido al sistema de gestión de la FruteriaAdrian.\n1.Gestion de mostrador\n2.Gestion de fruteria\nElija una de las opciones: ";
+    
 }

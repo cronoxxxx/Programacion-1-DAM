@@ -21,11 +21,23 @@ public class DaoFicherosFruta {
     public static void crearFicheros() throws IOException {
         File fichero1 = new File(FICHERO);
         File fichero2 = new File(FICHEROBINARIO);
+        String ruta = "data/";
+        String nombreArchivo = "facturas.json";
+        String rutaCompleta = ruta + nombreArchivo;
+
+        File fichero3 = new File(rutaCompleta);
+        if (!fichero3.exists()) {
+            File directorio = new File(ruta);
+            directorio.mkdirs();
+            fichero3.createNewFile();
+        }
         if (!fichero1.exists()) {
             fichero1.createNewFile();
         }
         if (!fichero2.exists())
             fichero2.createNewFile();
+            
+
     }
 
     public static boolean escribirFichero(List<Fruta> frutas) throws FileNotFoundException {

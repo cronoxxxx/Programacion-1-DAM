@@ -4,19 +4,17 @@ import org.example.common.*;
 import org.example.domain.*;
 import org.example.service.GestionMostrador;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.List;
-import java.util.Optional;
+import java.time.format.*;
+import java.util.*;
 
-public class InterfazMostrador  {
+public class InterfazMostrador {
 
     private static final String pass = "ronaldo";
+
     public static void getInterfazMostrador(GestionMostrador gestionMostrador) {
+
         BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
         Optional<String> contraOptional = Optional.empty();
         System.out.println(Constantes.INGRESE_CONTRASENA);
@@ -36,8 +34,263 @@ public class InterfazMostrador  {
                 switch (op) {
                     case 1 -> mostrarInformacion(gestionMostrador);
                     case 2 -> realizarVentaCliente(gestionMostrador);
+                    case 3 -> calcularBeneficiosTotales(gestionMostrador);
+                    case 4 -> darAlta(gestionMostrador);
+                    case 5 -> buscarClientes(gestionMostrador);
+                    case 6 -> eliminarCliente(gestionMostrador);
+                    case 7 -> aplicarDescuentos(gestionMostrador);
+                    case 8 -> reunirClientesPorCiudad(gestionMostrador);
+                    case 9 -> mostrarFacturas(gestionMostrador);
+                    case 10 -> buscarFacturas(gestionMostrador);
+                    case 11 -> actualizarFactura(gestionMostrador);
+                    case 12 -> lecturaFinal(gestionMostrador);
+
+                    default -> System.out.println(Constantes.INGRESE_UNA_OPCION_VALIDA);
                 }
-            } while (op != 0);
+            } while (op != 12);
+        }
+    }
+
+    public static void actualizarFactura(GestionMostrador gestionMostrador) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            System.out.println(Constantes.INGRESE_NOMBRE_DEL_CLIENTE);
+            String nombre = entradaReader.readLine();
+            System.out.println(Constantes.INGRESE_APELLIDOS_DEL_CLIENTE);
+            String apellidos = entradaReader.readLine();
+            Set<Factura> facturasSet = gestionMostrador.devolverFacturasNombreSet(nombre, apellidos);
+            List <Factura> facturas = new ArrayList<>(facturasSet);
+            if ( !facturas.isEmpty()) {
+                for (int i = 0; i < facturas.size(); i++) {
+                    System.out.println(i + " " + facturas.get(i));
+                }
+            } else {
+                System.out.println(Constantes.FACTURAS_NO_ENCONTRADAS);
+            }
+            System.out.println(Constantes.INGRESE_LA_FACTURA_A_ACTUALIZAR);
+            int op = Integer.parseInt(entradaReader.readLine());
+            if (op >= 0 && op < facturas.size()) {
+                Factura factura = facturas.get(op);
+                System.out.println(Constantes.INGRESE_NUEVO_NOMBRE_DEL_CLIENTE);
+                String nuevoNombre = entradaReader.readLine();
+                System.out.println(Constantes.INGRESE_NUEVOS_APELLIDOS_DEL_CLIENTE);
+                String nuevoApellidos = entradaReader.readLine();
+                if (gestionMostrador.actualizarFactura(factura, nuevoNombre, nuevoApellidos)) {
+                    System.out.println(Constantes.ACTUALIZADO_EXITOSO);
+                } else {
+                    System.out.println(Constantes.ACTUALIZADO_FALLIDO);
+                }
+            } else {
+                System.out.println(Constantes.INGRESE_UNA_OPCION_VALIDA);
+            }
+        } catch (IOException ignored) {
+            System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
+        }
+
+    }
+
+    public static void buscarFacturas(GestionMostrador gestionMostrador) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(Constantes.MENU_BUSCAR_FACTURAS);
+        int op = menu();
+        try {
+            switch (op) {
+                case 1 -> {
+                    System.out.println(Constantes.INGRESE_FECHA);
+                    String fecha = entradaReader.readLine();
+                    if (gestionMostrador.buscarFacturasPorFecha(fecha) != null) {
+                        System.out.println(Constantes.ENCONTRADO_EXITOSO);
+                        System.out.println(gestionMostrador.buscarFacturasPorFecha(fecha));
+                    } else {
+                        System.out.println(Constantes.ENCONTRADO_FALLIDO);
+                    }
+                }
+                case 2 -> {
+                    System.out.println(Constantes.INGRESE_NOMBRE_DEL_CLIENTE);
+                    String nombre = entradaReader.readLine();
+                    System.out.println(Constantes.INGRESE_APELLIDOS_DEL_CLIENTE);
+                    String apellidos = entradaReader.readLine();
+                    if (gestionMostrador.devolverFacturasNombreSet(nombre, apellidos) != null) {
+                        System.out.println(Constantes.ENCONTRADO_EXITOSO);
+                        System.out.println(gestionMostrador.devolverFacturasNombreSet(nombre, apellidos));
+                    } else {
+                        System.out.println(Constantes.ENCONTRADO_FALLIDO);
+                    }
+                }
+                default -> System.out.println(Constantes.INGRESE_UNA_OPCION_VALIDA);
+            }
+        } catch (IOException ignored) {
+            System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
+        }
+
+
+    }
+
+    public static void lecturaFinal(GestionMostrador gestionMostrador) {
+        System.out.println(Constantes.VUELVA_PRONTO);
+        gestionMostrador.escribirFicheroBinario();
+        System.out.println(gestionMostrador.leerFicheroBinario());
+        gestionMostrador.escribirCambiosFrutaTexto();
+        System.out.println(gestionMostrador.leerCambiosFrutaTexto());
+
+    }
+
+    public static void mostrarFacturas(GestionMostrador gestionMostrador) {
+        if (gestionMostrador.getFacturas() != null && !gestionMostrador.getFacturas().isEmpty()) {
+            System.out.println(Constantes.MOSTRAR_FACTURAS);
+            gestionMostrador.getFacturas().forEach(System.out::println);
+        } else {
+            System.out.println(Constantes.NO_HAY_FACTURAS);
+        }
+    }
+
+    public static void reunirClientesPorCiudad(GestionMostrador gestionMostrador) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            System.out.println(Constantes.INGRESE_CIUDAD);
+            String ciudad = entradaReader.readLine();
+            if (gestionMostrador.reunirClientesPorCiudad(ciudad)) {
+                System.out.println(Constantes.CLIENTES_REUNIDOS_CON_EXITO);
+            } else {
+                System.out.println(Constantes.CLIENTES_NO_REUNIDOS);
+            }
+        } catch (IOException ignored) {
+            System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
+        }
+
+
+    }
+
+    public static void aplicarDescuentos(GestionMostrador gestionMostrador) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(Constantes.MENU_DESCUENTOS);
+        try {
+            int op = menu();
+            switch (op) {
+                case 1 -> {
+                    System.out.println(Constantes.INGRESE_ID_DEL_CLIENTE);
+                    int id = Integer.parseInt(entradaReader.readLine());
+                    if (gestionMostrador.aplicarDescuentosClienteporID(id)) {
+                        System.out.println(Constantes.DESCUENTO_APLICADO_CON_EXITO);
+                    } else {
+                        System.out.println(Constantes.DESCUENTO_NO_APLICADO);
+                    }
+                }
+                case 2 -> {
+                    System.out.println(Constantes.INGRESE_NOMBRE_DEL_CLIENTE);
+                    String nombre = entradaReader.readLine();
+                    System.out.println(Constantes.INGRESE_SUS_APELLIDOS);
+                    String apellidos = entradaReader.readLine();
+                    List<Cliente> clientes = gestionMostrador.clienteAccion(nombre, apellidos);
+                    if (!clientes.isEmpty()) {
+                        for (int i = 0; i < clientes.size(); i++) {
+                            System.out.println(i + 1 + ". " + clientes.get(i).getNombre());
+                        }
+                        System.out.println(Constantes.SELECCIONE_POR_ID_O_NOMBRE_APELLIDO);
+                        int id = Integer.parseInt(entradaReader.readLine());
+                        Cliente actual = clientes.get(id - 1);
+                        if (actual != null) {
+                            if (gestionMostrador.aplicarDescuentosporClienteNombreApellidos(actual)) {
+                                System.out.println(Constantes.DESCUENTO_APLICADO_CON_EXITO);
+                            } else {
+                                System.out.println(Constantes.DESCUENTO_NO_APLICADO);
+                            }
+                        } else {
+                            System.out.println(Constantes.EL_ID_NO_EXISTE);
+                        }
+                    } else {
+                        System.out.println(Constantes.CLIENTE_VACIO);
+                    }
+                }
+                default -> System.out.println(Constantes.OPCION_NO_VALIDA);
+            }
+        } catch (IOException ignored) {
+            System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
+        }
+    }
+
+    public static void eliminarCliente(GestionMostrador gestionMostrador) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(Constantes.MENU_ELIMINAR_CLIENTE);
+        try {
+            int op = menu();
+            switch (op) {
+                case 1 -> {
+                    System.out.println(Constantes.INGRESE_ID_DEL_CLIENTE);
+                    int id = Integer.parseInt(entradaReader.readLine());
+                    if (gestionMostrador.removeClienteporID(id)) {
+                        System.out.println(Constantes.ELIMINADO_EXITOSAMENTE);
+                    } else {
+                        System.out.println(Constantes.ELIMINADO_FALLIDO);
+                    }
+                }
+                case 2 -> {
+                    System.out.println(Constantes.INGRESE_NOMBRE_DEL_CLIENTE);
+                    String nombre = entradaReader.readLine();
+                    System.out.println(Constantes.INGRESE_SUS_APELLIDOS);
+                    String apellidos = entradaReader.readLine();
+                    List<Cliente> clientes = gestionMostrador.clienteAccion(nombre, apellidos);
+                    if (!clientes.isEmpty()) {
+                        for (int i = 0; i < clientes.size(); i++) {
+                            System.out.println(i + 1 + ". " + clientes.get(i).getNombre());
+                        }
+                        System.out.println(Constantes.SELECCIONE_QUE_CLIENTE_VENDER);
+                        int index = Integer.parseInt(entradaReader.readLine()) - 1;
+                        Cliente online = clientes.get(index);
+                        if (online != null) {
+                            if (gestionMostrador.removeClienteporNombreApellidos(online)) {
+                                System.out.println(Constantes.ELIMINADO_EXITOSAMENTE);
+                            } else {
+                                System.out.println(Constantes.ELIMINADO_FALLIDO);
+                            }
+                        } else {
+                            System.out.println(Constantes.CLIENTE_VACIO);
+                        }
+                    } else {
+                        System.out.println(Constantes.CLIENTE_VACIO);
+                    }
+                }
+                default -> System.out.println(Constantes.OPCION_NO_VALIDA);
+            }
+        } catch (IOException ignored) {
+            System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
+        }
+    }
+
+    public static void calcularBeneficiosTotales(GestionMostrador gestionMostrador) {
+        if (gestionMostrador.getBeneficios() <= 0) {
+            System.out.println(Constantes.NO_HAY_NINGUN_BENEFICIO);
+        } else {
+            System.out.println(Constantes.BENEFICIOS_TOTALES + gestionMostrador.getBeneficios());
+        }
+    }
+
+    public static void buscarClientes(GestionMostrador gestionMostrador) {
+        BufferedReader entradaReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(Constantes.MENU_BUSCAR_CLIENTE);
+        try {
+            int op = menu();
+            switch (op) {
+                case 1 -> {
+                    System.out.println(Constantes.INGRESE_ID_DEL_CLIENTE);
+
+                    int id = Integer.parseInt(entradaReader.readLine());
+                    gestionMostrador.buscarClienteporID(id);
+
+                }
+                case 2 -> {
+                    System.out.println(Constantes.INGRESE_NOMBRE_DEL_CLIENTE);
+                    String nombre = entradaReader.readLine();
+                    System.out.println(Constantes.INGRESE_APELLIDOS_DEL_CLIENTE);
+                    String apellidos = entradaReader.readLine();
+                    gestionMostrador.buscarClienteNombreApellido(nombre, apellidos);
+
+                }
+                default -> System.out.println(Constantes.OPCION_NO_VALIDA);
+
+            }
+        } catch (IOException ignored) {
+            System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
         }
     }
 
@@ -58,6 +311,7 @@ public class InterfazMostrador  {
                         for (int i = 0; i < cant; i++) {
                             System.out.println(Constantes.INGRESE_LA_FRUTA + (i + 1));
                             sb.append(entradaReader.readLine()).append(", ");
+                            System.out.println(Constantes.INGRESE_LA_CANTIDAD);
                             cantidades[i] = Integer.parseInt(entradaReader.readLine());
                         }
 
@@ -86,6 +340,7 @@ public class InterfazMostrador  {
                                 for (int i = 0; i < cant; i++) {
                                     System.out.println(Constantes.INGRESE_LA_FRUTA + (i + 1));
                                     sb.append(entradaReader.readLine()).append(", ");
+                                    System.out.println(Constantes.INGRESE_LA_CANTIDAD);
                                     cantidades[i] = Integer.parseInt(entradaReader.readLine());
                                 }
                                 if (gestionMostrador.venderClienteOnline(online, sb, cantidades)) {
@@ -136,11 +391,10 @@ public class InterfazMostrador  {
                 }
                 default -> System.out.println(Constantes.OPCION_NO_VALIDA);
             }
-            } catch(IOException ignored){
-                System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
-            }
+        } catch (IOException ignored) {
+            System.out.println(Constantes.ERROR_ENTRADA_SALIDA);
         }
-
+    }
 
 
     private static void darAlta(GestionMostrador gestionMostrador) {
@@ -149,7 +403,7 @@ public class InterfazMostrador  {
             System.out.println(Constantes.QUE_CLIENTE_DAR_ALTA);
             int op = menu();
             switch (op) {
-                case 1->{
+                case 1 -> {
                     System.out.println(Constantes.INGRESE_EL_NOMBRE_DEL_CLIENTE);
                     String nombre = entradaReader.readLine();
                     System.out.println(Constantes.INGRESE_SUS_APELLIDOS);
@@ -164,9 +418,13 @@ public class InterfazMostrador  {
                         } else descuento = respuesta.strip().equalsIgnoreCase("si");
                     } while (!(respuesta.equalsIgnoreCase("si") || respuesta.equalsIgnoreCase("no")));
                     Cliente fisico = new ClienteFisico(nombre, apellidos, descuento);
-                    gestionMostrador.putCliente(fisico);
+                    if(gestionMostrador.putCliente(fisico)) {
+                        System.out.println(Constantes.OPERACION_EXITOSA);
+                    } else {
+                        System.out.println(Constantes.OPERACION_FALLIDA);
+                    }
                 }
-                case 2->{
+                case 2 -> {
                     System.out.println(Constantes.INGRESE_EL_NOMBRE_DEL_CLIENTE);
                     String nombre = entradaReader.readLine();
                     System.out.println(Constantes.INGRESE_SUS_APELLIDOS);
@@ -190,7 +448,11 @@ public class InterfazMostrador  {
                     Cliente online;
                     try {
                         online = new ClienteOnline(nombre, apellidos, fechaCaducidad, direccion, descuento, ciudad);
-                        gestionMostrador.putCliente(online);
+                        if(gestionMostrador.putCliente(online)){
+                            System.out.println(Constantes.OPERACION_EXITOSA);
+                        } else {
+                            System.out.println(Constantes.OPERACION_FALLIDA);
+                        }
                     } catch (FechaInvalidaException | DateTimeParseException e) {
                         System.out.println(Constantes.DEBE_INGRESAR_FECHA_VALIDA);
                     } catch (direccionInvalidoException e) {
@@ -208,14 +470,11 @@ public class InterfazMostrador  {
     }
 
 
-
-
-
     public static void mostrarInformacion(GestionMostrador gestionMostrador) {
         System.out.println(Constantes.ORDENAR_MOSTRAR_MOSTRADOR);
         int op = menu();
         switch (op) {
-            case 1 ->{
+            case 1 -> {
                 System.out.println(Constantes.SELECCIONE_ORDEN_DE_MUESTRA);
                 op = menu();
                 switch (op) {
@@ -224,7 +483,7 @@ public class InterfazMostrador  {
                     default -> System.out.println(Constantes.INGRESE_UNA_OPCION_VALIDA);
                 }
             }
-            case 2 ->{
+            case 2 -> {
                 System.out.println(Constantes.SELECCIONE_ORDEN_DE_MUESTRA);
                 op = menu();
                 switch (op) {

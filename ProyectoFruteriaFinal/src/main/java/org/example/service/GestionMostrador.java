@@ -7,7 +7,7 @@ import org.example.domain.*;
 import java.io.FileNotFoundException;
 import java.util.*;
 @Getter
-public class GestionMostrador implements IGestionMostrador{
+public class GestionMostrador implements IGestionMostrador {
     private final DaoMostradorImplementacion daoMostradorImplementacion;
     public GestionMostrador() {
         this.daoMostradorImplementacion = new DaoMostradorImplementacion();
@@ -111,8 +111,8 @@ public class GestionMostrador implements IGestionMostrador{
     }
 
     @Override
-    public boolean escribirFicheroBinario(Mostrador mostrador) {
-        return DaoFicherosFruta.escribirFicheroBinario(mostrador);
+    public boolean escribirFicheroBinario() {
+        return DaoFicherosFruta.escribirFicheroBinario(daoMostradorImplementacion.getMostrador());
     }
 
     @Override
@@ -131,5 +131,18 @@ public class GestionMostrador implements IGestionMostrador{
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public Set<Factura> buscarFacturasPorFecha(String date) {
+        return daoMostradorImplementacion.buscarFacturasPorFecha(date);
+    }
+    @Override
+    public boolean actualizarFactura(Factura factura, String nombre, String apellidos) {
+        return daoMostradorImplementacion.actualizarFactura(factura, nombre, apellidos);
+    }
+@Override
+public Set<Factura> devolverFacturasNombreSet(String nombre, String apellidos){
+        return daoMostradorImplementacion.devolverFacturasNombreSet(nombre,apellidos);
     }
 }

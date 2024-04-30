@@ -32,5 +32,11 @@ public interface DaoMostrador {
     List<Cliente> clienteAccion (String nombre, String apellidos);
     boolean reunirClientesPorCiudad(String ciudad);
     void eliminarTodo();
+    Set<Factura> buscarFacturasPorFecha(String date);
+
+
+    Set<Factura> devolverFacturasNombreSet(String nombre, String apellidos);
+
+    boolean actualizarFactura(Factura factura, String nombre, String apellidos);
 
 }

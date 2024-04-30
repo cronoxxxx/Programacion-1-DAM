@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 @Getter
 public class Fruteria implements Serializable {
-    private List<Fruta> frutas;
+    private final List<Fruta> frutas;
 
     //crear un hashmap de clientes
     public Fruteria(List<Fruta> frutas) {
