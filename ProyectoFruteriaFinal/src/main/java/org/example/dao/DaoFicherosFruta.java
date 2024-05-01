@@ -5,6 +5,7 @@ package org.example.dao;
 import org.example.common.Constantes;
 import org.example.common.FechaInvalidaException;
 import org.example.common.precioVentaExcepcion;
+import org.example.domain.Cliente;
 import org.example.domain.Fruta;
 
 import java.io.*;
@@ -82,7 +83,7 @@ public class DaoFicherosFruta {
         return frutas;
     }
 
-    public static Mostrador leerFicheroBinario()  {
+    public static Mostrador  leerFicheroBinario()  {
         Mostrador auxiliar = null;
         try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(FICHEROBINARIO))) {
             auxiliar = (Mostrador) is.readObject();

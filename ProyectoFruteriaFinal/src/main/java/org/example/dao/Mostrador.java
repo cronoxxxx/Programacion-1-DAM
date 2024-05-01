@@ -31,7 +31,9 @@ public class Mostrador implements Serializable {
     public Mostrador(int cantidad) {
         fruteria = new Fruteria();
         facturas = loadFacturas();
-        this.clientesEsperaCompra = new HashMap<>();
+        Mostrador mostrador = DaoFicherosFruta.leerFicheroBinario();
+        clientesEsperaCompra = mostrador.getClientesEsperaCompra();
+        this.beneficios = 0;
         for (int i = 0; i < cantidad; i++) {
             int randoMizer = (int) (Math.random() * 2);
             if (randoMizer == 1) {

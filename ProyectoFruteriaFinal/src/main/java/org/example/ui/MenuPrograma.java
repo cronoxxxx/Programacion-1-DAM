@@ -2,8 +2,7 @@ package org.example.ui;
 
 import lombok.extern.log4j.Log4j2;
 import org.example.common.Constantes;
-import org.example.dao.DaoFicherosFruta;
-import org.example.dao.Mostrador;
+
 import org.example.service.GestionFruteria;
 import org.example.service.GestionMostrador;
 

@@ -220,5 +220,25 @@
     "almacenVenta": [
       800.0
     ]
+  },
+  {
+    "cliente": "Eve",
+    "apellido": "Mohr",
+    "fechaHora": "2024-05-02T00:08:54.931254400",
+    "frutasVendidas": [
+      {
+        "nombre": "a",
+        "procedencia": "Vizcaya",
+        "numeroKilos": 38,
+        "precioCostePorKilo": 20.0,
+        "precioVentaPorKilo": 30.0,
+        "fechaCaducidad": "2024-09-20",
+        "cuantasVecesSeVendio": 1
+      }
+    ],
+    "precioCompra": 60.0,
+    "almacenVenta": [
+      60.0
+    ]
   }
 ]

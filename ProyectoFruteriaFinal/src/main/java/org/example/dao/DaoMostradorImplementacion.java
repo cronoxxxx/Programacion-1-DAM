@@ -13,7 +13,7 @@ public class DaoMostradorImplementacion implements DaoMostrador {
     private Mostrador mostrador;
 
     public DaoMostradorImplementacion() {
-        this.mostrador = DaoFicherosFruta.leerFicheroBinario();
+        this.mostrador = new Mostrador();
     }
 
 
