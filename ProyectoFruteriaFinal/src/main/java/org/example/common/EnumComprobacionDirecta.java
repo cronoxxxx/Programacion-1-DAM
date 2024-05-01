@@ -34,7 +34,7 @@ public class EnumComprobacionDirecta {
     }
 
     public static void direccionOK (String direccionEntregaPedido) throws direccionInvalidoException {
-        Pattern pattern = Pattern.compile("^[,\\p{L}0-9 ]+$");
+        Pattern pattern = Pattern.compile("^(?!.*,.*,)[,\\p{L}0-9 ]{9,}$");
         Matcher matcher = pattern.matcher(direccionEntregaPedido);
         if (!matcher.matches()) {
             throw new direccionInvalidoException();

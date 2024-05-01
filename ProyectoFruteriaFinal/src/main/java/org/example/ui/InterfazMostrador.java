@@ -186,7 +186,7 @@ public class InterfazMostrador {
                         for (int i = 0; i < clientes.size(); i++) {
                             System.out.println(i + 1 + ". " + clientes.get(i).getNombre());
                         }
-                        System.out.println(Constantes.SELECCIONE_POR_ID_O_NOMBRE_APELLIDO);
+                        System.out.println(Constantes.INGRESE_ID_DEL_CLIENTE);
                         int id = Integer.parseInt(entradaReader.readLine());
                         Cliente actual = clientes.get(id - 1);
                         if (actual != null) {

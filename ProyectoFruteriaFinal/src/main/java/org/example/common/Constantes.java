@@ -119,6 +119,7 @@ public class Constantes {
     public static final String OPERACION_EXITOSA = "Operacion exitosa.";
     public static final String OPERACION_FALLIDA = "Operacion fallida.";
     public static final String SELECCIONE_POR_ID_O_NOMBRE_APELLIDO = "1. Por ID\n2. Por Nombre y Apellidos\nElija una de las opciones: ";
+
     public static final String INGRESE_ID_DEL_CLIENTE = "Ingrese el ID del cliente: ";
     public static final String INGRESE_NOMBRE_DEL_CLIENTE = "Ingrese el Nombre del cliente: ";
     public static final String INGRESE_APELLIDO_DEL_CLIENTE = "Ingrese el Apellido del cliente: ";
@@ -146,6 +147,6 @@ public class Constantes {
     public static final String ACTUALIZADO_FALLIDO = "Actualizado fallido.";
     public static final String FACTURAS_NO_ENCONTRADAS = "Las facturas no han sido encontradas.";
     public static final String INGRESE_LA_CANTIDAD = "Ingrese la cantidad: ";
-    public static final String MENU_BIENVENIDA = "Bienvenido al sistema de gestión de la FruteriaAdrian.\n1.Gestion de mostrador\n2.Gestion de fruteria\nElija una de las opciones: ";
+    public static final String MENU_BIENVENIDA = "Bienvenido al sistema de gestión de la FruteriaAdrian.\n1.Gestion de mostrador\n2.Gestion de fruteria\n3.Salir del programa\nElija una de las opciones: ";
     
 }
