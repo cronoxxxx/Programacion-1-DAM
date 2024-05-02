@@ -222,23 +222,23 @@
     ]
   },
   {
-    "cliente": "Eve",
-    "apellido": "Mohr",
-    "fechaHora": "2024-05-02T00:08:54.931254400",
+    "cliente": "Gema",
+    "apellido": "Garcia Fernandez",
+    "fechaHora": "2024-05-02T12:33:50.321280200",
     "frutasVendidas": [
       {
-        "nombre": "a",
+        "nombre": "Manzana Vasca",
         "procedencia": "Vizcaya",
-        "numeroKilos": 38,
-        "precioCostePorKilo": 20.0,
-        "precioVentaPorKilo": 30.0,
+        "numeroKilos": 18,
+        "precioCostePorKilo": 30.0,
+        "precioVentaPorKilo": 40.0,
         "fechaCaducidad": "2024-09-20",
         "cuantasVecesSeVendio": 1
       }
     ],
-    "precioCompra": 60.0,
+    "precioCompra": 56.0,
     "almacenVenta": [
-      60.0
+      56.0
     ]
   }
 ]

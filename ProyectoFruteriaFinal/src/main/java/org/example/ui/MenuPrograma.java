@@ -19,8 +19,14 @@ public class MenuPrograma {
                 System.out.println(Constantes.MENU_BIENVENIDA);
                 var = Integer.parseInt(entradaReader.readLine());
                 switch (var) {
-                    case 1 -> InterfazMostrador.getInterfazMostrador(gestionMostrador);
-                    case 2 -> InterfazFruteria.getInterfazFruteria(gestionFruteria);
+                    case 1 -> {
+                        InterfazMostrador.getInterfazMostrador(gestionMostrador);
+                        var = 3;
+                    }
+                    case 2 -> {
+                        InterfazFruteria.getInterfazFruteria(gestionFruteria);
+                        var = 3;
+                    }
                     case 3 -> System.out.println(Constantes.VUELVA_PRONTO);
                     default -> System.out.println(Constantes.OPCION_NO_VALIDA);
                 }
