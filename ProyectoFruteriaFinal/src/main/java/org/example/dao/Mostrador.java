@@ -4,10 +4,9 @@ import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
-import net.datafaker.Faker;
 import org.example.common.Configuracion;
 import org.example.common.Constantes;
-import org.example.common.precioVentaExcepcion;
+
 import org.example.domain.*;
 
 import java.io.*;
@@ -24,39 +23,35 @@ public class Mostrador implements Serializable {
     private final Map<Integer, Cliente> clientesEsperaCompra;
     private final Fruteria fruteria;
     private double beneficios;
-    private static int iterador = 0;
+    private final Database database;
     private static int fila = 1;
-    private Set<Factura> facturas; //No colocará doble factura
-
-    public Mostrador(int cantidad) {
+    private final Set<Factura> facturas; //No colocará doble factura
+    public Mostrador() {
+        database = DaoFicherosFruta.leerFicheroBinarioData();
         fruteria = new Fruteria();
         facturas = loadFacturas();
-        Mostrador mostrador = DaoFicherosFruta.leerFicheroBinario();
-        clientesEsperaCompra = mostrador.getClientesEsperaCompra();
+        clientesEsperaCompra = database.getClientesEsperaCompra();
         this.beneficios = 0;
-        /*for (int i = 0; i < cantidad; i++) {
-            int randoMizer = (int) (Math.random() * 2);
-            if (randoMizer == 1) {
-                clientesEsperaCompra.put(iterador++, new ClienteFisico());
-            } else {
-                clientesEsperaCompra.put(iterador++, new ClienteOnline());
-            }
-        }*/
-
     }
-
-
-    public Mostrador() {
-        this(20);
-    }
-
     public boolean isEmptyClientes() {
         return clientesEsperaCompra.isEmpty();
     }
 
     public boolean putCliente(Cliente valor) {
-        int maxKey = clientesEsperaCompra.keySet().stream().mapToInt(Integer::intValue).max().orElse(0);
-        return clientesEsperaCompra.putIfAbsent(maxKey + 1, valor) == null;
+        if (valor instanceof ClienteFisico) {
+            // Obtener el último orden de fila de los clientes físicos existentes
+            int ultimoOrdenFila = clientesEsperaCompra.values().stream().filter(cliente -> cliente instanceof ClienteFisico)
+                .mapToInt(cliente -> ((ClienteFisico) cliente).getOrdenFila()).max().orElse(0);
+            // Asignar el nuevo cliente físico con un orden de fila incrementado
+            ((ClienteFisico) valor).setOrdenFila(ultimoOrdenFila + 1);
+            // Agregar el nuevo cliente a la lista
+            int maxKey = clientesEsperaCompra.keySet().stream().mapToInt(Integer::intValue).max().orElse(0);
+            return clientesEsperaCompra.putIfAbsent(maxKey + 1, valor) == null;
+        } else {
+            // Para otros tipos de clientes, agregar sin modificar el orden de fila
+            int maxKey = clientesEsperaCompra.keySet().stream().mapToInt(Integer::intValue).max().orElse(0);
+            return clientesEsperaCompra.putIfAbsent(maxKey + 1, valor) == null;
+        }
     }
 
     public Map<Integer, Cliente> mostrarInformacion(boolean ascendente) {
@@ -95,9 +90,9 @@ public class Mostrador implements Serializable {
 
     public boolean venderClienteFisico(Cliente clienteComprador, StringBuilder sb, int... cantidadKilos) {
         List<Fruta> agregarCompraFrutasFactura = new ArrayList<>();
-        String nombreFruta = null;
+        String nombreFruta;
         double sumadorVenta = 0;
-        double descuento = 0;
+        double descuento;
         List<Double> almacenPrecios = new LinkedList<>();
 
         String nombreFrutasString = sb.toString();
@@ -164,7 +159,7 @@ public class Mostrador implements Serializable {
     }
 
     public Cliente devolverClienteOnline(int id) {
-        ClienteOnline clienteCompradorOnline = null;
+        ClienteOnline clienteCompradorOnline;
         Cliente cliente = clientesEsperaCompra.get(id);
 
         if (cliente != null) {
@@ -379,9 +374,7 @@ public class Mostrador implements Serializable {
                 .collect(Collectors.toSet());
     }
 
-    public List<Factura> devolverFacturasNombre(String nombre, String apellidos){ //usar para actualizar factura
-        return facturas.stream().filter(factura -> factura.getCliente().strip().equalsIgnoreCase(nombre) && factura.getApellido().strip().equalsIgnoreCase(apellidos)).collect(Collectors.toList());
-    }
+
 
     public Set<Factura> devolverFacturasNombreSet(String nombre, String apellidos){ //usar para actualizar factura
         return facturas.stream().filter(factura -> factura.getCliente().strip().equalsIgnoreCase(nombre) && factura.getApellido().strip().equalsIgnoreCase(apellidos)).collect(Collectors.toSet());
@@ -423,14 +416,14 @@ public class Mostrador implements Serializable {
         }
         return facturas;
     }
-//poner al final del programa
+
     public boolean saveFacturas(Set<Factura> facturas) {
         Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(LocalDateTime.class, (JsonDeserializer<LocalDateTime>) (json, type, jsonDeserializationContext) -> LocalDateTime.parse(json.getAsJsonPrimitive().getAsString()))
                 .registerTypeAdapter(LocalDateTime.class, (JsonSerializer<LocalDateTime>) (localDateTime, type, jsonSerializationContext) -> new JsonPrimitive(localDateTime.toString()))
                 .registerTypeAdapter(LocalDate.class, (JsonDeserializer<LocalDate>) (json, type, jsonDeserializationContext) -> LocalDate.parse(json.getAsJsonPrimitive().getAsString()))
                 .registerTypeAdapter(LocalDate.class, (JsonSerializer<LocalDate>) (localDate, type, jsonSerializationContext) -> new JsonPrimitive(localDate.toString())
                 ).create();
-        ;
+
         try (FileWriter fw = new FileWriter(new Configuracion().loadPathProperties())) {
             gson.toJson(facturas, fw);
         } catch (IOException e) {

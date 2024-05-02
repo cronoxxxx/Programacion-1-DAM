@@ -240,5 +240,105 @@
     "almacenVenta": [
       56.0
     ]
+  },
+  {
+    "cliente": "Reagan",
+    "apellido": "Schinner",
+    "fechaHora": "2024-05-02T17:50:24.576811300",
+    "frutasVendidas": [
+      {
+        "nombre": "Platano Canario",
+        "procedencia": "Canarias",
+        "numeroKilos": 194,
+        "precioCostePorKilo": 300.0,
+        "precioVentaPorKilo": 400.0,
+        "fechaCaducidad": "2026-06-06",
+        "cuantasVecesSeVendio": 2
+      }
+    ],
+    "precioCompra": 800.0,
+    "almacenVenta": [
+      800.0
+    ]
+  },
+  {
+    "cliente": "Jermaine",
+    "apellido": "Heidenreich",
+    "fechaHora": "2024-05-02T19:06:53.068365900",
+    "frutasVendidas": [
+      {
+        "nombre": "Platano Canario",
+        "procedencia": "Canarias",
+        "numeroKilos": 194,
+        "precioCostePorKilo": 300.0,
+        "precioVentaPorKilo": 400.0,
+        "fechaCaducidad": "2026-06-06",
+        "cuantasVecesSeVendio": 2
+      }
+    ],
+    "precioCompra": 800.0,
+    "almacenVenta": [
+      800.0
+    ]
+  },
+  {
+    "cliente": "Samuel",
+    "apellido": "Torphy",
+    "fechaHora": "2024-05-02T19:09:08.212552100",
+    "frutasVendidas": [
+      {
+        "nombre": "Banana5",
+        "procedencia": "Caceres",
+        "numeroKilos": 3994,
+        "precioCostePorKilo": 39.26609495034995,
+        "precioVentaPorKilo": 77.7019971802236,
+        "fechaCaducidad": "2028-11-29",
+        "cuantasVecesSeVendio": 29
+      }
+    ],
+    "precioCompra": 155.4039943604472,
+    "almacenVenta": [
+      155.4039943604472
+    ]
+  },
+  {
+    "cliente": "Maksim",
+    "apellido": "Melnikov",
+    "fechaHora": "2024-05-02T19:10:34.076205600",
+    "frutasVendidas": [
+      {
+        "nombre": "Banana5",
+        "procedencia": "Caceres",
+        "numeroKilos": 3994,
+        "precioCostePorKilo": 39.26609495034995,
+        "precioVentaPorKilo": 77.7019971802236,
+        "fechaCaducidad": "2028-11-29",
+        "cuantasVecesSeVendio": 29
+      }
+    ],
+    "precioCompra": 155.4039943604472,
+    "almacenVenta": [
+      155.4039943604472
+    ]
+  },
+  {
+    "cliente": "Adrian",
+    "apellido": "Saavedra",
+    "fechaHora": "2024-05-02T19:41:30.847692100",
+    "frutasVendidas": [
+      {
+        "nombre": "Platano Canario",
+        "procedencia": "Canarias",
+        "numeroKilos": 192,
+        "precioCostePorKilo": 300.0,
+        "precioVentaPorKilo": 400.0,
+        "fechaCaducidad": "2026-06-06",
+        "cuantasVecesSeVendio": 3
+      }
+    ],
+    "precioCompra": 560.0,
+    "almacenVenta": [
+      560.0
+    ]
   }
 ]

@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.dao.Database;
 import org.example.dao.Mostrador;
 import org.example.domain.Cliente;
 import org.example.domain.Factura;
@@ -32,7 +33,7 @@ public interface IGestionMostrador {
     List<Cliente> clienteAccion (String nombre, String apellidos);
     boolean reunirClientesPorCiudad(String ciudad);
 
-    Mostrador leerFicheroBinario();
+    Database leerFicheroBinario();
     boolean escribirFicheroBinario();
 
     boolean escribirCambiosFrutaTexto();

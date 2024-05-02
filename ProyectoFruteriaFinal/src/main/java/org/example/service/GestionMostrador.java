@@ -106,13 +106,13 @@ public class GestionMostrador implements IGestionMostrador {
     }
 
     @Override
-    public Mostrador leerFicheroBinario() {
-        return DaoFicherosFruta.leerFicheroBinario();
+    public Database leerFicheroBinario() {
+        return DaoFicherosFruta.leerFicheroBinarioData();
     }
 
     @Override
     public boolean escribirFicheroBinario() {
-        return DaoFicherosFruta.escribirFicheroBinario(daoMostradorImplementacion.getMostrador());
+        return DaoFicherosFruta.escribirFicheroBinarioData(daoMostradorImplementacion.getMostrador().getDatabase());
     }
 
     @Override

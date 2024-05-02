@@ -17,7 +17,7 @@ import java.util.Scanner;
 public class DaoFicherosFruta {
 
 
-    private static String FICHERO = "Fichero", FICHEROBINARIO = "FicheroBinario.bin";
+    private static String FICHERO = "data/Fichero", FICHEROBINARIO = "data/Clientes.bin";
 
     public static void crearFicheros() throws IOException {
         File fichero1 = new File(FICHERO);
@@ -99,6 +99,30 @@ public class DaoFicherosFruta {
         boolean escrito = false;
         try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(FICHEROBINARIO))) {
             os.writeObject(mostrador);
+            escrito = true;
+        } catch (IOException ex) {
+            java.util.logging.Logger.getLogger(DaoFicherosFruta.class.getName()).log(java.util.logging.Level.SEVERE, ex.getMessage(), ex);
+        }
+        return escrito;
+    }
+
+
+    public static Database  leerFicheroBinarioData()  {
+        Database auxiliar = null;
+        try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(FICHEROBINARIO))) {
+            auxiliar = (Database) is.readObject();
+        } catch (IOException | ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(DaoFicherosFruta.class.getName()).log(java.util.logging.Level.SEVERE, ex.getMessage(), ex);
+        }
+        return auxiliar;
+    }
+
+
+
+    public static boolean escribirFicheroBinarioData(Database database) {
+        boolean escrito = false;
+        try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(FICHEROBINARIO))) {
+            os.writeObject(database);
             escrito = true;
         } catch (IOException ex) {
             java.util.logging.Logger.getLogger(DaoFicherosFruta.class.getName()).log(java.util.logging.Level.SEVERE, ex.getMessage(), ex);
