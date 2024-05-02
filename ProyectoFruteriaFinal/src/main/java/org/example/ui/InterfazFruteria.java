@@ -15,7 +15,7 @@ import java.util.Optional;
 
 
 public class InterfazFruteria {
-    private static final String pass = "messi";
+    private static final String pass = "ronaldo";
 
 
     public static void getInterfazFruteria(GestionFruteria gestionFruteria) {

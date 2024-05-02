@@ -11,7 +11,7 @@ import java.util.*;
 
 public class InterfazMostrador {
 
-    private static final String pass = "ronaldo";
+    private static final String pass = "messi";
 
     public static void getInterfazMostrador(GestionMostrador gestionMostrador) {
 
