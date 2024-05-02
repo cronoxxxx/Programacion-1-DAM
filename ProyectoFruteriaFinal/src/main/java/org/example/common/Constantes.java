@@ -112,6 +112,8 @@ public class Constantes {
     public static final String INGRESE_LA_DIRECCION_DEL_CLIENTE = "Ingrese la direccion del cliente: ";
     public static final String INGRESE_LA_CIUDAD_DEL_CLIENTE = "Ingrese la ciudad del cliente: ";
     public static final String DEBE_INGRESAR_FORMATO_DE_DIRECCION_VALIDA = "Debe introducir un formato de direccion valido.";
+    public static final String SELECCIONE_QUE_CLIENTE_QUIERE_VENDER="Seleccione que cliente al que quiere vender";
+    public static final String SELECCIONE_QUE_CLIENTE_QUIERE_ELIMINAR="Seleccione que cliente al que quiere eliminar";
     public static final String SELECCIONE_QUE_CLIENTE_VENDER = "Seleccione que cliente vender\n1. Cliente fisico\n2. Cliente en linea\nElija una de las opciones: ";
     public static final String INGRESE_CUANTAS_FRUTAS_DESEA_VENDER = "Ingrese cuantas frutas desea vender: ";
     public static final String INGRESE_LA_FRUTA = "Ingresa la fruta ";

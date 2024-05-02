@@ -234,7 +234,7 @@ public class InterfazMostrador {
                         for (int i = 0; i < clientes.size(); i++) {
                             System.out.println(i + 1 + ". " + clientes.get(i).getNombre());
                         }
-                        System.out.println(Constantes.SELECCIONE_QUE_CLIENTE_VENDER);
+                        System.out.println(Constantes.SELECCIONE_QUE_CLIENTE_QUIERE_ELIMINAR);
                         int index = Integer.parseInt(entradaReader.readLine()) - 1;
                         Cliente online = clientes.get(index);
                         if (online != null) {
@@ -276,7 +276,6 @@ public class InterfazMostrador {
 
                     int id = Integer.parseInt(entradaReader.readLine());
                     gestionMostrador.buscarClienteporID(id);
-
                 }
                 case 2 -> {
                     System.out.println(Constantes.INGRESE_NOMBRE_DEL_CLIENTE);
@@ -362,7 +361,7 @@ public class InterfazMostrador {
                                 for (int i = 0; i < clientes.size(); i++) {
                                     System.out.println(i + 1 + ". " + clientes.get(i).getNombre());
                                 }
-                                System.out.println(Constantes.SELECCIONE_QUE_CLIENTE_VENDER);
+                                System.out.println(Constantes.SELECCIONE_QUE_CLIENTE_QUIERE_VENDER);
                                 int index = Integer.parseInt(entradaReader.readLine()) - 1;
                                 Cliente online = clientes.get(index);
                                 if (online != null) {
@@ -412,7 +411,7 @@ public class InterfazMostrador {
                     boolean descuento = false;
                     String respuesta;
                     do {
-                        respuesta = entradaReader.readLine();
+                        respuesta = entradaReader.readLine().strip();
                         if (!(respuesta.equalsIgnoreCase("si") || respuesta.equalsIgnoreCase("no"))) {
                             System.out.println(Constantes.ERROR_SOLO_SE_ACEPTAN_VALORES_SI_O_NO);
                         } else descuento = respuesta.strip().equalsIgnoreCase("si");
@@ -433,7 +432,7 @@ public class InterfazMostrador {
                     boolean descuento = false;
                     String respuesta;
                     do {
-                        respuesta = entradaReader.readLine();
+                        respuesta = entradaReader.readLine().strip();
                         if (!(respuesta.equalsIgnoreCase("si") || respuesta.equalsIgnoreCase("no"))) {
                             System.out.println(Constantes.ERROR_SOLO_SE_ACEPTAN_VALORES_SI_O_NO);
                         } else descuento = respuesta.strip().equalsIgnoreCase("si");
