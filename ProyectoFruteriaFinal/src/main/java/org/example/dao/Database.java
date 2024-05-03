@@ -13,6 +13,7 @@ import java.util.Map;
 public class Database implements Serializable
 {
     private static int iterador = 0;
+    private  double beneficios = 0;
     private final Map<Integer, Cliente> clientesEsperaCompra;
     public Database() {
         clientesEsperaCompra = new HashMap<>();

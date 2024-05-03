@@ -8,6 +8,7 @@ import org.example.common.Configuracion;
 import org.example.common.Constantes;
 
 import org.example.domain.*;
+import org.example.domain.Comparators;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -31,11 +32,16 @@ public class Mostrador implements Serializable {
         fruteria = new Fruteria();
         facturas = loadFacturas();
         clientesEsperaCompra = database.getClientesEsperaCompra();
-        this.beneficios = 0;
+        this.beneficios = database.getBeneficios();
     }
     public boolean isEmptyClientes() {
         return clientesEsperaCompra.isEmpty();
     }
+
+    public void saveBeneficios() {
+    database.setBeneficios(this.beneficios);
+    //DaoFicherosFruta.escribirFicheroBinarioData(database);
+}
 
     public boolean putCliente(Cliente valor) {
         if (valor instanceof ClienteFisico) {
@@ -127,6 +133,7 @@ public class Mostrador implements Serializable {
 
                         fruta.setNumeroKilos(fruta.getNumeroKilos() - cantidadKilos[j]);
                         beneficios += descuento;
+                        saveBeneficios();
                         sumadorVenta += descuento;
 
                         System.out.println(Constantes.KILOS_VENDIDOS + cantidadKilos[j]);
@@ -219,6 +226,7 @@ public class Mostrador implements Serializable {
                         fruta.setNumeroKilos(fruta.getNumeroKilos() - cantidadKilos[j]);
                         agregarCompraFrutasFactura.add(fruta);
                         beneficios += descontado;
+                        saveBeneficios();
                         sumadorPrecio += descontado;
                         System.out.println(Constantes.KILOS_VENDIDOS + cantidadKilos[j]);
                         System.out.println(Constantes.NOMBRE_FRUTA + fruta.getNombre());

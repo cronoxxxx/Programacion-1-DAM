@@ -340,5 +340,45 @@
     "almacenVenta": [
       560.0
     ]
+  },
+  {
+    "cliente": "Benton",
+    "apellido": "Witting",
+    "fechaHora": "2024-05-03T11:26:07.186466500",
+    "frutasVendidas": [
+      {
+        "nombre": "Platano Canario",
+        "procedencia": "Canarias",
+        "numeroKilos": 190,
+        "precioCostePorKilo": 300.0,
+        "precioVentaPorKilo": 400.0,
+        "fechaCaducidad": "2026-06-06",
+        "cuantasVecesSeVendio": 4
+      }
+    ],
+    "precioCompra": 800.0,
+    "almacenVenta": [
+      800.0
+    ]
+  },
+  {
+    "cliente": "Harland",
+    "apellido": "Rowe",
+    "fechaHora": "2024-05-03T11:34:29.648229500",
+    "frutasVendidas": [
+      {
+        "nombre": "Platano Canario",
+        "procedencia": "Canarias",
+        "numeroKilos": 188,
+        "precioCostePorKilo": 300.0,
+        "precioVentaPorKilo": 400.0,
+        "fechaCaducidad": "2026-06-06",
+        "cuantasVecesSeVendio": 5
+      }
+    ],
+    "precioCompra": 800.0,
+    "almacenVenta": [
+      800.0
+    ]
   }
 ]
