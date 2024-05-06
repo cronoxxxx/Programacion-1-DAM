@@ -1,0 +1,48 @@
+2024-05-06 12:02:06.600 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2024-05-06 12:02:06.603 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2024-05-06 12:02:06.603 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2024-05-06 12:02:06.603 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2024-05-06 12:02:06.723 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 12:02:06.738 ERROR [JavaFX Application Thread] dao.Database - Ej7CRUDFX\data\animales.json (El sistema no puede encontrar la ruta especificada)
+java.io.FileNotFoundException: Ej7CRUDFX\data\animales.json (El sistema no puede encontrar la ruta especificada)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at dao.Database.loadAnimales(Database.java:27) ~[classes/:?]
+	at dao.DaoAnimales.getAnimales(DaoAnimales.java:26) ~[classes/:?]
+	at servicios.ServicioAnimales.getAnimales(ServicioAnimales.java:26) ~[classes/:?]
+	at ui.MainViewModel.<init>(MainViewModel.java:19) ~[classes/:?]
+	at ui.PrincipalController.<init>(PrincipalController.java:63) ~[classes/:?]
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:939) ~[javafx-fxml-19.0.2.1-win.jar:?]
+	at javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:981) ~[javafx-fxml-19.0.2.1-win.jar:?]
+	at javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230) ~[javafx-fxml-19.0.2.1-win.jar:?]
+	at javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:755) ~[javafx-fxml-19.0.2.1-win.jar:?]
+	at javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2845) ~[javafx-fxml-19.0.2.1-win.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2641) ~[javafx-fxml-19.0.2.1-win.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2555) ~[javafx-fxml-19.0.2.1-win.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2523) ~[javafx-fxml-19.0.2.1-win.jar:?]
+	at ui.MainFX.start(MainFX.java:34) ~[classes/:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847) ~[javafx-graphics-19.0.2.1-win.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484) ~[javafx-graphics-19.0.2.1-win.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457) ~[javafx-graphics-19.0.2.1-win.jar:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:456) ~[javafx-graphics-19.0.2.1-win.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96) ~[javafx-graphics-19.0.2.1-win.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx-graphics-19.0.2.1-win.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184) ~[javafx-graphics-19.0.2.1-win.jar:?]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+2024-05-06 12:04:17.996 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2024-05-06 12:04:17.998 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2024-05-06 12:04:17.998 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2024-05-06 12:04:17.998 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2024-05-06 12:04:18.042 INFO  [JavaFX Application Thread] dao.Database - cargando animales
+2024-05-06 14:02:46.297 INFO  [JavaFX Application Thread] ui.MainFX - La anotación simplifica esta tarea
+2024-05-06 14:02:46.298 DEBUG [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de depuración
+2024-05-06 14:02:46.299 INFO  [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de información
+2024-05-06 14:02:46.299 ERROR [JavaFX Application Thread] ui.MainFX - Mensaje de nivel de error
+2024-05-06 14:02:46.359 INFO  [JavaFX Application Thread] dao.Database - cargando animales

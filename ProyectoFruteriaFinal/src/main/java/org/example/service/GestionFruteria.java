@@ -124,6 +124,16 @@ public class GestionFruteria implements IGestionFruteria {
     }
 
     @Override
+    public boolean updateFruta(Fruta fruta) {
+        return daoFruteriaImplementacion.updateFruta(fruta);
+    }
+
+    @Override
+    public boolean removeFruta(Fruta fruta) {
+        return daoFruteriaImplementacion.removeFruta(fruta);
+    }
+
+    @Override
     public List<Fruta> frutasConMenorNumeroVendido() {
         return daoFruteriaImplementacion.frutasConMenorNumeroVendido();
     }

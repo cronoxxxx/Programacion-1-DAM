@@ -76,6 +76,21 @@ public class Fruteria implements Serializable {
         return false;
     }
 
+    public boolean removeFruta(Fruta fruta) {
+        return frutas.remove(fruta);
+    }
+
+    public boolean updateFruta(Fruta fruta) {
+        for (int i = 0; i < frutas.size(); i++) {
+            if (frutas.get(i).getNombre().equalsIgnoreCase(fruta.getNombre())) {
+                frutas.set(i, fruta);
+                return true;
+            }
+        }
+        System.out.println(Constantes.ERROR_FRUTA_NULA);
+        return false;
+    }
+
     public boolean darBajaFrutaPorNombre(String nombreFruta) {
         return frutas.removeIf(fruta -> fruta.getNombre().equalsIgnoreCase(nombreFruta));
     }

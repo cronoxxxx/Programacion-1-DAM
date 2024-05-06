@@ -111,6 +111,16 @@ public class DaoFruteriaImplementacion implements DaoFruteria {
     }
 
     @Override
+    public boolean updateFruta(Fruta fruta) {
+        return fruteria.updateFruta(fruta);
+    }
+
+    @Override
+    public boolean removeFruta(Fruta fruta) {
+        return fruteria.removeFruta(fruta);
+    }
+
+    @Override
     public List<Fruta> frutasConMenorNumeroVendido() {
         return fruteria.frutasConMenorNumeroVendido();
     }

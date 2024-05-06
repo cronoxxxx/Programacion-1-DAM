@@ -8,7 +8,7 @@ import org.example.common.Configuracion;
 import org.example.common.Constantes;
 
 import org.example.domain.*;
-import org.example.domain.Comparators;
+import org.example.common.Comparators;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -187,6 +187,7 @@ public class Mostrador implements Serializable {
 
     public boolean venderClienteOnline(Cliente clienteCompradorOnline, StringBuilder sb, int... cantidadKilos) {
         List<Fruta> agregarCompraFrutasFactura = new LinkedList<>();
+
         double sumadorPrecio = 0;
         double descontado;
         String nombreFrutasString = sb.toString();
@@ -247,7 +248,7 @@ public class Mostrador implements Serializable {
         Factura factura = new Factura( clienteCompradorOnline.getNombre(), clienteCompradorOnline.getApellidos(), agregarCompraFrutasFactura, sumadorPrecio, almacenPrecios);
         facturas.add(factura);
         saveFacturas(facturas);
-        System.out.println("Total a pagar: " + sumadorPrecio);
+        System.out.println(Constantes.TOTAL_EUROS + sumadorPrecio);
 
         // Eliminar al cliente del mapa
         clientesEsperaCompra.entrySet().stream()
