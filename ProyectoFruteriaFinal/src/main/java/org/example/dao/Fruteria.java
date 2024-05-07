@@ -1,6 +1,7 @@
 package org.example.dao;
 
 import lombok.Getter;
+import lombok.Setter;
 import org.example.common.*;
 import org.example.domain.*;
 
@@ -10,9 +11,9 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Getter
+@Getter@Setter
 public class Fruteria implements Serializable {
-    private final List<Fruta> frutas;
+    private List<Fruta> frutas;
 
     //crear un hashmap de clientes
     public Fruteria(List<Fruta> frutas) {

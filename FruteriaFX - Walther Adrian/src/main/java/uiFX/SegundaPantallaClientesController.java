@@ -16,6 +16,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -95,8 +96,8 @@ public class SegundaPantallaClientesController implements Initializable {
     }
 
     public void onEdit() {
-        //check si se ha seleccionado un elemento y actualiza los textField con los valores de los atributos del elemento seleccionado
-        //Con esto no haría falta la imagen de ayuda puesto que el usuario no tendría que introducirlo en los textField
+        // check si se ha seleccionado un elemento y actualiza los textField con los valores de los atributos del elemento seleccionado
+        // Con esto no haría falta la imagen de ayuda puesto que el usuario no tendría que introducirlo en los textField
         if (tablaFrutas.getSelectionModel().getSelectedItem() != null) {
             Fruta selectedFruta = tablaFrutas.getSelectionModel().getSelectedItem();
             nombre.setText(selectedFruta.getNombre());
@@ -104,11 +105,16 @@ public class SegundaPantallaClientesController implements Initializable {
             numeroKilos.setText(String.valueOf(selectedFruta.getNumeroKilos()));
             precioCoste.setText(String.valueOf(selectedFruta.getPrecioCostePorKilo()));
             precioVenta.setText(String.valueOf(selectedFruta.getPrecioVentaPorKilo()));
-            caducidad.setText(String.valueOf(selectedFruta.getFechaCaducidad()));
+
+            // Obtén el valor de caducidad como String
+            String caducidadString = selectedFruta.getFechaCaducidad().toString();
+            // Convierte el valor a un objeto LocalDate
+            LocalDate caducidadDate = LocalDate.parse(caducidadString);
+            // Establece el valor en el MFXDatePicker
+            caducidad.setValue(caducidadDate);
             numeroVentas.setText(String.valueOf(selectedFruta.getCuantasVecesSeVendio()));
         }
     }
-
     @FXML
     private void cambioIdioma() {
         ResourceBundle bundle;
@@ -228,7 +234,7 @@ public class SegundaPantallaClientesController implements Initializable {
         Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setTitle("Ayuda");
         a.setHeaderText("Ayuda");
-        a.setContentText("Selecciona el animal a actualizar en la tabla e introduce los nuevos datos");
+        a.setContentText("Selecciona la fruta a actualizar en la tabla e introduce los nuevos datos");
         a.show();
     }
 
@@ -236,25 +242,25 @@ public class SegundaPantallaClientesController implements Initializable {
     private void alertaErrorAddAnimal() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
-        alert.setHeaderText("Error al añadir el animal");
-        alert.setContentText("No se ha podido añadir el animal");
+        alert.setHeaderText("Error al añadir la fruta");
+        alert.setContentText("No se ha podido añadir la fruta");
         alert.show();
     }
 
     private void alertaOKAddAnimal() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Animal añadido correctamente");
-        alert.setHeaderText("Animal añadido correctamente");
-        alert.setContentText("Se ha añadido correctamente");
+        alert.setTitle("Fruta añadida correctamente");
+        alert.setHeaderText("Fruta añadida correctamente");
+        alert.setContentText("Se ha añadida correctamente");
         alert.show();
 
     }
 
     private void alertaOKUpdateAnimal() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Animal actualizado con éxito");
-        alert.setHeaderText("Animal actualizado con éxito");
-        alert.setContentText("Se ha actualizado correctamente");
+        alert.setTitle("Fruta actualizada con éxito");
+        alert.setHeaderText("Fruta actualizada con éxito");
+        alert.setContentText("Se ha actualizada correctamente");
         alert.show();
     }
 
@@ -262,8 +268,8 @@ public class SegundaPantallaClientesController implements Initializable {
     private void alertaErrorUpdateAnimal() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
-        alert.setHeaderText("Error al actualizar animal");
-        alert.setContentText("Problemas al actualizar el animal");
+        alert.setHeaderText("Error al actualizar fruta");
+        alert.setContentText("Problemas al actualizar la fruta");
         alert.show();
     }
 
