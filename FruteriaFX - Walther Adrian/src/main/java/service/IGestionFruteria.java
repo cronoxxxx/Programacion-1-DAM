@@ -17,7 +17,7 @@ public interface IGestionFruteria {
     boolean subir(double cantidad, int indexFruta);
     boolean subirNombreFruta (double cantidad, String nombreFruta);
     double calcularInventarioTotal();
-    boolean actualizarPrecioVenta(String nombreFruta, double nuevoPrecioVenta);
+    boolean actualizarPrecioVenta(Fruta nombreFruta, double nuevoPrecioVenta);
     boolean frutasDeMismaProcedencia(String nombre1, String nombre2);
     boolean reunirFrutasporProcedencia(String procedencia);
     boolean buscarFrutaPorNombre(String nombreFruta);
@@ -32,4 +32,5 @@ public interface IGestionFruteria {
     void eliminarTodo();
     List<Fruta> frutasConMenorNumeroVendido();
     List<Fruta> frutasConMayorNumeroVendido();
+    boolean actualizarPrecioVentaID(int id, double nuevoPrecioVenta);
 }

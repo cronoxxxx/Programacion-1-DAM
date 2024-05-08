@@ -3,6 +3,7 @@ package dao;
 
 
 
+import common.AgregarProvinciasException;
 import common.Constantes;
 import common.FechaInvalidaException;
 import common.precioVentaExcepcion;
@@ -79,6 +80,8 @@ public class DaoFicherosFruta {
             e.printStackTrace();
         } catch (precioVentaExcepcion | FechaInvalidaException e) {
             System.out.println(e.getMessage());
+        } catch (AgregarProvinciasException e) {
+            throw new RuntimeException(e);
         }
         return frutas;
     }

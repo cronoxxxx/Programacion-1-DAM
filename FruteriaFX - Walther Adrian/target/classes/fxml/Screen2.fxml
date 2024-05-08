@@ -36,7 +36,7 @@
             <Image url="@../images/ayuda.png" />
          </image>
       </ImageView>
-      <Label fx:id="label" alignment="CENTER" layoutX="185.0" layoutY="29.0" prefHeight="50.0" prefWidth="323.0" text="Ejemplo CRUD FX">
+      <Label fx:id="label" alignment="CENTER" layoutX="185.0" layoutY="29.0" prefHeight="50.0" prefWidth="323.0" text="Fruteria de Adrian">
          <font>
             <Font name="Calibri Bold" size="28.0" />
          </font>
@@ -47,5 +47,10 @@
       <MFXTextField fx:id="numeroKilos" alignment="CENTER" floatMode="BORDER" layoutX="556.0" layoutY="312.0" prefHeight="50.0" prefWidth="126.0" promptText="Número de Kilos" />
       <MFXTextField fx:id="precioCoste" alignment="CENTER" floatMode="BORDER" layoutX="720.0" layoutY="312.0" prefHeight="50.0" prefWidth="126.0" promptText="Precio de Coste" />
       <MFXDatePicker fx:id="caducidad" layoutX="716.0" layoutY="391.0" prefHeight="50.0" prefWidth="134.0" />
+      <ImageView fitHeight="101.0" fitWidth="126.0" layoutX="638.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pera.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

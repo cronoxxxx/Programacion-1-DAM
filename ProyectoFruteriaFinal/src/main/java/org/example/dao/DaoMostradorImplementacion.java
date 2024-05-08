@@ -30,7 +30,6 @@ public class DaoMostradorImplementacion implements DaoMostrador {
     @Override
     public boolean putCliente(Cliente valor) {
         return mostrador.putCliente(valor);
-
     }
 
     @Override

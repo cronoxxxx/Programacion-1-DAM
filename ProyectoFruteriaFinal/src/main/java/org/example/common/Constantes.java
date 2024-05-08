@@ -150,5 +150,11 @@ public class Constantes {
     public static final String FACTURAS_NO_ENCONTRADAS = "Las facturas no han sido encontradas.";
     public static final String INGRESE_LA_CANTIDAD = "Ingrese la cantidad: ";
     public static final String MENU_BIENVENIDA = "Bienvenido al sistema de gestión de la FruteriaAdrian.\n1.Gestion de mostrador\n2.Gestion de fruteria\n3.Salir del programa\nElija una de las opciones: ";
-    
+
+    public static final String INGRESE_EL_PRECIO_A_ACTUALIZAR = "Ingrese el nuevo precio: ";
+    public static final String ACTUALIZACION_FALLIDA = "Actualizacion fallida.";
+
+    public static final String ACTUALIZACION_EXITOSA = "Actualizacion exitosa.";
+    public static final String FRUTA_NO_ENCONTRADA = "La fruta no ha sido encontrada.";
+    public static final String MENU_ACTUALIZAR_PRECIO_VENTA_FRUTA = "1. Actualizar por ID\n2. Actualizar por Nombre\nElija una de las opciones: ";
 }

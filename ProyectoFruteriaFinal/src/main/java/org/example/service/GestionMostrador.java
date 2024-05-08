@@ -1,12 +1,13 @@
 package org.example.service;
 
 import lombok.Getter;
+import lombok.Setter;
 import org.example.dao.*;
 import org.example.domain.*;
 
 import java.io.FileNotFoundException;
 import java.util.*;
-@Getter
+@Getter@Setter
 public class GestionMostrador implements IGestionMostrador {
     private final DaoMostradorImplementacion daoMostradorImplementacion;
     public GestionMostrador() {

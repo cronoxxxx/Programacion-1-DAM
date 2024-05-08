@@ -1,7 +1,9 @@
 package uiFX;
 
+import common.AgregarProvinciasException;
 import common.FechaInvalidaException;
 import common.precioVentaExcepcion;
+import dao.DaoFicherosFruta;
 import dao.DaoFruteriaImplementacion;
 import domain.Fruta;
 
@@ -15,6 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.Locale;
@@ -76,6 +79,11 @@ public class SegundaPantallaClientesController implements Initializable {
 
     public SegundaPantallaClientesController() {
         viewModel = new MainViewModel(new GestionFruteria(new DaoFruteriaImplementacion()));
+        try {
+            DaoFicherosFruta.escribirFichero(viewModel.getServicioFruteria().getFrutas());
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -173,43 +181,50 @@ public class SegundaPantallaClientesController implements Initializable {
     }
 
     @FXML
-    private void addFruta() throws precioVentaExcepcion, FechaInvalidaException {
+    private void addFruta() throws precioVentaExcepcion, FechaInvalidaException, AgregarProvinciasException {
         if (nombre.getText().isEmpty() || procedencia.getText().isEmpty() || numeroKilos.getText().isEmpty() || precioCoste.getText().isEmpty() || precioVenta.getText().isEmpty() || caducidad.getText().isEmpty() || numeroVentas.getText().isEmpty()) {
             alertaErrorAddAnimal();
         } else {
            Fruta fruta = new Fruta(nombre.getText(),procedencia.getText(),Integer.parseInt(numeroKilos.getText()),Double.parseDouble(precioCoste.getText()),Double.parseDouble(precioVenta.getText()),caducidad.getValue(),Integer.parseInt(numeroVentas.getText()));
             if (viewModel.getServicioFruteria().darAltaFruta(fruta)) {
+
                 tablaFrutas.getItems().add(fruta);
                 alertaOKAddAnimal();
                 limpiarCampos();
+
             } else {
                 alertaErrorAddAnimal();
             }
         }
+        viewModel.getServicioFruteria().escribirFichero();
     }
 
     @FXML
     private void deleteFruta() {
         Fruta fruta = tablaFrutas.getSelectionModel().getSelectedItem();
         if (fruta != null && viewModel.getServicioFruteria().removeFruta(fruta)) {
+
             alertaConfirmationDeleteAnimal(fruta);
             alertaOkDeleteAnimal();
             limpiarCampos();
         } else {
             alertaErrorDeleteAnimal();
         }
+        viewModel.getServicioFruteria().escribirFichero();
     }
 
     @FXML
-    private void updateFruta() throws precioVentaExcepcion, FechaInvalidaException {
+    private void updateFruta() throws precioVentaExcepcion, FechaInvalidaException, AgregarProvinciasException {
         if (nombre.getText() == null || procedencia.getText() == null || numeroKilos.getText() == null || precioCoste.getText() == null || precioVenta.getText() == null || caducidad.getText() == null || numeroVentas.getText() == null) {
             alertaErrorUpdateAnimal();
         } else {
             Fruta fruta1 = new Fruta(nombre.getText(),procedencia.getText(),Integer.parseInt(numeroKilos.getText()),Double.parseDouble(precioCoste.getText()),Double.parseDouble(precioVenta.getText()),caducidad.getValue(),Integer.parseInt(numeroVentas.getText()));
             Fruta fruta2 = tablaFrutas.getSelectionModel().getSelectedItem();
             if (viewModel.getServicioFruteria().updateFruta(fruta1, fruta2)) {
+
                 tablaFrutas.getItems().remove(fruta2);
                 tablaFrutas.getItems().add(fruta1);
+                viewModel.getServicioFruteria().escribirFichero();
                 alertaOKUpdateAnimal();
                 limpiarCampos();
                 tablaFrutas.refresh();
@@ -217,6 +232,7 @@ public class SegundaPantallaClientesController implements Initializable {
                 alertaErrorUpdateAnimal();
             }
         }
+
     }
 
     private void limpiarCampos() {

@@ -21,7 +21,7 @@ public class Fruta implements Comparable<Fruta>, Serializable {
     private static int autonumerico = 1;
 
 
-    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo, LocalDate fechaCaducidad, int cuantasVecesSeVendio) throws precioVentaExcepcion, FechaInvalidaException {
+    public Fruta(String nombre, String procedencia, int numeroKilos, double precioCostePorKilo, double precioVentaPorKilo, LocalDate fechaCaducidad, int cuantasVecesSeVendio) throws precioVentaExcepcion, FechaInvalidaException, AgregarProvinciasException {
         this.nombre = nombre;
         this.procedencia = procedencia;
         this.numeroKilos = numeroKilos;
@@ -29,6 +29,7 @@ public class Fruta implements Comparable<Fruta>, Serializable {
         this.precioVentaPorKilo = precioVentaPorKilo;
         this.fechaCaducidad = fechaCaducidad;
         this.cuantasVecesSeVendio = cuantasVecesSeVendio;
+        EnumComprobacionDirecta.provinciaOK(procedencia);
         EnumComprobacionDirecta.precioVentaOK(precioVentaPorKilo, precioCostePorKilo);
         EnumComprobacionDirecta.fechaOK(fechaCaducidad);
     }

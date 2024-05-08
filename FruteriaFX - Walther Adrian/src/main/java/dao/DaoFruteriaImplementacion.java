@@ -76,7 +76,7 @@ public class DaoFruteriaImplementacion implements DaoFruteria {
     }
     //JUnit5
     @Override
-    public boolean actualizarPrecioVenta(String nombreFruta, double nuevoPrecioVenta) {
+    public boolean actualizarPrecioVenta(Fruta nombreFruta, double nuevoPrecioVenta) {
         return fruteria.actualizarPrecioVenta(nombreFruta,nuevoPrecioVenta);
     }
 //JUnit5
@@ -128,6 +128,11 @@ public class DaoFruteriaImplementacion implements DaoFruteria {
     @Override
     public List<Fruta> frutasConMayorNumeroVendido() {
         return fruteria.frutasConMayorNumeroVendido();
+    }
+
+    @Override
+    public boolean actualizarPrecioVentaID(int id, double nuevoPrecioVenta) {
+        return fruteria.actualizarPrecioVentaID(id,nuevoPrecioVenta);
     }
 
 }

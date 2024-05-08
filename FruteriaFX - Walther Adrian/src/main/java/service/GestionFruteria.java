@@ -74,7 +74,7 @@ public class GestionFruteria implements IGestionFruteria {
     }
 
     @Override
-    public boolean actualizarPrecioVenta(String nombreFruta, double nuevoPrecioVenta) {
+    public boolean actualizarPrecioVenta(Fruta nombreFruta, double nuevoPrecioVenta) {
         return daoFruteriaImplementacion.actualizarPrecioVenta(nombreFruta, nuevoPrecioVenta);
     }
 
@@ -141,5 +141,10 @@ public class GestionFruteria implements IGestionFruteria {
     @Override
     public List<Fruta> frutasConMayorNumeroVendido() {
         return daoFruteriaImplementacion.frutasConMayorNumeroVendido();
+    }
+
+    @Override
+    public boolean actualizarPrecioVentaID(int id, double nuevoPrecioVenta) {
+        return daoFruteriaImplementacion.actualizarPrecioVentaID(id, nuevoPrecioVenta);
     }
 }

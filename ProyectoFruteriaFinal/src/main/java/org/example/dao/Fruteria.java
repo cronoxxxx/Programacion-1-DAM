@@ -195,12 +195,27 @@ public class Fruteria implements Serializable {
         return  sum <=0 ? -1 : sum;
     }
 
-    public boolean actualizarPrecioVenta(String nombreFruta, double nuevoPrecioVenta) {
-        return frutas.stream()
-                .filter(fruta -> fruta.getNombre().equalsIgnoreCase(nombreFruta))
-                .peek(fruta -> fruta.setPrecioVentaPorKilo(nuevoPrecioVenta >= fruta.getPrecioCostePorKilo() ? nuevoPrecioVenta : fruta.getPrecioVentaPorKilo()))
-                .findFirst().isPresent();
+    public boolean actualizarPrecioVenta(Fruta nombreFruta, double nuevoPrecioVenta) {
+        if (nuevoPrecioVenta < nombreFruta.getPrecioCostePorKilo()) {
+            return false;
+        }
+        nombreFruta.setPrecioVentaPorKilo(nuevoPrecioVenta);
+        return true;
+    }
 
+    public boolean actualizarPrecioVentaID(int id, double nuevoPrecioVenta) {
+        if (id < 0 || id >= frutas.size()) {
+            return false;
+        }
+        Fruta fruta = frutas.get(id);
+        if (fruta == null) {
+            return false;
+        }
+        if (nuevoPrecioVenta < fruta.getPrecioCostePorKilo()) {
+            return false;
+        }
+        fruta.setPrecioVentaPorKilo(nuevoPrecioVenta);
+        return true;
     }
 
     public boolean frutasDeMismaProcedencia(String nombre1, String nombre2) {

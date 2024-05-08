@@ -12,8 +12,8 @@ module javafx {
 
     exports uiFX;
 
-    opens domainx.modelo to javafx.base, com.google.gson;
+
     opens uiFX to javafx.fxml;
-    opens configx to org.apache.logging.log4j;
+
 
 }

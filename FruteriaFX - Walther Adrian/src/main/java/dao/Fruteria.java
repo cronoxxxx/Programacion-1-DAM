@@ -24,7 +24,8 @@ public class Fruteria implements Serializable {
             frutas = DaoFicherosFruta.leerFichero();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
-        }}
+        }
+    }
 /*
         for (int i = 0; i < cantidadAlmacen; i++) {
             try {
@@ -73,22 +74,37 @@ public class Fruteria implements Serializable {
         } else {
             System.out.println(Constantes.YA_EXISTE_UNA_FRUTA_CON_EL_MISMO_NOMBRE_EN_LA_FRUTERIA);
         }
+        try {
+            DaoFicherosFruta.escribirFichero(frutas);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         return false;
     }
 
     public boolean removeFruta(Fruta fruta) {
-        return frutas.remove(fruta);
+        if (frutas.remove(fruta)) {
+            try {
+                DaoFicherosFruta.escribirFichero(frutas);
+                return true;
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return false;
+
+
     }
 
     public boolean updateFruta(Fruta fruta1, Fruta fruta2) {
-        for (int i = 0; i < frutas.size(); i++) {
-            if (frutas.get(i).getNombre().equalsIgnoreCase(fruta1.getNombre())) {
-                frutas.set(i, fruta2);
-                return true;
-            }
+        frutas.remove(fruta2);
+        frutas.add(fruta1);
+        try {
+            DaoFicherosFruta.escribirFichero(frutas);
+            return true;
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
-        System.out.println(Constantes.ERROR_FRUTA_NULA);
-        return false;
     }
 
     public boolean darBajaFrutaPorNombre(String nombreFruta) {
@@ -191,15 +207,30 @@ public class Fruteria implements Serializable {
 
     public double calcularInventarioTotal() {
         double sum = frutas.stream().mapToDouble(fruta -> fruta.getPrecioVentaPorKilo() * fruta.getNumeroKilos()).sum();
-        return  sum <=0 ? -1 : sum;
+        return sum <= 0 ? -1 : sum;
     }
 
-    public boolean actualizarPrecioVenta(String nombreFruta, double nuevoPrecioVenta) {
-        return frutas.stream()
-                .filter(fruta -> fruta.getNombre().equalsIgnoreCase(nombreFruta))
-                .peek(fruta -> fruta.setPrecioVentaPorKilo(nuevoPrecioVenta >= fruta.getPrecioCostePorKilo() ? nuevoPrecioVenta : fruta.getPrecioVentaPorKilo()))
-                .findFirst().isPresent();
+    public boolean actualizarPrecioVenta(Fruta nombreFruta, double nuevoPrecioVenta) {
+        if (nuevoPrecioVenta < nombreFruta.getPrecioCostePorKilo()) {
+            return false;
+        }
+        nombreFruta.setPrecioVentaPorKilo(nuevoPrecioVenta);
+        return true;
+    }
 
+    public boolean actualizarPrecioVentaID(int id, double nuevoPrecioVenta) {
+        if (id < 0 || id >= frutas.size()) {
+            return false;
+        }
+        Fruta fruta = frutas.get(id);
+        if (fruta == null) {
+            return false;
+        }
+        if (nuevoPrecioVenta < fruta.getPrecioCostePorKilo()) {
+            return false;
+        }
+        fruta.setPrecioVentaPorKilo(nuevoPrecioVenta);
+        return true;
     }
 
     public boolean frutasDeMismaProcedencia(String nombre1, String nombre2) {
@@ -234,6 +265,7 @@ public class Fruteria implements Serializable {
             return false;
         }
     }
+
     public boolean buscarFrutaPorNombre(String nombreFruta) {
         boolean valido = false;
         Fruta aux = null;
@@ -276,9 +308,6 @@ public class Fruteria implements Serializable {
     public void eliminarTodo() {
         frutas.clear();
     }
-
-
-
 
 
 }
