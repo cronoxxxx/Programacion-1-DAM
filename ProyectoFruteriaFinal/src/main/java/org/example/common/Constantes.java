@@ -60,7 +60,7 @@ public class Constantes {
     public static final String DEBE_INGRESAR_PRECIO_VENTA_MAYOR_A_PRECIO_COSTE = "Debe introducir un precio de venta mayor al precio de coste.";
     public static final String INGRESO_EXITOSO = "Ingreso exitoso.";
     public static final String INGRESO_FALLIDO = "Ingreso fallido.";
-    public static final String MENU_BAJA_FRUTA = "1. Dar baja fruta por nombre\n2. Dar baja fruta por procedencia\nElija una de las opciones: ";
+    public static final String MENU_BAJA_FRUTA = "1. Dar baja fruta por nombre\n2. Dar baja frutas por procedencia\nElija una de las opciones: ";
     public static final String ELIMINADO_EXITOSO = "Eliminado exitoso.";
     public static final String ELIMINADO_FALLIDO = "Eliminado fallido.";
     public static final String DEBE_INGRESAR_UNA_OPCION_VALIDA = "Debe introducir una opción valida.";

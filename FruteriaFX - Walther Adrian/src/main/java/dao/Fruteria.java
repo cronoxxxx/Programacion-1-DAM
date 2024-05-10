@@ -302,7 +302,7 @@ public class Fruteria implements Serializable {
     }
 
     public boolean eliminarFrutasCaducadas() {
-        return frutas.removeIf(fruta -> fruta.getFechaCaducidad().equals(LocalDate.now()));
+        return frutas.removeIf(fruta -> fruta.getFechaCaducidad().isBefore(LocalDate.now().plusDays(1)));
     }
 
     public void eliminarTodo() {

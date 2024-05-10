@@ -70,7 +70,7 @@ public class Mostrador implements Serializable {
 
     public Map<Integer, Cliente> mostrarInformacionporNombre(boolean ascendente) {
         Comparator<Cliente> comparator = new Comparators.ComparatorCliente().thenComparing(Cliente::getApellidos);
-        // Comparador para ordenar por nombre y luego por procedencia
+        // Comparador para ordenar por nombre y luego por apellido
         Map<Integer, Cliente> sortedMap = clientesEsperaCompra.entrySet().stream()
                 .sorted(ascendente ? Map.Entry.comparingByValue(comparator) : Map.Entry.comparingByValue(comparator.reversed()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
@@ -209,7 +209,7 @@ public class Mostrador implements Serializable {
                     if (fruta.getNumeroKilos() < cantidadKilos[j]) {
                         System.out.println(Constantes.LO_SENTIMOS_SOLO_TENEMOS_ESTA_CANTIDAD_DE_KILOS_PARA + nombreFruta);
                         System.out.println(fruta.getNumeroKilos());
-
+                        return false;
                     } else {
                         double precioUnitario = fruta.getPrecioVentaPorKilo();
                         double precioVentaFruta = precioUnitario * cantidadKilos[j];

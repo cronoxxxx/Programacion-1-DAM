@@ -14,6 +14,8 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -30,10 +32,15 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
+import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-
+@Log4j2
 @ExtendWith(MockitoExtension.class)
 class DaoFruteriaImplementacionTest {
+    private static final Logger logger = LogManager.getLogger(DaoFruteriaImplementacionTest.class);
     @Mock
     private Fruteria fruteria;
     @InjectMocks
@@ -42,6 +49,7 @@ class DaoFruteriaImplementacionTest {
 
     @Test
     void getFrutas() throws precioVentaExcepcion {
+
         List<Fruta> frutas = Arrays.asList(
                 new Fruta(2, 3),
                 new Fruta(2, 3),
@@ -56,8 +64,11 @@ class DaoFruteriaImplementacionTest {
                 () -> assertEquals(3, frutaList.size()),
                 () -> assertEquals(2, frutaList.get(0).getPrecioCostePorKilo()),
                 () -> assertEquals(frutas.get(frutas.size() - 2).getPrecioCostePorKilo(), frutaList.get(frutas.size() - 2).getPrecioCostePorKilo()),
-                () -> assertThrowsExactly(UnsupportedOperationException.class, () -> frutaList.add(new Fruta(10, 3)))
+                () -> assertThrowsExactly(UnsupportedOperationException.class, () -> frutaList.add(new Fruta(10, 3))) //precio de venta no mayor al de coste
         );
+        logger.info("Frutas obtenidas con exito");
+
+
     }
 
     @Test
@@ -66,6 +77,7 @@ class DaoFruteriaImplementacionTest {
         assertTrue(daoFruteria.isEmptyFrutas());
         when(fruteria.isEmptyFrutas()).thenReturn(false);
         assertFalse(daoFruteria.isEmptyFrutas());
+        logger.info("Estan vacias?" + daoFruteria.isEmptyFrutas());
     }
 
     @Test
@@ -137,42 +149,48 @@ class DaoFruteriaImplementacionTest {
 
     @Nested
     @DisplayName(" Cantidad de Frutas Vendidas mayor y menor")
-    public class hasVendidos {
-        @Test
-        void testFrutasConMayorNumeroVendido() throws precioVentaExcepcion, AgregarProvinciasException, FechaInvalidaException {
-            List<Fruta> lista = new ArrayList<>();
-            Fruta fruta1 = new Fruta("Manzana", "Madrid", 1, 2, 3, LocalDate.of(2025, 1, 1));
-            Fruta fruta2 = new Fruta(2, 3);
-            Fruta fruta3 = new Fruta(3, 4);
-            Fruta fruta4 = new Fruta(1, 3);
-            Fruta fruta5 = new Fruta(1, 4);
-            lista.add(fruta1);
-            lista.add(fruta2);
-            lista.add(fruta3);
-            lista.add(fruta4);
-            lista.add(fruta5);
+    public class hasVendidos  {
+
+        @ParameterizedTest
+        @MethodSource("provideFrutas")
+        void testFrutasConMayorOMenorNumeroVendido(List<Fruta> listaPrueba) throws precioVentaExcepcion, AgregarProvinciasException, FechaInvalidaException {
+            List<Fruta> lista = new ArrayList<>(listaPrueba);
             when(fruteria.frutasConMayorNumeroVendido()).thenReturn(lista);
-            //assertEquals(5, fruteria.frutasConMayorNumeroVendido().size());
             assertEquals(5, daoFruteria.frutasConMayorNumeroVendido().size());
         }
 
-        @Test
-        void testFrutasConMenorNumeroVendido() throws precioVentaExcepcion, AgregarProvinciasException, FechaInvalidaException {
-            List<Fruta> lista = new ArrayList<>();
-            Fruta fruta1 = new Fruta("Manzana", "Madrid", 1, 2, 3, LocalDate.of(2025, 1, 1));
-            Fruta fruta2 = new Fruta(2, 3);
-            Fruta fruta3 = new Fruta(3, 4);
-            Fruta fruta4 = new Fruta(1, 3);
-            Fruta fruta5 = new Fruta(1, 4);
-            lista.add(fruta1);
-            lista.add(fruta2);
-            lista.add(fruta3);
-            lista.add(fruta4);
-            lista.add(fruta5);
-            when(fruteria.frutasConMenorNumeroVendido()).thenReturn(lista);
-            //assertEquals(5, fruteria.frutasConMayorNumeroVendido().size());
-            assertEquals(5, daoFruteria.frutasConMenorNumeroVendido().size());
+        private static Stream<List<List<Fruta>>> provideFrutas() throws precioVentaExcepcion, AgregarProvinciasException, FechaInvalidaException {
+            return Stream.of(
+                    Arrays.asList(
+                            Arrays.asList(new Fruta("Manzana", "Madrid", 1, 2, 3, LocalDate.of(2025, 1, 1))),
+                            Arrays.asList(new Fruta(2, 3)),
+                            Arrays.asList(new Fruta(3, 4)),
+                            Arrays.asList(new Fruta(1, 3)),
+                            Arrays.asList(new Fruta(1, 4))
+
+            ));
         }
+    }
+
+
+
+    @ParameterizedTest
+    @MethodSource("provideFrutasForUpdate")
+    void updateFruta(Fruta fruta) throws precioVentaExcepcion {
+        List<Fruta> lista = Arrays.asList(fruta, new Fruta(2, 3));
+        when(fruteria.getFrutas()).thenReturn(lista);
+
+        fruta.setNombre("Naranja");
+
+        assertAll(
+                () -> assertThat(daoFruteria.getFrutas()).contains(fruta),
+                () -> assertThat(daoFruteria.getFrutas().size()).isEqualTo(2),
+                () -> assertThat(daoFruteria.getFrutas().get(0).getNombre()).isEqualTo("Naranja")
+        );
+    }
+
+    private static Stream<Fruta> provideFrutasForUpdate() throws precioVentaExcepcion, AgregarProvinciasException, FechaInvalidaException {
+        return Stream.of(new Fruta("Manzana", "Madrid", 1, 2, 3, LocalDate.of(2025, 1, 1)));
     }
 
     @Test
@@ -191,6 +209,8 @@ class DaoFruteriaImplementacionTest {
                 () -> assertThat(daoFruteria.getFrutas().size()).isEqualTo(2),
                 () -> assertThat(daoFruteria.getFrutas().get(0).getNombre()).isEqualTo("Naranja")
         );
+
+        logger.info("Fruta cambiada con exito");
     }
 
     @Test

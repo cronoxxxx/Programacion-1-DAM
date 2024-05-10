@@ -17,9 +17,14 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
+import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @ExtendWith(MockitoExtension.class)
 class GestionMostradorTest {
+
+    private static final Logger logger = LogManager.getLogger(GestionMostradorTest.class);
     @Mock
     private DaoMostradorImplementacion daoMostradorImplementacion;
     @InjectMocks
@@ -40,6 +45,8 @@ class GestionMostradorTest {
                 () -> assertEquals(clienteOnline1,gestionMostrador.mostrarInformacion(true).get(3)),
                 ()-> assertEquals(daoMostradorImplementacion.mostrarInformacion(true),gestionMostrador.mostrarInformacion(true))
         );
+        logger.info("Se agrego un nuevo cliente");
+
     }
 
     @Test
@@ -76,6 +83,7 @@ class GestionMostradorTest {
                 () -> assertEquals(1,gestionMostrador.mostrarInformacionporNombre(true).size()),
                 ()->assertEquals(clienteFisico1, gestionMostrador.mostrarInformacionporNombre(true).get(2)
         ));
+        logger.info("Se elimino un cliente");
     }
     @Test
     void reunirClientesPorCiudad() {
@@ -98,4 +106,8 @@ class GestionMostradorTest {
                 }
             }
         }
+        String finalG = g;
+                assertNotNull(finalG);
+
+        logger.info("Se reunieron los clientes por ciudad");
     }}
