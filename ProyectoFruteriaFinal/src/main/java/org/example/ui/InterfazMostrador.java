@@ -371,6 +371,7 @@ public class InterfazMostrador {
                                     for (int i = 0; i < cant; i++) {
                                         System.out.println(Constantes.INGRESE_LA_FRUTA + (i + 1));
                                         sb.append(entradaReader.readLine()).append(", ");
+                                        System.out.println(Constantes.INGRESE_LA_CANTIDAD);
                                         cantidades[i] = Integer.parseInt(entradaReader.readLine());
                                     }
                                     if (gestionMostrador.venderClienteOnline(online, sb, cantidades)) {

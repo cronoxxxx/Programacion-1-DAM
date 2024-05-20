@@ -117,6 +117,7 @@ public class Mostrador implements Serializable {
                     if (fruta.getNumeroKilos() < cantidadKilos[j]) {
                         System.out.println(Constantes.LO_SENTIMOS_SOLO_TENEMOS_ESTA_CANTIDAD_DE_KILOS_PARA + nombreFruta);
                         System.out.println(fruta.getNumeroKilos());
+                        return false;
                     } else {
                         double precioUnitario = fruta.getPrecioVentaPorKilo();
                         double precioVentaFruta = precioUnitario * cantidadKilos[j];
@@ -251,8 +252,7 @@ public class Mostrador implements Serializable {
         System.out.println(Constantes.TOTAL_EUROS + sumadorPrecio);
 
         // Eliminar al cliente del mapa
-        clientesEsperaCompra.entrySet().stream()
-                .filter(entry -> entry.getValue().equals(clienteCompradorOnline))
+        clientesEsperaCompra.entrySet().stream().filter(entry -> entry.getValue().equals(clienteCompradorOnline))
                 .map(Map.Entry::getKey)
                 .findFirst()
                 .ifPresent(clientesEsperaCompra::remove);

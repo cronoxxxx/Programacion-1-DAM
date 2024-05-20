@@ -1,0 +1,4 @@
+1;Afton;13.466514967053724;3.309777677340593;inspiracion,valor;true
+7;Freeda;13.349692319379542;1.7398785783634616;inspiracion,valor;false
+7;Gisele;7.915301273430491;1.6425508313125352;inspiracion;true
+5;Rufus;4.9003607431363605;1.9833139299517968;inspiracion,valor,brujeria,precision,dominacion;false
