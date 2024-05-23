@@ -1,0 +1,4 @@
+5;Dulce et Decorum Est;New Danial;5.919600321609931;azul
+3;Ring of Bright Water;South Twanda;94.77558998195352;azul
+7;The Last Enemy;Stuartville;7.223936546679688;verde
+1;The Last Temptation;West Virgie;29.30180357483193;azul
