@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be8a267a-ae7d-45da-bc87-82848bf9db4b" name="Changes" comment="Fruteria FX">
+      <change afterPath="$PROJECT_DIR$/../Proyectos Java/Ajedrez/fx/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Proyectos Java/Ajedrez/fx/.idea/fx.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Proyectos Java/Ajedrez/fx/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Proyectos Java/Ajedrez/fx/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Proyectos Java/Ajedrez/fx/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Colecciones/Colecciones-List/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Colecciones/Colecciones-List/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Comparadores/ComparatorEmpleado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Comparadores/Empleado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Comparadores/Tester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/HashCode/Empleado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/HashCode/Tester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Map/MapasTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ColeccionesGeneral/RepasoClasesLTA/src/main/java/org/example/Set/ConjuntosTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/.idea/Dam2324_3ev-master.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/ExcepcionPropia/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/ExcepcionPropia/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/ExcepcionPropia/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/ExcepcionPropia/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/ExcepcionPropia/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/ExcepcionPropia/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/ExcepcionPropia/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/Excepciones/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/Excepciones/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/Excepciones/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/Excepciones/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/Excepciones/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/Excepciones/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/Excepciones/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/src/main/java/org/example/TryCatch/ErrorNumeral.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/src/main/java/org/example/TryCatch/e1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dam2324_3ev-master/Dam2324_3ev-master/GenerandoDatosAleatorios/src/main/java/org/example/Trycatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/data/Clientes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/data/Fichero" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/data/facturas.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/AgregarProvinciasException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/Configuracion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/Constantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/EnumComprobacionDirecta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/FechaInvalidaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/Frutas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/Provincias.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/direccionInvalidoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/common/precioVentaExcepcion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/dao/DaoFicherosFruta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/dao/DaoFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/dao/DaoFruteriaImplementacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/dao/DaoMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/dao/DaoMostradorImplementacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/dao/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/dao/Fruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/dao/Mostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/domain/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/domain/ClienteFisico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/domain/ClienteOnline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/domain/Comparators.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/domain/Factura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/domain/Fruta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/service/GestionFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/service/GestionMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/service/IGestionFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/service/IGestionMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/ui/InterfazFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/ui/InterfazMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/ui/MenuPrograma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/ui/Principal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/uiFX/FxmlLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/uiFX/MainFX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/uiFX/MainViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/uiFX/PrincipalController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/uiFX/SegundaPantallaClientesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/java/uiFX/TerceraPantallaClientesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/fxml/Screen1.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/fxml/Screen2.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/fxml/Screen3.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/images/Logo_Quevedo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/images/ayuda.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/images/pera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/textosFX.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/src/main/resources/textosFX_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/AgregarProvinciasException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/Configuracion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/Constantes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/EnumComprobacionDirecta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/FechaInvalidaException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/Frutas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/Provincias.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/direccionInvalidoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/common/precioVentaExcepcion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/DaoFicherosFruta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/DaoFruteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/DaoFruteriaImplementacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/DaoMostrador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/DaoMostradorImplementacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/Fruteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/Mostrador$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/dao/Mostrador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/domain/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/domain/ClienteFisico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/domain/ClienteOnline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/domain/Comparators$ComparatorCliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/domain/Comparators$ComparatorFactura.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/domain/Comparators.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/domain/Factura.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/domain/Fruta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/fxml/Screen1.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/fxml/Screen2.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/fxml/Screen3.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/images/Logo_Quevedo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/images/ayuda.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/images/pera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/service/GestionFruteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/service/GestionMostrador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/service/IGestionFruteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/service/IGestionMostrador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/textosFX.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/textosFX_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/ui/InterfazFruteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/ui/InterfazMostrador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/ui/MenuPrograma.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/ui/Principal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/uiFX/FxmlLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/uiFX/MainFX.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/uiFX/MainViewModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/uiFX/PrincipalController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/uiFX/SegundaPantallaClientesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FruteriaFX - Walther Adrian/target/classes/uiFX/TerceraPantallaClientesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Clientes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Fichero" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/facturas.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/tuapp.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/AgregarProvinciasException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/Comparators.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/Configuracion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/Constantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/EnumComprobacionDirecta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/FechaInvalidaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/Frutas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/Provincias.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/direccionInvalidoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/precioVentaExcepcion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DaoFicherosFruta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DaoFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DaoFruteriaImplementacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DaoMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DaoMostradorImplementacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/Fruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/Mostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/ClienteFisico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/ClienteOnline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Factura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Fruta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/FileFruta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/FrutasFicheros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/JsonFacturas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/Main2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/Mew.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/ReFormatMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/ReescribirFrutas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drafts/ReescribirMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/GestionFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/GestionMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/IGestionFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/IGestionMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/InterfazFruteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/InterfazMostrador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/MenuPrograma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/Principal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/dao/DaoFruteriaImplementacionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/service/GestionMostradorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/Ahorcados CU - Walther Saavedra 1DAM.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica - Walther Saavedra 1DAM.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/Fichero" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/FicheroBinario" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/AhorcadoVisual.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/FXMLDocumentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/common/Categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/common/CategoriaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/common/Comprobacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/common/Constantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/dao/DaoPalabras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/dao/DaoPalabrasFicheros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/dao/DaoPalabrasImplementacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/dao/IDException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/dao/Palabras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/domain/CategoriaDificultadExcepcion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/domain/Juego.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/domain/Jugador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/domain/Palabra.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/service/GestionPalabras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/service/IGestionPalabras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/ui/FileTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/ui/GestionDiccionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/ui/GestionJuego.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/ui/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/com/example/ejemploahorcado/ui/PruebaTotal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/FXMLDocument.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/images/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/images/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/images/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/images/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/images/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/images/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/images/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGrafica/AhorcadoFX - Adrian Saavedra/src/main/resources/com/example/ejemploahorcado/images/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosGraficaFinal - Walther Saavedra 1DAM.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/Fichero" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/FicheroBinario" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/common/Categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/common/CategoriaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/common/Comprobacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/common/Constantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/dao/DaoPalabras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/dao/DaoPalabrasFicheros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/dao/DaoPalabrasImplementacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/dao/IDException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/dao/Palabras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/domain/CategoriaDificultadExcepcion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/domain/Juego.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/domain/Jugador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/domain/Palabra.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/service/GestionPalabras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/service/IGestionPalabras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/ui/FileTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/ui/GestionDiccionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/ui/GestionJuego.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/ui/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/AhorcadosTyga/src/main/java/ui/PruebaTotal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/CU/Ahorcado_CU_WaltherSaavedra1DAM.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/CU/CU_Ahorcado_WaltherSaavedra2.vpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/DC/DC_Ahorcado_WaltherSaavedra2.vpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/DC/DC_Ahorcado_WaltherSaavedra2.vpp.bak_000f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/DC/DC_Ahorcado_WaltherSaavedra2.vpp.bak_001d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/DC/DC_Ahorcado_WaltherSaavedra2.vpp.bak_002d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/DC/DC_Ahorcado_WaltherSaavedra2.vpp.bak_003d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ahorcado y Cu/DC/DC_Ahorcado_WaltherSaavedra2.vpp.bak_004d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyectos Java/Ajedrez/fx/fx" beforeDir="false" afterPath="$PROJECT_DIR$/../Proyectos Java/Ajedrez/fx/fx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/UtilExcepcionesPOO.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/AhorcadosFX/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/peliculas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/common/Constantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/dao/AccesoDatosExcepcion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/dao/AccesoDatosImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/dao/EscrituraDatosExcepcion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/dao/IAccesoDatos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/dao/LecturaDatosExcepcion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/domain/Pelicula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/service/ControlPeliculasImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/service/IControlPeliculas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/ui/Tester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/exdrafts/com/software/peliculas/ui/TesterControlPeliculas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/org/example/Muñecos/Muñecos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/org/example/Muñecos/Probador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/src/main/java/org/example/Muñecos/Programa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/common/Constantes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/dao/AccesoDatosExcepcion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/dao/AccesoDatosImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/dao/EscrituraDatosExcepcion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/dao/IAccesoDatos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/dao/LecturaDatosExcepcion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/domain/Pelicula.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/service/ControlPeliculasImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/service/IControlPeliculas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/ui/Tester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/exdrafts/com/software/peliculas/ui/TesterControlPeliculas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/org/example/Muñecos/Muñecos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/org/example/Muñecos/Probador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/EjerciciosPOOExcepciones/target/classes/org/example/Muñecos/Programa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/archivo.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/archivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/pennis" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/personas.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/prueba.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/IOFilles/Files1/Files1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/IOFilles/Files1/Filtro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/IOFilles/Files2/Files2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/IOFilles/Files3/AddContenido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/IOFilles/Files3/Files3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/IOFilles/Files3/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc5/Exc5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc5/Excepcion0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc7/Exc7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc7/OperacionAritmetica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/Excepciones/src/main/java/Runtime/Exc7/aritmetica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/peliculas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/personas.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/personas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UtilExcepcionesPOO/primero.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/Fichero" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/FicheroBinario" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/log/tuapp.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/common/CategoriaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/common/ComparacionPorCategoriaNombre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/common/ComparacionPorValoracionMedia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/common/Comprobacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/common/Constantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/dao/DaoAlojamientos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/dao/DaoAlojamientosFicheros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/dao/DaoAlojamientosImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/dao/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/domain/Alojamiento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/domain/CasaRural.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/domain/Hotel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/service/ServiciosAlojamientos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/service/ServiciosAlojamientosImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/ui/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/java/org/example/ui/MainAlojamientos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/test/java/org/example/dao/DaoAlojamientosImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/test/java/org/example/service/ServiciosAlojamientosImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/src/test/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/common/CategoriaException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/common/ComparacionPorCategoriaNombre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/common/ComparacionPorValoracionMedia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/common/Comprobacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/common/Constantes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/dao/DaoAlojamientos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/dao/DaoAlojamientosFicheros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/dao/DaoAlojamientosImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/dao/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/domain/Alojamiento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/domain/CasaRural.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/domain/Hotel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/service/ServiciosAlojamientos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/service/ServiciosAlojamientosImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/ui/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/classes/org/example/ui/MainAlojamientos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/test-classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/test-classes/org/example/dao/DaoAlojamientosTest$Actualizacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/test-classes/org/example/dao/DaoAlojamientosTest$AddAlojamiento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/test-classes/org/example/dao/DaoAlojamientosTest$estaVacia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/test-classes/org/example/dao/DaoAlojamientosTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/test-classes/org/example/service/ServiciosAlojamientosImplTest$ActualizarCategoria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/test-classes/org/example/service/ServiciosAlojamientosImplTest$Excepciones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../draft/target/test-classes/org/example/service/ServiciosAlojamientosImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/examenProgramacion.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/src/gestion/GestionPersonal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/src/gestion/Jefe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/src/gestion/Programador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/src/gestion/Tester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examenProgramacion/src/gestion/Trabajador.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cronoxxxx&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a44167a1-8f37-48f1-80b4-85eee04f12e1" />
+        <option name="url" value="https://github.com/cronoxxxx/Programacion-1-DAM.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2fVtGZ9yIJPBh7V6WEr4SD2Q1zl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/madrid/Desktop/1DAM/Programacion 1DAM/ProyectoAjedrez/AjedrezConsola",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "C:/Users/madrid/Desktop/1DAM/Programacion 1DAM/ProyectoFruteriaFinal/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\madrid\Desktop\1DAM\Programacion 1DAM\ProyectoFruteriaFinal" />
+      <recent name="C:\Users\madrid\Desktop\1DAM\Programacion 1DAM\ProyectoFruteriaFinal\src\main\java\org\example" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\madrid\Desktop\1DAM\Programacion 1DAM\ProyectoFruteriaFinal\data" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.service" />
+      <recent name="org.example.dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Principal">
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ui.Principal" />
+      <module name="ProyectoFruteriaFinal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoFruteriaImplementacionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoFruteriaFinal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dao" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dao.DaoFruteriaImplementacionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoFruteriaImplementacionTest.getFrutas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoFruteriaFinal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dao" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dao.DaoFruteriaImplementacionTest" />
+      <option name="METHOD_NAME" value="getFrutas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GestionMostradorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoFruteriaFinal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.service" />
+      <option name="MAIN_CLASS_NAME" value="org.example.service.GestionMostradorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GestionMostradorTest.reunirClientesPorCiudad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoFruteriaFinal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.service" />
+      <option name="MAIN_CLASS_NAME" value="org.example.service.GestionMostradorTest" />
+      <option name="METHOD_NAME" value="reunirClientesPorCiudad" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Principal" />
+        <item itemvalue="JUnit.GestionMostradorTest" />
+        <item itemvalue="JUnit.GestionMostradorTest.reunirClientesPorCiudad" />
+        <item itemvalue="JUnit.DaoFruteriaImplementacionTest" />
+        <item itemvalue="JUnit.DaoFruteriaImplementacionTest.getFrutas" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be8a267a-ae7d-45da-bc87-82848bf9db4b" name="Changes" comment="" />
+      <created>1713897982809</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713897982809</updated>
+      <workItem from="1713897985158" duration="774000" />
+      <workItem from="1713898895516" duration="1378000" />
+      <workItem from="1713900469489" duration="80000" />
+      <workItem from="1713904744124" duration="772000" />
+      <workItem from="1713943230700" duration="7860000" />
+      <workItem from="1713960500776" duration="909000" />
+      <workItem from="1713974762440" duration="17633000" />
+      <workItem from="1713998082833" duration="184000" />
+      <workItem from="1714028510115" duration="7442000" />
+      <workItem from="1714045283960" duration="824000" />
+      <workItem from="1714046130043" duration="174000" />
+      <workItem from="1714046468293" duration="2777000" />
+      <workItem from="1714059529033" duration="196000" />
+      <workItem from="1714060188327" duration="1911000" />
+      <workItem from="1714069037642" duration="197000" />
+      <workItem from="1714069250139" duration="73000" />
+      <workItem from="1714069338287" duration="60000" />
+      <workItem from="1714069529544" duration="39000" />
+      <workItem from="1714069589141" duration="12116000" />
+      <workItem from="1714088307057" duration="123000" />
+      <workItem from="1714117734848" duration="4628000" />
+      <workItem from="1714168525370" duration="539000" />
+      <workItem from="1714200174185" duration="9782000" />
+      <workItem from="1714254814639" duration="2014000" />
+      <workItem from="1714309314107" duration="10062000" />
+      <workItem from="1714373268545" duration="5361000" />
+      <workItem from="1714386347082" duration="9590000" />
+      <workItem from="1714416512458" duration="9549000" />
+      <workItem from="1714430813068" duration="88000" />
+      <workItem from="1714458959556" duration="13523000" />
+      <workItem from="1714515883764" duration="1096000" />
+      <workItem from="1714543973989" duration="885000" />
+      <workItem from="1714596087016" duration="16394000" />
+      <workItem from="1714672374128" duration="742000" />
+      <workItem from="1714673130316" duration="256000" />
+      <workItem from="1714727996253" duration="628000" />
+      <workItem from="1714989461126" duration="121000" />
+      <workItem from="1714990570944" duration="2513000" />
+      <workItem from="1714997147989" duration="3210000" />
+      <workItem from="1715020510437" duration="2287000" />
+      <workItem from="1715107956345" duration="18542000" />
+      <workItem from="1715208454262" duration="529000" />
+      <workItem from="1715240264969" duration="6085000" />
+      <workItem from="1715329533137" duration="3470000" />
+      <workItem from="1715334585733" duration="3167000" />
+      <workItem from="1715339034933" duration="2988000" />
+      <workItem from="1715361375183" duration="1185000" />
+      <workItem from="1715376484512" duration="1449000" />
+      <workItem from="1715594576420" duration="17000" />
+      <workItem from="1715601026924" duration="1049000" />
+      <workItem from="1715878049033" duration="1707000" />
+      <workItem from="1715942970515" duration="14173000" />
+      <workItem from="1716052962987" duration="26000" />
+      <workItem from="1716054587020" duration="2408000" />
+      <workItem from="1716145086549" duration="502000" />
+      <workItem from="1716145613846" duration="606000" />
+      <workItem from="1716235227195" duration="1662000" />
+      <workItem from="1716274545135" duration="202000" />
+      <workItem from="1716275249580" duration="3216000" />
+      <workItem from="1716391414965" duration="33000" />
+      <workItem from="1716466461751" duration="2216000" />
+      <workItem from="1716571808512" duration="1137000" />
+      <workItem from="1716638728435" duration="1304000" />
+      <workItem from="1716650460952" duration="2412000" />
+    </task>
+    <task id="LOCAL-00001" summary="25 de abruk de 2024">
+      <option name="closed" value="true" />
+      <created>1713998252930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713998252930</updated>
+    </task>
+    <task id="LOCAL-00002" summary="26 de abril de 2024">
+      <option name="closed" value="true" />
+      <created>1714088394977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714088394977</updated>
+    </task>
+    <task id="LOCAL-00003" summary="26 de abril de 2024">
+      <option name="closed" value="true" />
+      <created>1714123978729</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714123978729</updated>
+    </task>
+    <task id="LOCAL-00004" summary="27 de abril de 2024">
+      <option name="closed" value="true" />
+      <created>1714169046751</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714169046751</updated>
+    </task>
+    <task id="LOCAL-00005" summary="28 de abril de 2024">
+      <option name="closed" value="true" />
+      <created>1714256762249</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714256762249</updated>
+    </task>
+    <task id="LOCAL-00006" summary="29 de abril de 2024">
+      <option name="closed" value="true" />
+      <created>1714346852494</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714346852494</updated>
+    </task>
+    <task id="LOCAL-00007" summary="29 de abril de 2024">
+      <option name="closed" value="true" />
+      <created>1714346900549</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714346900549</updated>
+    </task>
+    <task id="LOCAL-00008" summary="30 de abril de 2024">
+      <option name="closed" value="true" />
+      <created>1714430881404</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714430881404</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1 de mayo de 2024">
+      <option name="closed" value="true" />
+      <created>1714516940438</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714516940438</updated>
+    </task>
+    <task id="LOCAL-00010" summary="1 de mayo de 2024 (Solo pasar a gráfica)">
+      <option name="closed" value="true" />
+      <created>1714544842811</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714544842811</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2 de mayo de 2024 (Solo pasar a gráfica)">
+      <option name="closed" value="true" />
+      <created>1714601579217</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714601579217</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2 de mayo de 2024 (Solo pasar a gráfica)">
+      <option name="closed" value="true" />
+      <created>1714646348321</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714646348321</updated>
+    </task>
+    <task id="LOCAL-00013" summary="2 de mayo de 2024 (Solo pasar a gráfica)">
+      <option name="closed" value="true" />
+      <created>1714672567095</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714672567095</updated>
+    </task>
+    <task id="LOCAL-00014" summary="2 de mayo de 2024 (Solo pasar a gráfica)">
+      <option name="closed" value="true" />
+      <created>1714673052077</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714673052077</updated>
+    </task>
+    <task id="LOCAL-00015" summary="2 de mayo de 2024 (Solo pasar a gráfica)">
+      <option name="closed" value="true" />
+      <created>1714673173457</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714673173457</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Junit5">
+      <option name="closed" value="true" />
+      <created>1715114224258</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715114224258</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Junit5">
+      <option name="closed" value="true" />
+      <created>1715114243034</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715114243034</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fruteria FX">
+      <option name="closed" value="true" />
+      <created>1716659030139</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1716659030139</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="25 de abruk de 2024" />
+    <MESSAGE value="26 de abril de 2024" />
+    <MESSAGE value="27 de abril de 2024" />
+    <MESSAGE value="28 de abril de 2024" />
+    <MESSAGE value="29 de abril de 2024" />
+    <MESSAGE value="30 de abril de 2024" />
+    <MESSAGE value="1 de mayo de 2024" />
+    <MESSAGE value="1 de mayo de 2024 (Solo pasar a gráfica)" />
+    <MESSAGE value="2 de mayo de 2024 (Solo pasar a gráfica)" />
+    <MESSAGE value="Junit5" />
+    <MESSAGE value="Fruteria FX" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fruteria FX" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/drafts/ReescribirMostrador.java</url>
+          <line>11</line>
+          <properties class="org.example.drafts.ReescribirMostrador" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
+    <option name="historyDtoById">
+      <map>
+        <entry key="7c5f51">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="7c5f51" />
+              <option name="initiateTms" value="1713898329820" />
+              <option name="request" value="Type your message here..." />
+              <option name="response" value="" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/main/java/org/example/ui/MainFruteria.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="greeting">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="greeting" />
+              <option name="initiateTms" value="1713898326585" />
+              <option name="request" value="" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="&#10;Hello, I am Machinet AI - context aware chat, which can help you with your daily programming routine. How can I help?" />
+              <option name="responseTms" value="1713898328340" />
+            </ChatHistoryModel>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
