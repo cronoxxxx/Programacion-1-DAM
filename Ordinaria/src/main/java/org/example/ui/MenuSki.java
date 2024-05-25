@@ -4,6 +4,7 @@ import org.example.common.Constantes;
 import org.example.common.DificultadException;
 import org.example.dao.DaoFicheros;
 import org.example.dao.Pistas;
+import org.example.domain.Pista;
 import org.example.domain.Pueblo;
 import org.example.domain.SkiAlpino;
 import org.example.domain.SkiFondo;
@@ -11,10 +12,7 @@ import org.example.service.IServiceInterface;
 import org.example.service.ServiceInterface;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class MenuSki {
     public static void action() {
@@ -60,10 +58,22 @@ public class MenuSki {
     }
 
     private static void devolverInfoPistaPorProvincia(IServiceInterface serviceInterface) {
-        if (serviceInterface.getPistasProvincia() != null) {
-            serviceInterface.getPistasProvincia().forEach((k, v) -> {
-                System.out.println("Provincia " + k + "\n" + v);
-            });
+        Map<String, List<Pista>> mapa = serviceInterface.getPistasProvincia();
+        if (mapa != null) {
+            for (String provincia : mapa.keySet()) {
+                List<Pista> pistasProvincia = mapa.get(provincia);
+                int numPistas = pistasProvincia.size();
+                double sumKm = 0.0;
+                for (Pista pista : pistasProvincia) {
+                    sumKm += pista.getKmExtension();
+                }
+                double mediaKmPorPista = sumKm / numPistas;
+                System.out.println("Provincia: " + provincia);
+                System.out.println("Pistas: " + pistasProvincia);
+                System.out.println("Número de pistas: " + numPistas);
+                System.out.println("Media de km por pista: " + mediaKmPorPista);
+                System.out.println();
+            }
         } else {
             System.out.println("No hay nada para listar");
         }

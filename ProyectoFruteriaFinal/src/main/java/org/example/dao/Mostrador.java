@@ -115,8 +115,6 @@ public class Mostrador implements Serializable {
                     // Se encontró la fruta, realizar la venta
                     frutaEncontrada = true;
                     if (fruta.getNumeroKilos() < cantidadKilos[j]) {
-                        System.out.println(Constantes.LO_SENTIMOS_SOLO_TENEMOS_ESTA_CANTIDAD_DE_KILOS_PARA + nombreFruta);
-                        System.out.println(fruta.getNumeroKilos());
                         return false;
                     } else {
                         double precioUnitario = fruta.getPrecioVentaPorKilo();
@@ -125,21 +123,15 @@ public class Mostrador implements Serializable {
                         if (clienteComprador.isHasDescuento()) {
                             descuento = precioVentaFruta * 0.7; // Aplicar descuento del 30%
                             almacenPrecios.add(precioVentaFruta * 0.7);
-                            System.out.println(Constantes.DESCUENTO_EN_LECTURA);
                         } else {
                             descuento = precioVentaFruta;
                             almacenPrecios.add(precioVentaFruta);
-                            System.out.println(Constantes.NO_DESCUENTO_EN_LECTURA);
                         }
 
                         fruta.setNumeroKilos(fruta.getNumeroKilos() - cantidadKilos[j]);
                         beneficios += descuento;
                         saveBeneficios();
                         sumadorVenta += descuento;
-
-                        System.out.println(Constantes.KILOS_VENDIDOS + cantidadKilos[j]);
-                        System.out.println(Constantes.NOMBRE_FRUTA + fruta.getNombre());
-                        System.out.println(Constantes.TOTAL_EUROS + descuento);
                         agregarCompraFrutasFactura.add(fruta);
                         fruta.setAgregarNumeroVentas();
                     }
@@ -149,7 +141,6 @@ public class Mostrador implements Serializable {
             }
 
             if (!frutaEncontrada) {
-                System.out.println(Constantes.FRUTA_NO_DISPONIBLE + nombreFruta);
                 return false;
             }
         }
