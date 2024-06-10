@@ -1,0 +1,8 @@
+SkiFondo;1;Postern of Fate;Celestinaview;44.49176650419786;New Broderickstad,Lezlieview
+SkiFondo;3;Ring of Bright Water;East Genoveva;59.767573304640244;Jacobimouth,Aureliostad
+SkiAlpino;7;No Country for Old Men;Lake Gia;74.24057736216483;azul
+SkiAlpino;8;The Cricket on the Hearth;Malcolmview;85.17084389504716;verde
+SkiFondo;4;The Mermaids Singing;Michaleville;46.59115235537724;Grantburgh,South Torabury
+SkiAlpino;5;The Wives of Bath;North Kendrickfort;26.538418496121885;verde
+SkiAlpino;6;Pale Kings and Princes;O'Haraside;37.472442500114624;azul
+SkiFondo;2;Far From the Madding Crowd;South Lorenzofurt;50.2830200472293;Hyattstad,South Nobukoshire
